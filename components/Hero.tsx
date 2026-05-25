@@ -7,7 +7,7 @@ import { ArrowRight, Phone } from "lucide-react"
 import { useLang } from "@/lib/i18n"
 
 export default function Hero() {
-  const { t, lang } = useLang()
+  const { t } = useLang()
   const [index, setIndex] = useState(0)
   const words = useMemo(() => t.hero.words, [t.hero.words])
 
@@ -29,18 +29,14 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 pt-8 pb-16 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
         <div>
-          <h1 className="font-sans font-extrabold text-6xl md:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
+          <h1 className="font-sans font-extrabold text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
             {t.hero.before}
 
-            <span
-              className="block relative h-[2.2em] sm:h-[1.1em] overflow-hidden mt-1"
-              lang={lang === "DE" ? "de" : lang === "TR" ? "tr" : "en"}
-            >
+            <span className="block relative h-[1.1em] overflow-hidden mt-1">
               {words.map((word, i) => (
                 <motion.span
                   key={word}
                   className="absolute inset-0 text-accent"
-                  style={{ hyphens: "auto", wordBreak: "break-word" }}
                   initial={{ opacity: 0, y: 60 }}
                   animate={
                     index === i
