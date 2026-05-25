@@ -23,10 +23,10 @@ export default function Hero() {
   return (
     <>
       {/* ── Hero section — exactly one screen tall on mobile ── */}
-      <section className="relative h-[100dvh] lg:min-h-screen lg:h-auto pt-16 flex items-center border-b border-line overflow-hidden">
+      <section className="relative h-[100dvh] lg:min-h-screen lg:h-auto pt-16 flex items-end lg:items-center border-b border-line overflow-hidden">
         <div className="hero-glow absolute inset-0 pointer-events-none" />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-8 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
+        <div className="relative max-w-6xl mx-auto px-6 pb-12 pt-8 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
           {/* Text */}
           <div>

@@ -26,7 +26,7 @@ export default function Nav() {
           <select
             value={lang}
             onChange={(e) => setLang(e.target.value as Lang)}
-            className="md:hidden bg-transparent font-mono text-xs text-white-muted border border-line px-2 py-1.5 cursor-pointer"
+            className="md:hidden bg-transparent font-mono text-xs text-white-muted border border-line px-2 py-1.5 cursor-pointer text-center [text-align-last:center]"
           >
             {LANGS.map((l) => (
               <option key={l} value={l} style={{ background: "#141414", color: "#F5F3EE" }}>{l}</option>
