@@ -22,7 +22,7 @@ export default function Nav() {
 
         <div className="flex items-center gap-4">
           {/* Language switcher */}
-          <div className="hidden sm:flex items-center gap-0 font-mono text-xs">
+          <div className="flex items-center gap-0 font-mono text-xs">
             {LANGS.map((l, i) => (
               <span key={l} className="flex items-center">
                 {i > 0 && <span className="mx-1.5 text-white/[0.15] select-none">·</span>}
