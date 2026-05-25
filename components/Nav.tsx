@@ -14,15 +14,27 @@ export default function Nav() {
           foorgun.ai
         </a>
 
+        {/* Desktop center links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#services" className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.services}</a>
-          <a href="#process"  className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.process}</a>
-          <a href="#testimonials" className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.testimonials}</a>
+          <a href="#services"      className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.services}</a>
+          <a href="#process"       className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.process}</a>
+          <a href="#testimonials"  className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.testimonials}</a>
         </div>
 
-        <div className="flex items-center gap-4">
-          {/* Language switcher */}
-          <div className="flex items-center gap-0 font-mono text-xs">
+        <div className="flex items-center gap-3">
+          {/* Mobile: native select */}
+          <select
+            value={lang}
+            onChange={(e) => setLang(e.target.value as Lang)}
+            className="md:hidden bg-transparent font-mono text-xs text-white-muted border border-line px-2 py-1.5 cursor-pointer"
+          >
+            {LANGS.map((l) => (
+              <option key={l} value={l} style={{ background: "#141414", color: "#F5F3EE" }}>{l}</option>
+            ))}
+          </select>
+
+          {/* Desktop: inline EN · DE · TR */}
+          <div className="hidden md:flex items-center font-mono text-xs">
             {LANGS.map((l, i) => (
               <span key={l} className="flex items-center">
                 {i > 0 && <span className="mx-1.5 text-white/[0.15] select-none">·</span>}
@@ -37,9 +49,10 @@ export default function Nav() {
             ))}
           </div>
 
+          {/* CTA — fixed width so language changes don't shift layout */}
           <a
             href="#contact"
-            className="font-mono text-sm font-medium px-5 py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
+            className="w-[7.5rem] md:w-auto text-center whitespace-nowrap font-mono text-xs md:text-sm font-medium px-3 md:px-5 py-2 md:py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
           >
             {t.nav.cta}
           </a>

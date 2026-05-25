@@ -79,7 +79,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative order-first lg:order-last">
+        <div className="relative">
           <div className="relative w-full h-[260px] lg:h-auto lg:aspect-[3/4] overflow-hidden bg-surface-2">
             <Image src="/furkan.png" alt="Furkan Cetin" fill className="object-cover object-top" priority />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg/60 to-transparent pointer-events-none" />
