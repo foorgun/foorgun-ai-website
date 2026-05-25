@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <LangProvider>
-      <main>
+      <main className="overflow-x-hidden">
         <Nav />
         <Hero />
         <Stats />

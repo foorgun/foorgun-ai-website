@@ -7,7 +7,7 @@ import { ArrowRight, Phone } from "lucide-react"
 import { useLang } from "@/lib/i18n"
 
 export default function Hero() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const [index, setIndex] = useState(0)
   const words = useMemo(() => t.hero.words, [t.hero.words])
 
@@ -26,17 +26,21 @@ export default function Hero() {
     <section className="relative min-h-screen pt-16 flex items-center border-b border-line overflow-hidden">
       <div className="hero-glow absolute inset-0 pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto px-6 py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 pt-8 pb-16 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
         <div>
           <h1 className="font-sans font-extrabold text-6xl md:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
             {t.hero.before}
 
-            <span className="block relative h-[1.1em] overflow-hidden mt-1">
+            <span
+              className="block relative h-[2.2em] sm:h-[1.1em] overflow-hidden mt-1"
+              lang={lang === "DE" ? "de" : lang === "TR" ? "tr" : "en"}
+            >
               {words.map((word, i) => (
                 <motion.span
                   key={word}
                   className="absolute inset-0 text-accent"
+                  style={{ hyphens: "auto", wordBreak: "break-word" }}
                   initial={{ opacity: 0, y: 60 }}
                   animate={
                     index === i
@@ -75,8 +79,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="relative w-full aspect-[4/3] lg:aspect-[3/4] overflow-hidden bg-surface-2">
+        <div className="relative order-first lg:order-last">
+          <div className="relative w-full h-[260px] lg:h-auto lg:aspect-[3/4] overflow-hidden bg-surface-2">
             <Image src="/furkan.png" alt="Furkan Cetin" fill className="object-cover object-top" priority />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg/60 to-transparent pointer-events-none" />
           </div>
