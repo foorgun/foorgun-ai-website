@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 pt-8 pb-16 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
         <div>
-          <h1 className="font-sans font-extrabold text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
+          <h1 className="font-sans font-extrabold text-[11vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
             {t.hero.before}
 
             <span className="block relative h-[1.1em] overflow-hidden mt-1">

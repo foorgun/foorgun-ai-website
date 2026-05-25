@@ -200,7 +200,7 @@ const translations: Record<Lang, Translations> = {
     hero: {
       before: "Manuel işleri",
       words: ["otomatik", "akıllı", "zahmetsiz", "ölçeklenebilir", "güçlü"],
-      after: "sistemlere dönüştürüyorum.",
+      after: "sistemlere dönüş­türüyorum.",
       subline: "Operasyon, pazarlama, içerik — ekibiniz bunu manuel yapıyorsa, daha iyi bir yol var.",
       cta: "Görüşme Ayarla",
       secondary: "Ne Yapıyorum",
