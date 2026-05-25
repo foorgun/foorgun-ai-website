@@ -1,3 +1,4 @@
+import { LangProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
@@ -11,17 +12,19 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Stats />
-      <IntegrationMarquee />
-      <WhatIDo />
-      <Process />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </main>
+    <LangProvider>
+      <main>
+        <Nav />
+        <Hero />
+        <Stats />
+        <IntegrationMarquee />
+        <WhatIDo />
+        <Process />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+        <Footer />
+      </main>
+    </LangProvider>
   );
 }

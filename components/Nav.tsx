@@ -1,4 +1,12 @@
+"use client"
+
+import { useLang, type Lang } from "@/lib/i18n"
+
+const LANGS: Lang[] = ["EN", "DE", "TR"]
+
 export default function Nav() {
+  const { lang, setLang, t } = useLang()
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-line bg-bg/90 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -7,33 +15,36 @@ export default function Nav() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#services"
-            className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150"
-          >
-            Services
-          </a>
-          <a
-            href="#process"
-            className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150"
-          >
-            Process
-          </a>
-          <a
-            href="#testimonials"
-            className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150"
-          >
-            Testimonials
-          </a>
+          <a href="#services" className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.services}</a>
+          <a href="#process"  className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.process}</a>
+          <a href="#testimonials" className="font-mono text-xs text-white-muted hover:text-white transition-colors duration-150">{t.nav.testimonials}</a>
         </div>
 
-        <a
-          href="#contact"
-          className="font-mono text-sm font-medium px-5 py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
-        >
-          Book a call
-        </a>
+        <div className="flex items-center gap-4">
+          {/* Language switcher */}
+          <div className="hidden sm:flex items-center gap-0 font-mono text-xs">
+            {LANGS.map((l, i) => (
+              <span key={l} className="flex items-center">
+                {i > 0 && <span className="mx-1.5 text-white/[0.15] select-none">·</span>}
+                <button
+                  onClick={() => setLang(l)}
+                  className="transition-colors duration-150"
+                  style={{ color: lang === l ? "#C4521A" : "rgba(245,243,238,0.25)" }}
+                >
+                  {l}
+                </button>
+              </span>
+            ))}
+          </div>
+
+          <a
+            href="#contact"
+            className="font-mono text-sm font-medium px-5 py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
+          >
+            {t.nav.cta}
+          </a>
+        </div>
       </div>
     </nav>
-  );
+  )
 }
