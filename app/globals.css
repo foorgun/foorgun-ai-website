@@ -3,25 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0C0C0C;
+  --surface: #141414;
+  --surface-2: #1C1C1C;
+  --accent: #C4521A;
+  --accent-dim: rgba(196, 82, 26, 0.1);
+  --white: #F5F3EE;
+  --white-mid: rgba(245, 243, 238, 0.6);
+  --white-muted: rgba(245, 243, 238, 0.25);
+  --line: rgba(255, 255, 255, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* Hero radial glow */
+.hero-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -5%,
+    rgba(196, 82, 26, 0.15) 0%,
+    transparent 65%
+  );
 }
