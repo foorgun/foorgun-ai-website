@@ -51,7 +51,9 @@ export default function Nav() {
 
           {/* CTA — fixed width so language changes don't shift layout */}
           <a
-            href="#contact"
+            href="https://calendar.app.google/npA5cpbJTia9oXYj9"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-[7.5rem] md:w-auto text-center whitespace-nowrap font-mono text-xs md:text-sm font-medium px-3 md:px-5 py-2 md:py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
           >
             {t.nav.cta}

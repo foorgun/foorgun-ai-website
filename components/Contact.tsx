@@ -17,7 +17,9 @@ export default function Contact() {
           <p className="text-white-mid leading-relaxed mb-12 font-light text-lg max-w-xl">{t.contact.description}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#contact"
+              href="https://calendar.app.google/npA5cpbJTia9oXYj9"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-accent text-white font-mono text-sm font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity duration-150"
             >
               {t.contact.cta}
