@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Mono } from "next/font/google";
+import { LangProvider } from "@/lib/i18n";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -31,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${dmMono.variable} antialiased`}
       >
-        {children}
+        <LangProvider>{children}</LangProvider>
       </body>
     </html>
   );

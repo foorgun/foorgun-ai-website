@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowRight, Phone } from "lucide-react"
@@ -8,10 +8,10 @@ import { useLang } from "@/lib/i18n"
 
 export default function Hero() {
   const { t } = useLang()
+  const words = t.hero.words
   const [index, setIndex] = useState(0)
-  const words = useMemo(() => t.hero.words, [t.hero.words])
 
-  useEffect(() => { setIndex(0) }, [t])
+  useEffect(() => { setIndex(0) }, [words])
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -30,37 +30,38 @@ export default function Hero() {
 
           {/* Text */}
           <div>
-            <h1 className="font-sans font-extrabold text-[11vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[1.05] tracking-tight text-white mb-8">
-              {t.hero.before}
-
-              <span className="block relative h-[1.1em] overflow-hidden mt-1">
-                {words.map((word, i) => (
-                  <motion.span
-                    key={word}
-                    className="absolute inset-0 text-accent"
-                    initial={{ opacity: 0, y: 60 }}
-                    animate={
-                      index === i
-                        ? { opacity: 1, y: 0 }
-                        : { opacity: 0, y: index > i ? -60 : 60 }
-                    }
-                    transition={{ type: "spring", stiffness: 60, damping: 15 }}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
+            <h1 className="font-sans font-extrabold text-[7.5vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] leading-[1.25] tracking-tight text-white mb-6">
+              <span className="block">{t.hero.line1}</span>
+              <span className="block mt-3 sm:mt-4">
+                {t.hero.line2Before}
+                <span className="relative inline-grid max-w-full overflow-hidden align-bottom pb-2 -mb-2">
+                  {words.map((word, i) => (
+                    <motion.span
+                      key={word}
+                      className="col-start-1 row-start-1 text-accent leading-[1.3]"
+                      initial={{ opacity: 0, y: "100%" }}
+                      animate={
+                        index === i
+                          ? { opacity: 1, y: "0%" }
+                          : { opacity: 0, y: index > i ? "-100%" : "100%" }
+                      }
+                      transition={{ type: "spring", stiffness: 60, damping: 15 }}
+                    >
+                      {word}
+                      {t.hero.line2After}
+                    </motion.span>
+                  ))}
+                </span>
               </span>
-
-              <span className="block">{t.hero.after}</span>
             </h1>
 
-            <p className="text-white-mid text-lg leading-relaxed mb-12 max-w-lg font-light">
+            <p className="text-white-mid text-base sm:text-lg leading-relaxed mb-10 max-w-lg font-light">
               {t.hero.subline}
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="https://calendar.app.google/npA5cpbJTia9oXYj9"
+                href="https://cal.eu/foorgun/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-accent text-white font-mono text-sm font-medium px-7 py-4 rounded-full hover:opacity-90 transition-opacity duration-150"

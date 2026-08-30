@@ -2,6 +2,8 @@
 
 ## Always Do First
 
+- **Invoke the 'frontend-design' skill** before writing any frontend code, every session, no exceptions.
+
 - Read this entire file before writing any code  
 - Check existing file structure before creating new files  
 - Never overwrite files without reading them first  
@@ -99,6 +101,22 @@
 
 - Email: [hello@foorgun.ai](mailto:hello@foorgun.ai)  
 - CTA: Book a call (Calendly placeholder)
+
+---
+
+## Screenshot Workflow
+•⁠  ⁠Puppeteer is installed at
+C:/Users/nateh/AppData/Local/Temp/puppeteer-test/• Chrome cache is at c:/Users/nateh/.cache/puppeteer/
+•⁠  ⁠*Always screenshot from localhost: •node screenshot.mjs
+http://localhost:3000
+•⁠  ⁠Screenshots are saved automatically to /temporary screenshots/screenshot-N.png' (auto-incremented, never overwritten).
+•⁠  ⁠Optional label suffix: node screenshot.mjs http://localhost: 3000
+label → saves as screenshot-N-label.png"
+•⁠  ⁠"screenshot.mjs" lives in the project root. Use it as-is.
+•⁠  ⁠After screenshotting, read the PNG from temporary screenshots/ with the Read tool - Claude can see and analyze the image directly.
+•⁠  ⁠When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
+•⁠  ⁠Check: spacing/padding, font size/w ght/line-height, colors (exact
+hex), alignment, border-radius, shadows, image sizing
 
 ---
 

@@ -58,9 +58,9 @@ export default function IntegrationMarquee() {
 
   return (
     <section className="border-b border-line py-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 mb-12">
-        <p className="font-mono text-xs text-accent uppercase tracking-widest mb-3">{t.integrations.eyebrow}</p>
-        <h2 className="font-sans font-bold text-3xl md:text-4xl text-white tracking-tight">{t.integrations.title}</h2>
+      <div className="max-w-2xl mx-auto px-6 mb-12 text-center">
+        <p className="font-mono text-xs text-accent uppercase tracking-widest mb-5">{t.integrations.eyebrow}</p>
+        <h2 className="font-sans font-bold text-3xl md:text-4xl text-white tracking-tight mb-8">{t.integrations.title}</h2>
       </div>
 
       <div className="relative flex flex-col gap-3">

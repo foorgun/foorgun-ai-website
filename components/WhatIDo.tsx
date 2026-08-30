@@ -1,13 +1,16 @@
 "use client"
 
-import { Zap, Sparkles, Link2, Layers } from "lucide-react"
+import { Target, FileText, Building2, MessageSquare, UserCheck, BarChart3, Layers } from "lucide-react"
 import { useLang } from "@/lib/i18n"
 
 const ICONS = [
-  <Zap      key="zap"      width="20" height="20" strokeWidth={1.8} />,
-  <Sparkles key="sparkles" width="20" height="20" strokeWidth={1.8} />,
-  <Link2    key="link2"    width="20" height="20" strokeWidth={1.8} />,
-  <Layers   key="layers"   width="20" height="20" strokeWidth={1.8} />,
+  <Target        key="target"        width="20" height="20" strokeWidth={1.8} />,
+  <FileText      key="filetext"      width="20" height="20" strokeWidth={1.8} />,
+  <Building2     key="building2"     width="20" height="20" strokeWidth={1.8} />,
+  <MessageSquare key="messagesquare" width="20" height="20" strokeWidth={1.8} />,
+  <UserCheck     key="usercheck"     width="20" height="20" strokeWidth={1.8} />,
+  <BarChart3     key="barchart3"     width="20" height="20" strokeWidth={1.8} />,
+  <Layers        key="layers"        width="20" height="20" strokeWidth={1.8} />,
 ]
 
 export default function WhatIDo() {
@@ -22,14 +25,24 @@ export default function WhatIDo() {
           <p className="text-white-mid font-light">{t.services.subline}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {t.services.cards.map((card, i) => (
-            <div key={i} className="bg-surface p-8 flex flex-col gap-6 hover:bg-surface-2 transition-colors duration-200">
+            <div
+              key={i}
+              className={`bg-surface p-8 h-full flex flex-col gap-6 hover:bg-surface-2 transition-colors duration-200 ${
+                i === t.services.cards.length - 1 ? "sm:col-span-2 lg:col-span-3" : ""
+              }`}
+            >
               <div className="w-11 h-11 flex items-center justify-center bg-accent/10 text-accent border border-accent/20">
                 {ICONS[i]}
               </div>
               <h3 className="font-sans font-semibold text-xl text-white">{card.title}</h3>
-              <p className="text-white-mid text-sm leading-relaxed font-light">{card.description}</p>
+              <div className="flex flex-col gap-2 flex-1">
+                <p className="text-white-mid text-sm leading-relaxed font-light">{card.description}</p>
+              </div>
+              {card.note && (
+                <p className="text-white-muted text-xs leading-relaxed font-light">{card.note}</p>
+              )}
             </div>
           ))}
         </div>

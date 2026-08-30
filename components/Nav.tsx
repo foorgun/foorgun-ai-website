@@ -2,7 +2,7 @@
 
 import { useLang, type Lang } from "@/lib/i18n"
 
-const LANGS: Lang[] = ["EN", "DE", "TR"]
+const LANGS: Lang[] = ["EN", "DE"]
 
 export default function Nav() {
   const { lang, setLang, t } = useLang()
@@ -51,7 +51,7 @@ export default function Nav() {
 
           {/* CTA — fixed width so language changes don't shift layout */}
           <a
-            href="https://calendar.app.google/npA5cpbJTia9oXYj9"
+            href="https://cal.eu/foorgun/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="w-[7.5rem] md:w-auto text-center whitespace-nowrap font-mono text-xs md:text-sm font-medium px-3 md:px-5 py-2 md:py-2.5 rounded-full bg-accent text-white hover:opacity-90 transition-opacity duration-150"
