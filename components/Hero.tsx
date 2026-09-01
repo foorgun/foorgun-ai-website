@@ -28,18 +28,10 @@ export default function Hero() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-8 lg:py-24 w-full">
 
-          {/* Mobile: Image first, then text */}
-          <div className="lg:hidden mb-8">
-            <div className="relative w-full aspect-[4/3] overflow-hidden bg-surface-2 rounded-lg">
-              <Image src="/furkan.png" alt="Furkan Cetin" fill className="object-cover object-top" priority />
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg/60 to-transparent pointer-events-none" />
-            </div>
-          </div>
-
           {/* Desktop: Two-column grid, Mobile: single column */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
-            {/* Text */}
+            {/* Text — On mobile: headline + subline first */}
             <div>
               <h1 className="font-sans font-extrabold text-[7.5vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] leading-[1.25] tracking-tight text-white mb-6">
                 <span className="block">{t.hero.line1}</span>
@@ -70,6 +62,15 @@ export default function Hero() {
                 {t.hero.subline}
               </p>
 
+              {/* Mobile: Image after subline */}
+              <div className="lg:hidden mb-10">
+                <div className="relative w-full aspect-[4/3] overflow-hidden bg-surface-2 rounded-lg">
+                  <Image src="/furkan.png" alt="Furkan Cetin" fill className="object-cover object-top" priority />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg/60 to-transparent pointer-events-none" />
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="https://cal.eu/foorgun/15min"
