@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { PhoneCall, Map, Settings2, Wrench, Activity, Rocket } from "lucide-react"
 import { useLang } from "@/lib/i18n"
 
@@ -17,15 +16,8 @@ export default function Process() {
   const { t } = useLang()
 
   return (
-    <motion.section
-      id="process"
-      className="border-b border-line"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      <div className="max-w-2xl mx-auto px-6 py-12 lg:py-24 text-center mb-16">
+    <section id="process" className="border-b border-line">
+      <div className="max-w-2xl mx-auto px-6 py-24 text-center mb-16">
         <p className="font-mono text-xs text-accent uppercase tracking-widest mb-5">{t.process.eyebrow}</p>
         <h2 className="font-sans font-bold text-4xl md:text-5xl text-white mb-3 tracking-tight">{t.process.title}</h2>
         <p className="text-white-mid font-light">{t.process.subline}</p>
@@ -69,6 +61,6 @@ export default function Process() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }

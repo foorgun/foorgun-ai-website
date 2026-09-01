@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { useLang } from "@/lib/i18n"
 
 export default function Problem() {
@@ -25,14 +24,8 @@ export default function Problem() {
   )
 
   return (
-    <motion.section
-      className="border-b border-line"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
+    <section className="border-b border-line">
+      <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-20">
           <p className="font-mono text-xs text-accent uppercase tracking-widest mb-4">{t.problem.eyebrow}</p>
           <h2 className="font-sans font-bold text-4xl md:text-5xl text-white mb-4 tracking-tight">
@@ -65,6 +58,6 @@ export default function Problem() {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }

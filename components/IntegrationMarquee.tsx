@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Image from "next/image"
 import { useLang } from "@/lib/i18n"
 
@@ -58,13 +57,7 @@ export default function IntegrationMarquee() {
   const { t } = useLang()
 
   return (
-    <motion.section
-      className="border-b border-line py-12 lg:py-20 overflow-hidden"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
+    <section className="border-b border-line py-20 overflow-hidden">
       <div className="max-w-2xl mx-auto px-6 mb-12 text-center">
         <p className="font-mono text-xs text-accent uppercase tracking-widest mb-5">{t.integrations.eyebrow}</p>
         <h2 className="font-sans font-bold text-3xl md:text-4xl text-white tracking-tight mb-8">{t.integrations.title}</h2>
@@ -76,6 +69,6 @@ export default function IntegrationMarquee() {
         <MarqueeRow tools={row1} />
         <MarqueeRow tools={row2} reverse />
       </div>
-    </motion.section>
+    </section>
   )
 }

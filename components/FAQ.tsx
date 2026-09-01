@@ -39,15 +39,8 @@ export default function FAQ() {
   const { t } = useLang()
 
   return (
-    <motion.section
-      id="faq"
-      className="border-b border-line"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
+    <section id="faq" className="border-b border-line">
+      <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <p className="font-mono text-xs text-accent uppercase tracking-widest mb-4">{t.faq.eyebrow}</p>
           <h2 className="font-sans font-bold text-4xl md:text-5xl text-white tracking-tight">{t.faq.title}</h2>
@@ -59,6 +52,6 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }

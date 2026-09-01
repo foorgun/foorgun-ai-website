@@ -1,20 +1,13 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { useLang } from "@/lib/i18n"
 
 export default function Footer() {
   const { t } = useLang()
 
   return (
-    <motion.footer
-      className="overflow-hidden border-t border-line"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-10 lg:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="overflow-hidden border-t border-line">
+      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
         {/* Col 1 — Brand */}
         <div className="flex flex-col gap-6">
@@ -91,6 +84,6 @@ export default function Footer() {
           foorgun.ai
         </p>
       </div>
-    </motion.footer>
+    </footer>
   )
 }
