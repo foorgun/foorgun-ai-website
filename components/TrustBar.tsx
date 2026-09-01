@@ -1,5 +1,6 @@
 "use client"
 
+import { motion } from "framer-motion"
 import Image from "next/image"
 import { useLang } from "@/lib/i18n"
 
@@ -14,8 +15,14 @@ export default function TrustBar() {
   const { t } = useLang()
 
   return (
-    <section className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
+    <motion.section
+      className="border-b border-line"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-10 lg:py-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
         <p className="font-sans font-bold text-3xl md:text-4xl text-white tracking-tight text-center md:text-left shrink-0">
           {t.trust.copy}
         </p>
@@ -35,6 +42,6 @@ export default function TrustBar() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

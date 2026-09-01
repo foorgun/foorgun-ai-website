@@ -26,8 +26,16 @@ export default function Testimonials() {
   const item = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } }
 
   return (
-    <section ref={sectionRef} id="testimonials" className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-24">
+    <motion.section
+      ref={sectionRef}
+      id="testimonials"
+      className="border-b border-line"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
         <motion.div initial="hidden" animate={controls} variants={container}
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -78,6 +86,6 @@ export default function Testimonials() {
 
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
