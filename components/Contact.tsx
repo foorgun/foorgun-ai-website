@@ -7,7 +7,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="border-b border-line">
-      <div className="max-w-2xl mx-auto px-6 py-24 text-center">
+      <div className="max-w-2xl mx-auto px-6 py-12 lg:py-24 text-center">
         <p className="font-mono text-xs text-accent uppercase tracking-widest mb-5">{t.contact.eyebrow}</p>
         <h2 className="font-sans font-bold text-5xl md:text-6xl leading-[1.0] tracking-tight text-white mb-8">
           {t.contact.headlinePre}

@@ -17,7 +17,7 @@ export default function Process() {
 
   return (
     <section id="process" className="border-b border-line">
-      <div className="max-w-2xl mx-auto px-6 py-24 text-center mb-16">
+      <div className="max-w-2xl mx-auto px-6 py-12 lg:py-24 text-center mb-16">
         <p className="font-mono text-xs text-accent uppercase tracking-widest mb-5">{t.process.eyebrow}</p>
         <h2 className="font-sans font-bold text-4xl md:text-5xl text-white mb-3 tracking-tight">{t.process.title}</h2>
         <p className="text-white-mid font-light">{t.process.subline}</p>

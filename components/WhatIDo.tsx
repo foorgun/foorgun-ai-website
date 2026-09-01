@@ -18,7 +18,7 @@ export default function WhatIDo() {
 
   return (
     <section id="services" className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-24">
+      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
         <div className="text-center mb-16">
           <p className="font-mono text-xs text-accent uppercase tracking-widest mb-4">{t.services.eyebrow}</p>
           <h2 className="font-sans font-bold text-4xl md:text-5xl text-white mb-4 tracking-tight">{t.services.title}</h2>
