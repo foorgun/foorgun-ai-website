@@ -15,7 +15,7 @@ export default function TrustBar() {
 
   return (
     <section className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-10 md:py-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
         <p className="font-sans font-bold text-3xl md:text-4xl text-white tracking-tight text-center md:text-left shrink-0">
           {t.trust.copy}
         </p>

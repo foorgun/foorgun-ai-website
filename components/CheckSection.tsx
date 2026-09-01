@@ -9,7 +9,7 @@ export default function CheckSection() {
 
   return (
     <section id="check" className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
+      <div className="max-w-6xl mx-auto px-6 py-16 lg:py-24">
         <LeadMagnet embedCal={<CalEmbedInline ctaLabel={t.check.result.cta} />} />
       </div>
     </section>

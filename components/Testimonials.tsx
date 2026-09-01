@@ -27,7 +27,7 @@ export default function Testimonials() {
 
   return (
     <section ref={sectionRef} id="testimonials" className="border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24">
+      <div className="max-w-6xl mx-auto px-6 py-16 lg:py-24">
         <motion.div initial="hidden" animate={controls} variants={container}
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
