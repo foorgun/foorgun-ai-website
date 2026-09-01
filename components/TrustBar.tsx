@@ -23,7 +23,14 @@ export default function TrustBar() {
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 opacity-80">
           {LOGOS.map((logo) => (
             <div key={logo.name} className="relative h-8 w-24">
-              <Image src={logo.src} alt={logo.name} fill className="object-contain" />
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 96px, 96px"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

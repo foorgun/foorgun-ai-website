@@ -30,7 +30,7 @@ export default function Process() {
             aria-hidden="true"
           />
 
-          <div className="flex flex-col gap-6 md:gap-10">
+          <div className="flex flex-col gap-10 md:gap-12">
             {t.process.steps.map((s, i) => {
               const isEven = i % 2 === 0
               return (
