@@ -201,7 +201,6 @@ const translations: Record<Lang, Translations> = {
       companyTitle: "Company",
       company: [
         { label: "Legal Notice", href: "/impressum" },
-        { label: "Terms of service", href: "#" },
         { label: "Privacy policy", href: "/datenschutz" },
       ],
       contactTitle: "Contact info",
@@ -473,7 +472,6 @@ const translations: Record<Lang, Translations> = {
       companyTitle: "Unternehmen",
       company: [
         { label: "Impressum", href: "/impressum" },
-        { label: "Nutzungsbedingungen", href: "#" },
         { label: "Datenschutz", href: "/datenschutz" },
       ],
       contactTitle: "Kontakt",
