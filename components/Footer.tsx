@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useLang } from "@/lib/i18n"
 
 export default function Footer() {
@@ -58,11 +59,17 @@ export default function Footer() {
           <p className="font-mono text-xs text-white uppercase tracking-widest">{t.footer.companyTitle}</p>
           <div className="w-full h-px bg-line" />
           <nav className="flex flex-col gap-4">
-            {t.footer.company.map((link) => (
-              <a key={link.label} href={link.href} className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">
-                {link.label}
-              </a>
-            ))}
+            {t.footer.company.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link key={link.label} href={link.href} className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">
+                  {link.label}
+                </Link>
+              ) : (
+                <a key={link.label} href={link.href} className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
         </div>
 

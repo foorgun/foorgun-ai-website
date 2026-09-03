@@ -35,6 +35,13 @@ export type Translations = {
     companyTitle: string; company: { label: string; href: string }[]
     contactTitle: string
   }
+  impressum: {
+    title: string
+    name: string; company: string; street: string; city: string
+    contactTitle: string; phoneLabel: string; emailLabel: string
+    sections: { title: string; body: string }[]
+    back: string
+  }
   check: {
     progressLabel: string
     backButton: string
@@ -178,11 +185,27 @@ const translations: Record<Lang, Translations> = {
       ],
       companyTitle: "Company",
       company: [
-        { label: "About", href: "#" },
+        { label: "Legal Notice", href: "/impressum" },
         { label: "Terms of service", href: "#" },
         { label: "Privacy policy", href: "#" },
       ],
       contactTitle: "Contact info",
+    },
+    impressum: {
+      title: "Legal Notice (Impressum)",
+      name: "Furkan Cetin",
+      company: "Furkan Cetin IT Beratung",
+      street: "Margarete-Steiff-Straße 19",
+      city: "89081 Ulm, Germany",
+      contactTitle: "Contact",
+      phoneLabel: "Phone",
+      emailLabel: "Email",
+      sections: [
+        { title: "Note pursuant to Section 19 of the German VAT Act (UStG)", body: "As a small business owner within the meaning of Section 19 (1) UStG, no VAT is charged." },
+        { title: "German Business Identification Number (Wirtschaftsidentifikationsnummer)", body: "DE324940872" },
+        { title: "Consumer Dispute Resolution", body: "We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board." },
+      ],
+      back: "Back to homepage",
     },
     check: {
       progressLabel: "Step {current} of {total}",
@@ -358,11 +381,27 @@ const translations: Record<Lang, Translations> = {
       ],
       companyTitle: "Unternehmen",
       company: [
-        { label: "Über uns", href: "#" },
+        { label: "Impressum", href: "/impressum" },
         { label: "Nutzungsbedingungen", href: "#" },
         { label: "Datenschutz", href: "#" },
       ],
       contactTitle: "Kontakt",
+    },
+    impressum: {
+      title: "Impressum",
+      name: "Furkan Cetin",
+      company: "Furkan Cetin IT Beratung",
+      street: "Margarete-Steiff-Straße 19",
+      city: "89081 Ulm",
+      contactTitle: "Kontakt",
+      phoneLabel: "Telefon",
+      emailLabel: "E-Mail",
+      sections: [
+        { title: "Hinweis gemäß § 19 UStG", body: "Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet." },
+        { title: "Wirtschaftsidentifikationsnummer", body: "DE324940872" },
+        { title: "Verbraucherstreitbeilegung/Universalschlichtungsstelle", body: "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen." },
+      ],
+      back: "Zurück zur Startseite",
     },
     check: {
       progressLabel: "Schritt {current} von {total}",
