@@ -24,10 +24,10 @@ export default function Contact() {
             {t.contact.cta}
           </a>
           <a
-            href="mailto:hello@foorgun.ai"
+            href="mailto:hello@foorgun.com"
             className="inline-flex items-center gap-2 border border-line text-white-mid font-mono text-sm px-8 py-4 hover:border-white/20 hover:text-white transition-colors duration-150"
           >
-            hello@foorgun.ai
+            hello@foorgun.com
           </a>
         </div>
       </div>

@@ -99,7 +99,7 @@
 
 **Contact**
 
-- Email: [hello@foorgun.ai](mailto:hello@foorgun.ai)  
+- Email: [hello@foorgun.com](mailto:hello@foorgun.com)  
 - CTA: Book a call (Calendly placeholder)
 
 ---

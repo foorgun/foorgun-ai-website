@@ -78,7 +78,7 @@ export default function Footer() {
           <p className="font-mono text-xs text-white uppercase tracking-widest">{t.footer.contactTitle}</p>
           <div className="w-full h-px bg-line" />
           <div className="flex flex-col gap-4">
-            <a href="mailto:hello@foorgun.ai" className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">hello@foorgun.ai</a>
+            <a href="mailto:hello@foorgun.com" className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">hello@foorgun.com</a>
             <a href="tel:+4917622920442" className="font-mono text-sm text-white-mid hover:text-white transition-colors duration-150">+49 176 2292 0442</a>
           </div>
         </div>
