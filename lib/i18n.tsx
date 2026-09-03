@@ -42,6 +42,21 @@ export type Translations = {
     sections: { title: string; body: string }[]
     back: string
   }
+  datenschutz: {
+    title: string
+    sections: {
+      title: string
+      blocks: {
+        title?: string
+        paragraphs?: string[]
+        lines?: string[]
+        phoneLabel?: string
+        emailLabel?: string
+        link?: { label: string; href: string }
+      }[]
+    }[]
+    back: string
+  }
   check: {
     progressLabel: string
     backButton: string
@@ -187,7 +202,7 @@ const translations: Record<Lang, Translations> = {
       company: [
         { label: "Legal Notice", href: "/impressum" },
         { label: "Terms of service", href: "#" },
-        { label: "Privacy policy", href: "#" },
+        { label: "Privacy policy", href: "/datenschutz" },
       ],
       contactTitle: "Contact info",
     },
@@ -204,6 +219,82 @@ const translations: Record<Lang, Translations> = {
         { title: "Note pursuant to Section 19 of the German VAT Act (UStG)", body: "As a small business owner within the meaning of Section 19 (1) UStG, no VAT is charged." },
         { title: "German Business Identification Number (Wirtschaftsidentifikationsnummer)", body: "DE324940872" },
         { title: "Consumer Dispute Resolution", body: "We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board." },
+      ],
+      back: "Back to homepage",
+    },
+    datenschutz: {
+      title: "Privacy Policy",
+      sections: [
+        {
+          title: "1. Data Protection at a Glance",
+          blocks: [
+            { title: "General Information", paragraphs: ["The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you."] },
+            { title: "Who is responsible for data collection on this website?", paragraphs: ["Data processing on this website is carried out by the website operator. Contact details can be found in the section “Notice concerning the responsible party.”"] },
+            { title: "How do we collect your data?", paragraphs: ["Your data is collected in part when you provide it to us (e.g., via the booking calendar). Other data is collected automatically or with your consent when you visit the website (technical data such as browser, operating system, or time of page access)."] },
+            { title: "What do we use your data for?", paragraphs: ["Some data is collected to ensure error-free provision of the website. Other data is processed to schedule appointments via the embedded booking calendar."] },
+            { title: "What rights do you have regarding your data?", paragraphs: ["You have the right to receive free information about the origin, recipients, and purpose of your stored personal data at any time, as well as the right to have this data corrected or deleted. If you have given consent to data processing, you can revoke this consent at any time. You also have the right to lodge a complaint with the competent supervisory authority."] },
+          ],
+        },
+        {
+          title: "2. Hosting",
+          blocks: [
+            {
+              title: "External Hosting",
+              paragraphs: [
+                "This website is hosted externally. The personal data collected on this website is stored on the servers of the hosting provider.",
+                "External hosting is carried out for the purpose of fulfilling contracts with our prospective and existing customers (Art. 6(1)(b) GDPR) and in the interest of secure, fast, and efficient provision of our online services (Art. 6(1)(f) GDPR).",
+                "We use the following hosting provider:",
+              ],
+              lines: ["Vercel Inc.", "340 S Lemon Ave #4133, Walnut, CA 91789, USA"],
+            },
+          ],
+        },
+        {
+          title: "3. General Information and Mandatory Disclosures",
+          blocks: [
+            { title: "Data Protection", paragraphs: ["The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with statutory data protection regulations and this privacy policy."] },
+            {
+              title: "Notice Concerning the Responsible Party",
+              paragraphs: ["The party responsible for data processing on this website is:"],
+              lines: ["Furkan Cetin", "Furkan Cetin IT Beratung", "Margarete-Steiff-Straße 19", "89081 Ulm, Germany"],
+              phoneLabel: "Phone",
+              emailLabel: "Email",
+            },
+            { title: "Storage Duration", paragraphs: ["Unless a more specific storage period has been specified in this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies."] },
+            { title: "Revocation of Your Consent to Data Processing", paragraphs: ["You may revoke consent you have already given at any time. The legality of data processing carried out prior to revocation remains unaffected."] },
+            { title: "Right to Object to Data Collection in Special Cases (Art. 21 GDPR)", paragraphs: ["Where data processing is based on Art. 6(1)(e) or (f) GDPR, you have the right to object to the processing of your data at any time for reasons arising from your particular situation."] },
+            { title: "Right to Lodge a Complaint with the Competent Supervisory Authority", paragraphs: ["In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority."] },
+            { title: "Right to Data Portability", paragraphs: ["You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party."] },
+            { title: "Right of Access, Rectification, and Erasure", paragraphs: ["You have the right to obtain free information about your stored personal data at any time, as well as the right to have this data corrected or deleted."] },
+            { title: "Right to Restriction of Processing", paragraphs: ["You have the right to request the restriction of the processing of your personal data under certain circumstances."] },
+          ],
+        },
+        {
+          title: "4. Data Collection on This Website",
+          blocks: [
+            {
+              title: "Cookies",
+              paragraphs: [
+                "Our websites use cookies. Cookies are small data packages and do not cause any damage to your device. They are stored either temporarily (session cookies) or permanently (persistent cookies).",
+                "Necessary cookies are stored on the basis of Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the storage of necessary cookies for the technically error-free provision of its services.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "5. Appointment Scheduling with Cal.com",
+          blocks: [
+            {
+              paragraphs: [
+                "This website integrates a booking calendar provided by Cal.com, through which you can directly schedule an appointment with us. The provider is Cal.com, Inc.",
+                "When you visit the page with the embedded calendar, a connection to Cal.com’s servers is established. This may involve the transmission of personal data such as your IP address and technical information about your device and browser to Cal.com. If you book an appointment through the calendar, the data you enter (e.g., name, email address, preferred time) is also transmitted to and processed by Cal.com in order to carry out the booking.",
+                "This processing is based on our legitimate interest in efficient and straightforward appointment scheduling (Art. 6(1)(f) GDPR) as well as the performance of pre-contractual measures at your request (Art. 6(1)(b) GDPR).",
+                "Cal.com may process data outside the EU. Further information on data protection at Cal.com is available at:",
+              ],
+              link: { label: "https://cal.com/privacy", href: "https://cal.com/privacy" },
+            },
+          ],
+        },
       ],
       back: "Back to homepage",
     },
@@ -383,7 +474,7 @@ const translations: Record<Lang, Translations> = {
       company: [
         { label: "Impressum", href: "/impressum" },
         { label: "Nutzungsbedingungen", href: "#" },
-        { label: "Datenschutz", href: "#" },
+        { label: "Datenschutz", href: "/datenschutz" },
       ],
       contactTitle: "Kontakt",
     },
@@ -400,6 +491,82 @@ const translations: Record<Lang, Translations> = {
         { title: "Hinweis gemäß § 19 UStG", body: "Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet." },
         { title: "Wirtschaftsidentifikationsnummer", body: "DE324940872" },
         { title: "Verbraucherstreitbeilegung/Universalschlichtungsstelle", body: "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen." },
+      ],
+      back: "Zurück zur Startseite",
+    },
+    datenschutz: {
+      title: "Datenschutzerklärung",
+      sections: [
+        {
+          title: "1. Datenschutz auf einen Blick",
+          blocks: [
+            { title: "Allgemeine Hinweise", paragraphs: ["Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."] },
+            { title: "Wer ist verantwortlich für die Datenerfassung auf dieser Website?", paragraphs: ["Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle“ entnehmen."] },
+            { title: "Wie erfassen wir Ihre Daten?", paragraphs: ["Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. über den Buchungskalender). Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website erfasst (technische Daten wie Browser, Betriebssystem, Uhrzeit des Seitenaufrufs)."] },
+            { title: "Wofür nutzen wir Ihre Daten?", paragraphs: ["Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten werden zur Terminvereinbarung über den eingebundenen Buchungskalender verarbeitet."] },
+            { title: "Welche Rechte haben Sie bezüglich Ihrer Daten?", paragraphs: ["Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten, sowie ein Recht auf Berichtigung oder Löschung. Erteilte Einwilligungen können Sie jederzeit widerrufen. Außerdem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu."] },
+          ],
+        },
+        {
+          title: "2. Hosting",
+          blocks: [
+            {
+              title: "Externes Hosting",
+              paragraphs: [
+                "Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert.",
+                "Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).",
+                "Wir setzen folgenden Hoster ein:",
+              ],
+              lines: ["Vercel Inc.", "340 S Lemon Ave #4133, Walnut, CA 91789, USA"],
+            },
+          ],
+        },
+        {
+          title: "3. Allgemeine Hinweise und Pflichtinformationen",
+          blocks: [
+            { title: "Datenschutz", paragraphs: ["Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."] },
+            {
+              title: "Hinweis zur verantwortlichen Stelle",
+              paragraphs: ["Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:"],
+              lines: ["Furkan Cetin", "Furkan Cetin IT Beratung", "Margarete-Steiff-Straße 19", "89081 Ulm"],
+              phoneLabel: "Telefon",
+              emailLabel: "E-Mail",
+            },
+            { title: "Speicherdauer", paragraphs: ["Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt."] },
+            { title: "Widerruf Ihrer Einwilligung zur Datenverarbeitung", paragraphs: ["Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt."] },
+            { title: "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen (Art. 21 DSGVO)", paragraphs: ["Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Widerspruch einzulegen."] },
+            { title: "Beschwerderecht bei der zuständigen Aufsichtsbehörde", paragraphs: ["Im Falle von Verstößen gegen die DSGVO steht Ihnen ein Beschwerderecht bei einer Aufsichtsbehörde zu."] },
+            { title: "Recht auf Datenübertragbarkeit", paragraphs: ["Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten aushändigen zu lassen."] },
+            { title: "Auskunft, Berichtigung und Löschung", paragraphs: ["Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung."] },
+            { title: "Recht auf Einschränkung der Verarbeitung", paragraphs: ["Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten unter bestimmten Umständen zu verlangen."] },
+          ],
+        },
+        {
+          title: "4. Datenerfassung auf dieser Website",
+          blocks: [
+            {
+              title: "Cookies",
+              paragraphs: [
+                "Unsere Internetseiten verwenden Cookies. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend (Session-Cookies) oder dauerhaft (permanente Cookies) gespeichert.",
+                "Notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung notwendiger Cookies zur technisch fehlerfreien Bereitstellung seiner Dienste.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "5. Terminbuchung mit Cal.com",
+          blocks: [
+            {
+              paragraphs: [
+                "Auf dieser Website ist ein Buchungskalender des Dienstes Cal.com eingebunden, über den Sie direkt einen Termin mit uns vereinbaren können. Anbieter ist Cal.com, Inc.",
+                "Wenn Sie die entsprechende Seite mit dem eingebundenen Kalender aufrufen, wird eine Verbindung zu den Servern von Cal.com hergestellt. Dabei können personenbezogene Daten wie Ihre IP-Adresse sowie technische Daten zu Ihrem Endgerät und Browser an Cal.com übermittelt werden. Wenn Sie über den Kalender einen Termin buchen, werden zusätzlich die von Ihnen eingegebenen Daten (z. B. Name, E-Mail-Adresse, Terminwunsch) an Cal.com übermittelt und dort verarbeitet, um die Terminbuchung durchzuführen.",
+                "Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer effizienten und unkomplizierten Terminvereinbarung (Art. 6 Abs. 1 lit. f DSGVO) sowie zur Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin (Art. 6 Abs. 1 lit. b DSGVO).",
+                "Cal.com kann Daten auch außerhalb der EU verarbeiten. Weitere Informationen zum Datenschutz bei Cal.com finden Sie unter:",
+              ],
+              link: { label: "https://cal.com/privacy", href: "https://cal.com/privacy" },
+            },
+          ],
+        },
       ],
       back: "Zurück zur Startseite",
     },
