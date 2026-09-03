@@ -116,7 +116,7 @@ const translations: Record<Lang, Translations> = {
       cards: [
         { title: "Lead Generation", description: "Leads go cold before anyone follows up. I build systems that qualify and follow up automatically." },
         { title: "Content Planning & Production", description: "Content eats your whole week or gets inconsistent. I build pipelines that plan, draft, and publish on schedule." },
-        { title: "Agency & Campaign Operations", description: "Managing the same process separately per client or campaign stops scaling. I build one system that runs it for all of them.", note: "Saved a marketing agency 15-20 hours/week across 15+ clients." },
+        { title: "Agency & Campaign Operations", description: "Managing the same process separately per client or campaign stops scaling. I build one system that runs it for all of them." },
         { title: "Sales & Customer Communication", description: "Your team answers the same questions daily. I build AI agents that read, draft, and follow up automatically." },
         { title: "Recruiting & Applicant Screening", description: "AI made mass-applying effortless — HR drowns in it. I build systems that match and rank candidates automatically." },
         { title: "Internal Operations & Reporting", description: "Data lives in five different tools, none of them synced. I connect your stack into one source of truth." },
@@ -291,12 +291,12 @@ const translations: Record<Lang, Translations> = {
     integrations: { eyebrow: "Integrationen", title: "Funktioniert mit den Tools, die du bereits nutzt" },
     services: {
       eyebrow: "Unsere Leistungen",
-      title: "Was ich mache",
+      title: "Woran wir arbeiten",
       subline: "Wo ich einsteige, um deine Systeme intelligenter zu machen.",
       cards: [
         { title: "Leadgenerierung", description: "Leads werden kalt, bevor jemand nachfasst. Ich baue Systeme, die automatisch qualifizieren und nachfassen." },
         { title: "Content-Planung & Produktion", description: "Content frisst deine ganze Woche oder wird unregelmäßig. Ich baue Pipelines, die nach Zeitplan planen, entwerfen und veröffentlichen." },
-        { title: "Agentur- & Kampagnen-Betrieb", description: "Denselben Prozess separat pro Kunde oder Kampagne zu steuern, skaliert nicht. Ich baue ein System, das es für alle zusammen übernimmt.", note: "Hat einer Marketing-Agentur 15–20 Stunden pro Woche über 15+ Kunden hinweg gespart." },
+        { title: "Agentur- & Kampagnen-Betrieb", description: "Denselben Prozess separat pro Kunde oder Kampagne zu steuern, skaliert nicht. Ich baue ein System, das es für alle zusammen übernimmt." },
         { title: "Vertrieb & Kundenkommunikation", description: "Dein Team beantwortet täglich dieselben Fragen. Ich baue KI-Agenten, die lesen, entwerfen und automatisch nachfassen." },
         { title: "Recruiting & Bewerber-Screening", description: "KI macht Massenbewerbungen mühelos — HR versinkt darin. Ich baue Systeme, die Kandidaten automatisch matchen und ranken." },
         { title: "Interne Abläufe & Reporting", description: "Daten liegen in fünf verschiedenen Tools, keines davon synchron. Ich verbinde deinen Stack zu einer einzigen verlässlichen Quelle." },
