@@ -26,7 +26,7 @@ export type Translations = {
   }
   testimonials: {
     eyebrow: string; title: string; subline: string
-    items: { name: string; role: string; company: string; content: string; rating: number }[]
+    items: { name: string; role: string; company: string; content: string; rating: number; image?: string }[]
   }
   faq: { eyebrow: string; title: string; items: { q: string; a: string }[] }
   contact: { eyebrow: string; headlinePre: string; headlineAccent: string; description: string; cta: string }
@@ -141,9 +141,9 @@ const translations: Record<Lang, Translations> = {
       title: "What clients say",
       subline: "Real results from teams that decided to stop doing things manually.",
       items: [
-        { name: "Soojin Joung", role: "CEO",     company: "BAZZAAL",                   content: "Working with Furkan transformed how we manage our influencer campaigns. What used to take days now runs automatically.", rating: 5 },
-        { name: "Owner",        role: "Founder", company: "ViUnlimited",                content: "Furkan automated our entire content pipeline. Our team saves hours every week and the results speak for themselves.", rating: 5 },
-        { name: "Patrick Wings",role: "Owner",   company: "Digital Marketing Services", content: "Exactly the kind of technical partner you want — delivers what he promises, no fluff.", rating: 5 },
+        { name: "Daniela Dávila", role: "COO",     company: "BAZZAAL",                   content: "Furkan is really good at understanding what the business needs and finding the most practical solutions that actually work. Having worked with him for the past year, I've found him to be reliable, proactive, and always thinking of ways to make things better and more efficient.", rating: 5, image: "/testimonials/daniela-davila.jpg" },
+        { name: "Owner",          role: "Founder", company: "ViUnlimited",                content: "Furkan automated our entire content pipeline. Our team saves hours every week and the results speak for themselves.", rating: 5, image: "/testimonials/sandra-schmidt.webp" },
+        { name: "Patrick Wings",  role: "Owner",   company: "Digital Marketing Services", content: "Exactly the kind of technical partner you want — delivers what he promises, no fluff.", rating: 5, image: "/testimonials/patrick-wings.avif" },
       ],
     },
     faq: {
@@ -321,9 +321,9 @@ const translations: Record<Lang, Translations> = {
       title: "Was Kunden sagen",
       subline: "Echte Ergebnisse von Teams, die aufgehört haben, alles manuell zu erledigen.",
       items: [
-        { name: "Soojin Joung", role: "CEO",       company: "BAZZAAL",                   content: "Die Zusammenarbeit mit Furkan hat unser Influencer-Kampagnen-Management komplett verändert. Was früher Tage dauerte, läuft jetzt automatisch.", rating: 5 },
-        { name: "Inhaberin",    role: "Gründerin", company: "ViUnlimited",                content: "Furkan hat unsere gesamte Content-Pipeline automatisiert. Unser Team spart jede Woche Stunden — die Ergebnisse sprechen für sich.", rating: 5 },
-        { name: "Patrick Wings",role: "Inhaber",   company: "Digital Marketing Services", content: "Genau die Art von technischem Partner, den man sich wünscht — liefert was er verspricht, ohne Umwege.", rating: 5 },
+        { name: "Daniela Dávila", role: "COO",       company: "BAZZAAL",                   content: "Furkan versteht wirklich gut, was das Geschäft braucht, und findet die praktischsten Lösungen, die tatsächlich funktionieren. Ich arbeite schon ein Jahr mit ihm zusammen und habe ihn als zuverlässig, proaktiv und ständig auf der Suche nach Verbesserungen erlebt.", rating: 5, image: "/testimonials/daniela-davila.jpg" },
+        { name: "Inhaberin",      role: "Gründerin", company: "ViUnlimited",                content: "Furkan hat unsere gesamte Content-Pipeline automatisiert. Unser Team spart jede Woche Stunden — die Ergebnisse sprechen für sich.", rating: 5, image: "/testimonials/sandra-schmidt.webp" },
+        { name: "Patrick Wings",  role: "Inhaber",   company: "Digital Marketing Services", content: "Genau die Art von technischem Partner, den man sich wünscht — liefert was er verspricht, ohne Umwege.", rating: 5, image: "/testimonials/patrick-wings.avif" },
       ],
     },
     faq: {

@@ -3,9 +3,16 @@
 import { useEffect, useRef, useState } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { Star } from "lucide-react"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 import { useLang } from "@/lib/i18n"
+
+const LOGOS = [
+  { name: "BAZZAAL", src: "/logos/bazzaal.png" },
+  { name: "ViUnlimited", src: "/logos/viunlimited.png" },
+  { name: "ABM Becker & Cetin", src: "/logos/abm-becker-cetin.png" },
+  { name: "Patrick Wings", src: "/logos/patrick-wings.png" },
+]
 
 export default function Testimonials() {
   const { t } = useLang()
@@ -20,7 +27,7 @@ export default function Testimonials() {
   useEffect(() => {
     const id = setInterval(() => setActiveIndex((i) => (i + 1) % testimonials.length), 5000)
     return () => clearInterval(id)
-  }, [])
+  }, [testimonials.length])
 
   const container = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.15 } } }
   const item = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } }
@@ -46,22 +53,23 @@ export default function Testimonials() {
             </div>
           </motion.div>
 
-          <motion.div variants={item} className="relative min-h-[320px]">
+          <motion.div variants={item} className="grid grid-cols-1">
             {testimonials.map((testimonial, i) => (
-              <motion.div key={i} className="absolute inset-0"
+              <motion.div key={i} className="relative col-start-1 row-start-1"
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: activeIndex === i ? 1 : 0, x: activeIndex === i ? 0 : 80, scale: activeIndex === i ? 1 : 0.96 }}
                 transition={{ duration: 0.45, ease: "easeInOut" }}
                 style={{ zIndex: activeIndex === i ? 10 : 0 }}
               >
-                <div className="bg-surface border border-line p-8 h-full flex flex-col">
+                <div className="bg-surface border border-line px-8 py-8 pb-16 flex flex-col">
                   <div className="flex gap-1 mb-6">
                     {Array(testimonial.rating).fill(0).map((_, si) => <Star key={si} className="w-4 h-4 fill-accent text-accent" />)}
                   </div>
                   <p className="text-white text-lg font-light leading-relaxed flex-1 mb-6">&ldquo;{testimonial.content}&rdquo;</p>
                   <Separator className="mb-6" />
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 mt-auto">
                     <Avatar className="h-11 w-11 border border-line">
+                      {testimonial.image && <AvatarImage src={testimonial.image} alt={testimonial.name} />}
                       <AvatarFallback className="font-mono text-xs text-white-mid">{testimonial.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div>
@@ -72,10 +80,25 @@ export default function Testimonials() {
                 </div>
               </motion.div>
             ))}
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/5 pointer-events-none" />
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/5 pointer-events-none" />
           </motion.div>
 
+        </motion.div>
+
+        <motion.div initial="hidden" animate={controls} variants={item}
+          className="border-t border-line pt-16 mt-16">
+          <p className="text-center text-white-mid font-light text-sm mb-8 font-mono uppercase tracking-widest">Trusted by teams</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 opacity-80">
+            {LOGOS.map((logo) => (
+              <div key={logo.name} className="h-8 w-24 flex items-center justify-center">
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

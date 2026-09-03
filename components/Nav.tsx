@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useLang, type Lang } from "@/lib/i18n"
 
 const LANGS: Lang[] = ["EN", "DE"]
@@ -10,8 +11,15 @@ export default function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-line bg-bg/90 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="font-mono text-accent text-base tracking-tight">
-          foorgun.ai
+        <a href="/" className="flex items-center">
+          <Image
+            src="/logos/foorgun-logo.png"
+            alt="foorgun.ai"
+            width={637}
+            height={95}
+            className="h-10 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop center links */}

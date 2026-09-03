@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
 import Problem from "@/components/Problem";
 import Approach from "@/components/Approach";
 import Stats from "@/components/Stats";
@@ -19,7 +18,7 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <Nav />
       <Hero />
-      <TrustBar />
+      <Testimonials />
       <Problem />
       <Stats />
       <Approach />
@@ -27,7 +26,6 @@ export default function Home() {
       <WhatIDo />
       <Process />
       <FitCheck />
-      <Testimonials />
       <CheckSection />
       <FAQ />
       <Contact />
