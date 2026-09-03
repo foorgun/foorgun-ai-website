@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Mono } from "next/font/google";
 import { LangProvider } from "@/lib/i18n";
+import { ConsentProvider } from "@/lib/consent";
+import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -32,7 +34,12 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${dmMono.variable} antialiased`}
       >
-        <LangProvider>{children}</LangProvider>
+        <ConsentProvider>
+          <LangProvider>
+            {children}
+            <CookieBanner />
+          </LangProvider>
+        </ConsentProvider>
       </body>
     </html>
   );

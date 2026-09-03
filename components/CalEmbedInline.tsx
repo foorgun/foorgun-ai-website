@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight } from "lucide-react"
+import { useConsent } from "@/lib/consent"
+import { useLang } from "@/lib/i18n"
 
 const CAL_ORIGIN = "https://cal.eu"
 const CAL_LINK = "foorgun/15min"
@@ -55,8 +57,16 @@ function loadCalSnippet() {
 export default function CalEmbedInline({ ctaLabel }: { ctaLabel: string }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [status, setStatus] = useState<"loading" | "ready" | "failed">("loading")
+  const { consent, ready } = useConsent()
+  const { t } = useLang()
+
+  // Loaded automatically only with full consent. Otherwise the visitor has to
+  // ask for it explicitly, which counts as consent for this single case.
+  const [loadedByClick, setLoadedByClick] = useState(false)
+  const shouldLoad = ready && (consent === "all" || loadedByClick)
 
   useEffect(() => {
+    if (!shouldLoad) return
     let cancelled = false
 
     const fallbackTimer = setTimeout(() => {
@@ -104,7 +114,25 @@ export default function CalEmbedInline({ ctaLabel }: { ctaLabel: string }) {
       cancelled = true
       clearTimeout(fallbackTimer)
     }
-  }, [])
+  }, [shouldLoad])
+
+  if (!shouldLoad) {
+    // Nothing is requested from Cal.com until this button is pressed.
+    return (
+      <div className="w-full border border-line bg-surface p-8 flex flex-col items-start gap-5">
+        <p className="text-white-mid font-light text-sm leading-relaxed">
+          {t.cookies.calBlockedText}
+        </p>
+        <button
+          onClick={() => setLoadedByClick(true)}
+          className="inline-flex items-center gap-2 bg-accent text-white font-mono text-sm font-medium px-6 py-3 rounded-full hover:opacity-90 transition-opacity duration-150"
+        >
+          {t.cookies.calLoadButton}
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      </div>
+    )
+  }
 
   if (status === "failed") {
     return (

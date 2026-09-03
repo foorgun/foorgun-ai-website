@@ -2,9 +2,11 @@
 
 import Link from "next/link"
 import { useLang } from "@/lib/i18n"
+import { useConsent } from "@/lib/consent"
 
 export default function Footer() {
   const { t } = useLang()
+  const { openSettings } = useConsent()
 
   return (
     <footer className="overflow-hidden border-t border-line">
@@ -70,6 +72,12 @@ export default function Footer() {
                 </a>
               )
             )}
+            <button
+              onClick={openSettings}
+              className="text-left font-mono text-sm text-white-mid hover:text-white transition-colors duration-150"
+            >
+              {t.cookies.settings}
+            </button>
           </nav>
         </div>
 

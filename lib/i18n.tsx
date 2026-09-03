@@ -57,6 +57,16 @@ export type Translations = {
     }[]
     back: string
   }
+  cookies: {
+    textBefore: string
+    policyLabel: string
+    textAfter: string
+    acceptAll: string
+    necessaryOnly: string
+    settings: string
+    calBlockedText: string
+    calLoadButton: string
+  }
   check: {
     progressLabel: string
     backButton: string
@@ -296,6 +306,16 @@ const translations: Record<Lang, Translations> = {
         },
       ],
       back: "Back to homepage",
+    },
+    cookies: {
+      textBefore: "This website uses cookies, including for appointment scheduling via Cal.com. Learn more in our ",
+      policyLabel: "Privacy Policy",
+      textAfter: ".",
+      acceptAll: "Accept all",
+      necessaryOnly: "Only necessary",
+      settings: "Cookie settings",
+      calBlockedText: "The booking calendar is loaded from Cal.com. Loading it transmits data to Cal.com, including your IP address.",
+      calLoadButton: "Load calendar and book a call",
     },
     check: {
       progressLabel: "Step {current} of {total}",
@@ -567,6 +587,16 @@ const translations: Record<Lang, Translations> = {
         },
       ],
       back: "Zurück zur Startseite",
+    },
+    cookies: {
+      textBefore: "Diese Website nutzt Cookies, u. a. für die Terminbuchung über Cal.com. Mehr dazu in unserer ",
+      policyLabel: "Datenschutzerklärung",
+      textAfter: ".",
+      acceptAll: "Alle akzeptieren",
+      necessaryOnly: "Nur technisch notwendig",
+      settings: "Cookie-Einstellungen",
+      calBlockedText: "Der Buchungskalender wird von Cal.com geladen. Dabei werden Daten an Cal.com übertragen, unter anderem deine IP-Adresse.",
+      calLoadButton: "Kalender laden und Termin buchen",
     },
     check: {
       progressLabel: "Schritt {current} von {total}",
