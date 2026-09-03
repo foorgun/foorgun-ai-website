@@ -31,9 +31,11 @@ export default function Hero() {
           {/* Desktop: Two-column grid, Mobile: single column */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
 
-            {/* Text — On mobile: headline + subline first */}
-            <div>
-              <h1 className="font-sans font-extrabold text-[7.5vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] leading-[1.25] tracking-tight text-white mb-6">
+            {/* Text column. On mobile this is a flex column so the image can be
+                ordered between headline and subline; from lg it is a plain block
+                again, where `order` has no effect and the DOM order applies. */}
+            <div className="flex flex-col lg:block">
+              <h1 className="order-1 font-sans font-extrabold text-[7.5vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] leading-[1.25] tracking-tight text-white mb-6">
                 <span className="block">{t.hero.line1}</span>
                 <span className="block mt-3 sm:mt-4">
                   {t.hero.line2Before}
@@ -58,12 +60,12 @@ export default function Hero() {
                 </span>
               </h1>
 
-              <p className="text-white-mid text-base sm:text-lg leading-relaxed mb-10 max-w-lg font-light">
+              <p className="order-3 text-white-mid text-base sm:text-lg leading-relaxed mb-10 max-w-lg font-light">
                 {t.hero.subline}
               </p>
 
-              {/* Mobile: Image after subline */}
-              <div className="lg:hidden mb-10">
+              {/* Mobile only: sits between headline and subline */}
+              <div className="order-2 lg:hidden mb-10">
                 <div className="relative w-full aspect-[4/3] overflow-hidden bg-surface-2 rounded-lg">
                   <Image src="/furkan.png" alt="Furkan Cetin" fill className="object-cover object-top" priority />
                   <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg/60 to-transparent pointer-events-none" />
@@ -71,7 +73,7 @@ export default function Hero() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="order-4 flex flex-wrap items-center gap-4">
                 <a
                   href="https://cal.eu/foorgun/15min"
                   target="_blank"
