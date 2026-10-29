@@ -14,7 +14,7 @@
 ## Project Overview
 
 **Client:** foorgun.ai — AI & Automation Consultancy  
-**Owner:** Furkan Cetin, Ulm, Germany  
+**Owner:** Furkan Cetin  
 **Stack:** Next.js 14 · Tailwind CSS · TypeScript  
 **Hosting:** Cloudflare Pages  
 **Repo:** GitHub

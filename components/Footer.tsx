@@ -38,7 +38,6 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <p className="font-mono text-xs text-white-muted">Ulm, Germany</p>
             <p className="font-mono text-xs text-white-muted">© {new Date().getFullYear()} Furkan Cetin</p>
           </div>
         </div>
