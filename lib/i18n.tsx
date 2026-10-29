@@ -240,7 +240,7 @@ const translations: Record<Lang, Translations> = {
             { title: "General Information", paragraphs: ["The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you."] },
             { title: "Who is responsible for data collection on this website?", paragraphs: ["Data processing on this website is carried out by the website operator. Contact details can be found in the section “Notice concerning the responsible party.”"] },
             { title: "How do we collect your data?", paragraphs: ["Your data is collected in part when you provide it to us (e.g., via the booking calendar). Other data is collected automatically or with your consent when you visit the website (technical data such as browser, operating system, or time of page access)."] },
-            { title: "What do we use your data for?", paragraphs: ["Some data is collected to ensure error-free provision of the website. Other data is processed to schedule appointments via the embedded booking calendar."] },
+            { title: "What do we use your data for?", paragraphs: ["Some data is collected to ensure error-free provision of the website. Other data is processed to schedule appointments via the embedded booking calendar or to statistically analyze how the website is used."] },
             { title: "What rights do you have regarding your data?", paragraphs: ["You have the right to receive free information about the origin, recipients, and purpose of your stored personal data at any time, as well as the right to have this data corrected or deleted. If you have given consent to data processing, you can revoke this consent at any time. You also have the right to lodge a complaint with the competent supervisory authority."] },
           ],
         },
@@ -301,6 +301,21 @@ const translations: Record<Lang, Translations> = {
                 "Cal.com may process data outside the EU. Further information on data protection at Cal.com is available at:",
               ],
               link: { label: "https://cal.com/privacy", href: "https://cal.com/privacy" },
+            },
+          ],
+        },
+        {
+          title: "6. Web Analytics with Vercel Web Analytics",
+          blocks: [
+            {
+              paragraphs: [
+                "This website uses Vercel Web Analytics, a web analytics service provided by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. It helps us understand how visitors use our website so we can improve its content and usability.",
+                "Vercel Web Analytics does not use cookies and does not store any information on your device. Visitors are not identified across websites or over longer periods. Instead, a hash is generated from the incoming request that is only valid for one day and is then automatically discarded.",
+                "The following data is collected: the page visited, the referring website (referrer), the time of access, and general information about your device such as browser, operating system, device type, and country (derived from the IP address). The IP address itself is not stored. The data is only evaluated in aggregated form.",
+                "Processing is based on our legitimate interest in the statistical analysis of user behavior in order to optimize our website (Art. 6(1)(f) GDPR).",
+                "Vercel may process data in the USA. Vercel is certified under the EU-U.S. Data Privacy Framework (DPF). Further information on data protection at Vercel is available at:",
+              ],
+              link: { label: "https://vercel.com/docs/analytics/privacy-policy", href: "https://vercel.com/docs/analytics/privacy-policy" },
             },
           ],
         },
@@ -521,7 +536,7 @@ const translations: Record<Lang, Translations> = {
             { title: "Allgemeine Hinweise", paragraphs: ["Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."] },
             { title: "Wer ist verantwortlich für die Datenerfassung auf dieser Website?", paragraphs: ["Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle“ entnehmen."] },
             { title: "Wie erfassen wir Ihre Daten?", paragraphs: ["Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. über den Buchungskalender). Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website erfasst (technische Daten wie Browser, Betriebssystem, Uhrzeit des Seitenaufrufs)."] },
-            { title: "Wofür nutzen wir Ihre Daten?", paragraphs: ["Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten werden zur Terminvereinbarung über den eingebundenen Buchungskalender verarbeitet."] },
+            { title: "Wofür nutzen wir Ihre Daten?", paragraphs: ["Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten werden zur Terminvereinbarung über den eingebundenen Buchungskalender oder zur statistischen Auswertung der Websitenutzung verarbeitet."] },
             { title: "Welche Rechte haben Sie bezüglich Ihrer Daten?", paragraphs: ["Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten, sowie ein Recht auf Berichtigung oder Löschung. Erteilte Einwilligungen können Sie jederzeit widerrufen. Außerdem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu."] },
           ],
         },
@@ -582,6 +597,21 @@ const translations: Record<Lang, Translations> = {
                 "Cal.com kann Daten auch außerhalb der EU verarbeiten. Weitere Informationen zum Datenschutz bei Cal.com finden Sie unter:",
               ],
               link: { label: "https://cal.com/privacy", href: "https://cal.com/privacy" },
+            },
+          ],
+        },
+        {
+          title: "6. Webanalyse mit Vercel Web Analytics",
+          blocks: [
+            {
+              paragraphs: [
+                "Diese Website nutzt Vercel Web Analytics, einen Webanalysedienst der Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Damit können wir nachvollziehen, wie Besucher unsere Website nutzen, und Inhalte sowie Bedienbarkeit verbessern.",
+                "Vercel Web Analytics verwendet keine Cookies und speichert keine Informationen auf Ihrem Endgerät. Besucher werden weder websiteübergreifend noch über längere Zeiträume wiedererkannt. Stattdessen wird aus der eingehenden Anfrage ein Hash erzeugt, der nur einen Tag gültig ist und danach automatisch verworfen wird.",
+                "Erfasst werden: die aufgerufene Seite, die verweisende Website (Referrer), der Zeitpunkt des Aufrufs sowie allgemeine Angaben zu Ihrem Endgerät wie Browser, Betriebssystem, Gerätetyp und Land (abgeleitet aus der IP-Adresse). Die IP-Adresse selbst wird nicht gespeichert. Die Daten werden ausschließlich in aggregierter Form ausgewertet.",
+                "Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an der statistischen Analyse des Nutzerverhaltens zur Optimierung unserer Website (Art. 6 Abs. 1 lit. f DSGVO).",
+                "Vercel kann Daten in den USA verarbeiten. Vercel ist unter dem EU-U.S. Data Privacy Framework (DPF) zertifiziert. Weitere Informationen zum Datenschutz bei Vercel finden Sie unter:",
+              ],
+              link: { label: "https://vercel.com/docs/analytics/privacy-policy", href: "https://vercel.com/docs/analytics/privacy-policy" },
             },
           ],
         },

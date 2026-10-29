@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, DM_Mono } from "next/font/google";
 import { LangProvider } from "@/lib/i18n";
 import { ConsentProvider } from "@/lib/consent";
 import CookieBanner from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -40,6 +41,7 @@ export default function RootLayout({
             <CookieBanner />
           </LangProvider>
         </ConsentProvider>
+        <Analytics />
       </body>
     </html>
   );
