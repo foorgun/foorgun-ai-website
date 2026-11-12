@@ -5,8 +5,8 @@ import { ArrowRight } from "lucide-react"
 import { useConsent } from "@/lib/consent"
 import { useLang } from "@/lib/i18n"
 
-const CAL_ORIGIN = "https://cal.eu"
-const CAL_LINK = "foorgun/15min"
+export const CAL_ORIGIN = "https://cal.eu"
+export const CAL_LINK = "foorgun/15min"
 const CAL_URL = `${CAL_ORIGIN}/${CAL_LINK}`
 const NAMESPACE = "15min"
 const FALLBACK_TIMEOUT_MS = 8000
@@ -19,7 +19,7 @@ declare global {
 }
 
 // Official Cal.com embed loader snippet (works for cal.eu — same open-source embed API).
-function loadCalSnippet() {
+export function loadCalSnippet() {
   ;(function (C: any, A: string, L: string) {
     const p = function (a: any, ar: any) {
       a.q.push(ar)

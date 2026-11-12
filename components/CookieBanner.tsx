@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useConsent } from "@/lib/consent"
 import { useLang } from "@/lib/i18n"
 
@@ -9,7 +10,11 @@ export default function CookieBanner() {
   const { t } = useLang()
   const c = t.cookies
 
-  if (!bannerOpen) return null
+  const pathname = usePathname()
+
+  // Consent betrifft nur das eingebettete Cal.com (nur auf /check).
+  // Die übrigen Seiten verlinken Cal nur, dort braucht es kein Banner.
+  if (!bannerOpen || !pathname?.startsWith("/check")) return null
 
   return (
     <div

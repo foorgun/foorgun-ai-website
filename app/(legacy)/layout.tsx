@@ -4,7 +4,7 @@ import { LangProvider } from "@/lib/i18n";
 import { ConsentProvider } from "@/lib/consent";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -20,6 +20,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://foorgun.ai"),
   title: "foorgun.ai — AI & Automation Consultancy",
   description:
     "Furkan Cetin turns manual work into automated systems. Operations, marketing, content — smarter workflows for growing teams.",

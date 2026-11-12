@@ -89,7 +89,7 @@ export type Translations = {
   }
 }
 
-const translations: Record<Lang, Translations> = {
+export const translations: Record<Lang, Translations> = {
   EN: {
     nav: { services: "Services", process: "Process", testimonials: "Testimonials", cta: "Book a call" },
     hero: {
@@ -287,6 +287,14 @@ const translations: Record<Lang, Translations> = {
                 "Necessary cookies are stored on the basis of Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the storage of necessary cookies for the technically error-free provision of its services.",
               ],
             },
+            {
+              title: "Contact via WhatsApp",
+              paragraphs: [
+                "Our website contains links to WhatsApp. Clicking such a link opens WhatsApp or the WhatsApp website; no data is transmitted to WhatsApp before you click. The provider is WhatsApp Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Ireland.",
+                "If you contact us via WhatsApp, the data you send (e.g. phone number, name, message content) is processed by WhatsApp and by us in order to handle your enquiry (Art. 6(1)(b) GDPR). WhatsApp may process data outside the EU. Further information on data protection at WhatsApp is available at:",
+              ],
+              link: { label: "https://www.whatsapp.com/legal/privacy-policy-eea", href: "https://www.whatsapp.com/legal/privacy-policy-eea" },
+            },
           ],
         },
         {
@@ -295,7 +303,7 @@ const translations: Record<Lang, Translations> = {
             {
               paragraphs: [
                 "This website integrates a booking calendar provided by Cal.com, through which you can directly schedule an appointment with us. The provider is Cal.com, Inc.",
-                "When you visit the page with the embedded calendar, a connection to Cal.com’s servers is established. This may involve the transmission of personal data such as your IP address and technical information about your device and browser to Cal.com. If you book an appointment through the calendar, the data you enter (e.g., name, email address, preferred time) is also transmitted to and processed by Cal.com in order to carry out the booking.",
+                "The calendar is only loaded once you actively click to load it (on the /check page, alternatively once you have accepted all cookies). Only then is a connection to Cal.com’s servers established. This may involve the transmission of personal data such as your IP address and technical information about your device and browser to Cal.com. If you book an appointment through the calendar, the data you enter (e.g., name, email address, preferred time) is also transmitted to and processed by Cal.com in order to carry out the booking.",
                 "This processing is based on our legitimate interest in efficient and straightforward appointment scheduling (Art. 6(1)(f) GDPR) as well as the performance of pre-contractual measures at your request (Art. 6(1)(b) GDPR).",
                 "Cal.com may process data outside the EU. Further information on data protection at Cal.com is available at:",
               ],
@@ -582,6 +590,14 @@ const translations: Record<Lang, Translations> = {
                 "Notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung notwendiger Cookies zur technisch fehlerfreien Bereitstellung seiner Dienste.",
               ],
             },
+            {
+              title: "Kontakt per WhatsApp",
+              paragraphs: [
+                "Unsere Website enthält Links zu WhatsApp. Ein Klick darauf öffnet WhatsApp bzw. die WhatsApp-Website; vor dem Klick werden keine Daten an WhatsApp übertragen. Anbieter ist die WhatsApp Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland.",
+                "Wenn Sie uns über WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten (z. B. Telefonnummer, Name, Nachrichteninhalt) von WhatsApp und von uns verarbeitet, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b DSGVO). WhatsApp kann Daten auch außerhalb der EU verarbeiten. Weitere Informationen zum Datenschutz bei WhatsApp finden Sie unter:",
+              ],
+              link: { label: "https://www.whatsapp.com/legal/privacy-policy-eea", href: "https://www.whatsapp.com/legal/privacy-policy-eea" },
+            },
           ],
         },
         {
@@ -590,7 +606,7 @@ const translations: Record<Lang, Translations> = {
             {
               paragraphs: [
                 "Auf dieser Website ist ein Buchungskalender des Dienstes Cal.com eingebunden, über den Sie direkt einen Termin mit uns vereinbaren können. Anbieter ist Cal.com, Inc.",
-                "Wenn Sie die entsprechende Seite mit dem eingebundenen Kalender aufrufen, wird eine Verbindung zu den Servern von Cal.com hergestellt. Dabei können personenbezogene Daten wie Ihre IP-Adresse sowie technische Daten zu Ihrem Endgerät und Browser an Cal.com übermittelt werden. Wenn Sie über den Kalender einen Termin buchen, werden zusätzlich die von Ihnen eingegebenen Daten (z. B. Name, E-Mail-Adresse, Terminwunsch) an Cal.com übermittelt und dort verarbeitet, um die Terminbuchung durchzuführen.",
+                "Der Kalender wird erst geladen, wenn Sie ihn aktiv per Klick laden (auf der Seite /check alternativ, wenn Sie alle Cookies akzeptiert haben). Erst dann wird eine Verbindung zu den Servern von Cal.com hergestellt. Dabei können personenbezogene Daten wie Ihre IP-Adresse sowie technische Daten zu Ihrem Endgerät und Browser an Cal.com übermittelt werden. Wenn Sie über den Kalender einen Termin buchen, werden zusätzlich die von Ihnen eingegebenen Daten (z. B. Name, E-Mail-Adresse, Terminwunsch) an Cal.com übermittelt und dort verarbeitet, um die Terminbuchung durchzuführen.",
                 "Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer effizienten und unkomplizierten Terminvereinbarung (Art. 6 Abs. 1 lit. f DSGVO) sowie zur Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin (Art. 6 Abs. 1 lit. b DSGVO).",
                 "Cal.com kann Daten auch außerhalb der EU verarbeiten. Weitere Informationen zum Datenschutz bei Cal.com finden Sie unter:",
               ],

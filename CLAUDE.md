@@ -1,174 +1,45 @@
-# CLAUDE.md — foorgun.ai Website
+# foorgun.ai – Projektkontext für Claude Code
 
-## Always Do First
+## Wer / was
+Furkan Çetin, Wirtschaftsinformatiker, selbstständig als **foorgun.ai** (AI & Automation). Remote, Sprachen: DE, EN, TR.
+Ziel der Seite: Leads über ein kostenloses 15-Min-Gespräch (Cal: https://cal.eu/foorgun/15min), alternativ WhatsApp/E-Mail (hello@foorgun.com).
 
-- **Invoke the 'frontend-design' skill** before writing any frontend code, every session, no exceptions.
+## Positionierung (aktuell)
+- Headline Startseite (bewusst so gewollt): **"Bau ein Unternehmen, das für dich arbeitet. Nicht umgekehrt."**
+- Differenzierung direkt darunter: Prozess zuerst, nicht Tool. "Erst verstehe ich, wie du arbeitest. Dann baue ich das, was dir jede Woche Stunden spart."
+- Positionierung: AI / Intelligent Automation Engineer. Drei Sparten, die aufeinander aufbauen: Automation → Software & Plattformen (interne Software, CRM, Kundenportale, Websites mit Online-Buchung) → KI-Coaching. Websites nicht in der Hauptnavigation, aber /websites bleibt (verlinkt von /software und Footer).
+- Ablauf: Zuerst verstehen → Klein anfangen → Dann ausbauen.
+- Zielgruppe: Unternehmen jeder Größe, Selbstständige, lokale Betriebe.
 
-- Read this entire file before writing any code  
-- Check existing file structure before creating new files  
-- Never overwrite files without reading them first  
-- Run `npm run dev` to preview before considering a task done
+## Ton
+Direkt, ehrlich, konkret, kein Buzzword-Bingo, keine Rechtsberatung-Formulierungen. Kundenfokus und Prozessfokus vor Tool-Fokus. Anrede: **immer duzen** (du/dich/dein), auf allen Seiten und in Blog-Artikeln. Ausnahme: Rechtstexte (Impressum/Datenschutz) bleiben beim "Sie". FAQ-Fragen aus Kundensicht dürfen "wir" verwenden ("Brauchen wir Vorwissen?").
+Kein Roboyo / UiPath / Arbeitgebernamen in der Außendarstellung (bewusst entfernt). BAZZAAL darf genannt werden (Logo in "Trusted by teams", Testimonial Daniela Dávila, COO BAZZAAL), aber keine Details zur Arbeit dort (kein "n8n-Stack, 25+ Workflows, 15 Kunden" o. Ä.). Retainer beendet Okt 2026. "Wer dahinter steckt" = persönliche About-Section ohne Lebenslauf-Aufzählung.
 
----
+## Zwei Codebasen
+1. **Live-Seite**: Next.js 14 (App Router), Vercel, DNS Cloudflare, Repo ~/foorgun.ai. Enthält /check (Lead-Magnet-Quiz), /impressum, /datenschutz, DE/EN-Toggle, Cookie-Banner, Vercel Analytics, app/sitemap.ts, app/robots.ts. Search Console ist eingerichtet, Sitemap eingereicht.
+2. **Statischer Entwurf** (foorgun-site-v3.zip): src/build.py (Python, f-Strings) erzeugt index/websites/automation/software/ki-coaching.html + style.css. Selbst gehostete Schriften in fonts/ (Bricolage Grotesque, Instrument Sans). Design-Tokens: paper #FBFAF7, ink #0C0C0C, signal #C4521A.
+   Build: `python3 src/build.py`. Konfiguration oben in build.py (EMAIL, WHATSAPP, CALL, HAS_WA).
 
-## Project Overview
+## Offene Entscheidung
+Soll der Entwurf die Next.js-Seite ersetzen oder in sie überführt werden? Empfehlung: Inhalte/Struktur in die Next.js-Seite übernehmen (so bleiben /check, Legal, Analytics, Sitemap, i18n erhalten). Danach ggf. Umzug auf Coolify (zuletzt, geringe Priorität).
 
-**Client:** foorgun.ai — AI & Automation Consultancy  
-**Owner:** Furkan Cetin  
-**Stack:** Next.js 14 · Tailwind CSS · TypeScript  
-**Hosting:** Cloudflare Pages  
-**Repo:** GitHub
+## To-do
+- [x] WhatsApp verlinkt: https://wa.me/4917622920442 (components/site/config.ts)
+- [ ] Unterseiten an neue Dach-Positionierung anpassen
+- [x] Du/Ihr vereinheitlichen (jetzt durchgehend "du")
+- [x] Referenzen und Preise bestätigt (12.11.2026): Software ab 3.000 €, Automation ab 1.500 €, KI-Coaching 490 €, Websites 990 € + 29 €/Monat. Testimonials freigegeben. BAZZAAL ohne Projektdetails.
+- [ ] Bilder (Portrait, Testimonials, Logos) lokal ablegen statt von foorgun.ai zu laden
+- [ ] OG-Image + Meta-Tags, Structured Data
+- [ ] Portrait/About mit eigenem Foto verfeinern
 
----
+## Regeln für die Arbeit
+- Weniger planen, mehr machen: erst umsetzen, dann kurz melden.
+- Vor Änderungen an der Live-Seite: Branch, Preview prüfen, dann mergen.
+- Zahlen/Referenzen nicht erfinden; im Zweifel markieren und nachfragen.
 
-## Brand Assets
-
-### Colors
-
-| Token | Hex | Usage |
-| :---- | :---- | :---- |
-| Background | `#0C0C0C` | Page background |
-| Surface | `#141414` | Cards, sections |
-| Surface 2 | `#1C1C1C` | Borders, elevated cards |
-| Accent | `#C4521A` | CTAs, highlights, links |
-| Accent dim | `rgba(196,82,26,0.12)` | Subtle accent backgrounds |
-| White | `#F5F3EE` | Primary text |
-| White mid | `rgba(245,243,238,0.6)` | Secondary text |
-| White muted | `rgba(245,243,238,0.25)` | Placeholder, labels |
-| Line | `rgba(255,255,255,0.08)` | Borders, dividers |
-
-### Typography
-
-- **Headings:** DM Serif Display (Google Fonts) — italic for emphasis  
-- **Body:** DM Sans (Google Fonts) — weight 300 for body, 500 for labels  
-- **Mono:** DM Mono (Google Fonts) — eyebrows, tags, code
-
-### Logo
-
-- Text logo: `foorgun.ai` in DM Mono, color: `#C4521A`  
-- No icon/symbol — text only
-
-### Photo
-
-- File: `/public/furkan.jpg`  
-- Usage: Hero section, right side  
-- If not present: use a dark placeholder div with initials "FC"
-
----
-
-## Site Structure
-
-/
-
-├── Nav
-
-├── Hero
-
-├── What I Do (3 cards)
-
-├── Testimonials (3 cards)
-
-└── Contact
-
-### Section Details
-
-**Nav**
-
-- Left: `foorgun.ai` logo  
-- Right: `Book a call` button (accent color, links to \#contact)
-
-**Hero**
-
-- Left: Headline \+ subline \+ CTA  
-- Right: Photo `/public/furkan.jpg`  
-- Headline: "I turn manual work into automated systems."  
-- Subline: "Operations, marketing, content — if your team does it manually and repeatedly, there's a smarter way."  
-- CTA: "Book a call →"
-
-**What I Do**
-
-- 3 cards: Automation Systems · AI Integration · System Design  
-- Dark card background, accent left border
-
-**Testimonials**
-
-- 3 cards, grid layout, large quote mark  
-- Soojin Joung — CEO, BAZZAAL  
-- Owner — ViUnlimited  
-- Patrick Wings — Digital Marketing Services
-
-**Contact**
-
-- Email: [hello@foorgun.com](mailto:hello@foorgun.com)  
-- CTA: Book a call (Calendly placeholder)
-
----
-
-## Screenshot Workflow
-•⁠  ⁠Puppeteer is installed at
-C:/Users/nateh/AppData/Local/Temp/puppeteer-test/• Chrome cache is at c:/Users/nateh/.cache/puppeteer/
-•⁠  ⁠*Always screenshot from localhost: •node screenshot.mjs
-http://localhost:3000
-•⁠  ⁠Screenshots are saved automatically to /temporary screenshots/screenshot-N.png' (auto-incremented, never overwritten).
-•⁠  ⁠Optional label suffix: node screenshot.mjs http://localhost: 3000
-label → saves as screenshot-N-label.png"
-•⁠  ⁠"screenshot.mjs" lives in the project root. Use it as-is.
-•⁠  ⁠After screenshotting, read the PNG from temporary screenshots/ with the Read tool - Claude can see and analyze the image directly.
-•⁠  ⁠When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
-•⁠  ⁠Check: spacing/padding, font size/w ght/line-height, colors (exact
-hex), alignment, border-radius, shadows, image sizing
-
----
-
-## Output Details
-
-- All components in `/components` folder  
-- Page in `/app/page.tsx`  
-- Global styles in `/app/globals.css`  
-- Fonts loaded via `next/font/google`  
-- Images via `next/image`  
-- No external UI libraries — Tailwind only  
-- Mobile responsive — mobile first  
-- No animations for now — keep it fast
-
----
-
-## Hard Rules
-
-- **Never use light backgrounds** — everything stays dark  
-- **Never use blue** — accent is always `#C4521A` (terracotta)  
-- **No gradients** unless very subtle (background only)  
-- **No stock photos** — only the provided photo of Furkan  
-- **No Lorem ipsum** — use real content from this file  
-- **No external component libraries** (no shadcn, no MUI, no Radix)  
-- **No inline styles** — Tailwind classes only  
-- **Keep it fast** — no heavy dependencies, no animations library  
-- **Deploy-ready** — must build without errors (`npm run build`)
-
----
-
-## Reference Inspirations
-
-- linear.app — clean, dark, minimal  
-- basement.studio — editorial, bold typography  
-- Our own presentation style: dark bg, terracotta accent, DM Serif Display headings
-
----
-
-## Commands
-
-npm run dev      \# Start dev server
-
-npm run build    \# Build for production
-
-npm run lint     \# Check for errors
-
----
-
-## Deploy (Cloudflare Pages)
-
-- Connect GitHub repo to Cloudflare Pages  
-- Build command: `npm run build`  
-- Output directory: `.next`  
-- Node version: 18+
-
+## Blog & SEO (Next.js-Seite, Branch redesign-v3)
+- Artikel: `content/blog/<id>/de.md` und `en.md` (immer beide Sprachen). Frontmatter: title, description, slug, date (YYYY-MM-DD), cluster, optional updated.
+- Cluster = Pillar-Seite: automation → /automation, ki-coaching → /ki-coaching, prozessmanagement → /prozessmanagement, fde → /forward-deployed-engineering (siehe components/site/clusters.ts). Artikel erscheinen automatisch auf der Pillar-Seite, im Blog, in der Sitemap, mit eigenem Vorschaubild.
+- Interne Links im Text setzen: auf die Pillar-Seite und passende andere Artikel (DE ohne Präfix, EN mit /en).
+- Keine reinen News; KI-News nur mit eigener Einordnung für Unternehmen. Keine erfundenen Zahlen/Kundenbeispiele.
+- Grafiken in Artikeln: eigene Zeile `[[figure:name]]` im Markdown. Verfügbare Namen und neue Grafiken in components/site/figures.tsx (Tabellen: bpmn-legend, epk-legend; Diagramme: bpmn-lanes, bpmn-example, epk-example; Einzelbilder: bpmn-events, bpmn-tasks, bpmn-gateways, bpmn-flows, epk-elements).
