@@ -36,7 +36,7 @@ So the question isn't which tool is "better" – it's which one suits you better
 
 The tool question usually isn't the decisive one. More important:
 
-1. **Is the process clear?** Automate an unclear process and you get an unclear process that makes mistakes faster. That's why I map processes first – for example with [BPMN](/en/blog/bpmn-explained-simply).
+1. **Is the process clear?** Automate an unclear process and you get an unclear process that makes mistakes faster. That's why I map processes first – for example with [BPMN](/blog/bpmn-explained-simply).
 2. **Who looks after it afterwards?** An automation needs someone who receives error alerts and can make small adjustments.
 3. **What happens when something fails?** Good workflows speak up when something goes wrong – instead of silently losing data.
 
@@ -44,4 +44,4 @@ The tool question usually isn't the decisive one. More important:
 
 For most projects with customer data, multiple systems and AI steps, I go with **n8n** – for the control over data and the flexibility. But if a team mainly wants to build simple connections themselves, **Make** is often the easier start.
 
-Not sure what fits your process? That's exactly what we clarify in the [automation pilot](/en/automation): process first, then the tool.
+Not sure what fits your process? That's exactly what we clarify in the [automation pilot](/automation): process first, then the tool.

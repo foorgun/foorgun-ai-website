@@ -36,7 +36,7 @@ Die Frage ist also nicht, welches Tool „besser“ ist – sondern welches bess
 
 Die Tool-Frage ist meistens nicht die entscheidende. Wichtiger ist:
 
-1. **Ist der Ablauf klar?** Wer einen unklaren Ablauf automatisiert, bekommt einen unklaren Ablauf, der schneller Fehler macht. Deshalb nehme ich Abläufe vorher auf – zum Beispiel mit [BPMN](/blog/bpmn-einfach-erklaert).
+1. **Ist der Ablauf klar?** Wer einen unklaren Ablauf automatisiert, bekommt einen unklaren Ablauf, der schneller Fehler macht. Deshalb nehme ich Abläufe vorher auf – zum Beispiel mit [BPMN](/de/blog/bpmn-einfach-erklaert).
 2. **Wer kümmert sich danach?** Eine Automation braucht jemanden, der Fehlermeldungen bekommt und kleine Anpassungen machen kann.
 3. **Was passiert bei Fehlern?** Gute Workflows melden sich, wenn etwas schiefgeht – statt still Daten zu verlieren.
 
@@ -44,4 +44,4 @@ Die Tool-Frage ist meistens nicht die entscheidende. Wichtiger ist:
 
 Für die meisten Projekte mit Kundendaten, mehreren Systemen und KI-Schritten setze ich auf **n8n** – wegen der Kontrolle über die Daten und der Flexibilität. Wenn ein Team aber vor allem selbst einfache Verbindungen bauen soll, ist **Make** oft der leichtere Einstieg.
 
-Du bist unsicher, was für deinen Ablauf passt? Genau das klären wir im [Automations-Pilot](/automation): erst der Ablauf, dann das Tool.
+Du bist unsicher, was für deinen Ablauf passt? Genau das klären wir im [Automations-Pilot](/de/automation): erst der Ablauf, dann das Tool.

@@ -71,4 +71,4 @@ Meine Empfehlung: Für neue Projekte, besonders wenn später automatisiert werde
 
 - Mit fünf Elementen – Ereignis, Aufgabe, Gateway, Pfeil, Lane – lassen sich die meisten Abläufe beschreiben.
 - Erst den Ist-Ablauf aufnehmen, mit den Leuten, die ihn machen.
-- Ein sauberes Diagramm ist die beste Grundlage, um zu entscheiden, was sich [automatisieren](/automation) lässt.
+- Ein sauberes Diagramm ist die beste Grundlage, um zu entscheiden, was sich [automatisieren](/de/automation) lässt.

@@ -71,4 +71,4 @@ My recommendation: for new projects, especially if you want to automate later, u
 
 - Five elements – event, task, gateway, arrow, lane – describe most processes.
 - Map the as-is process first, with the people who run it.
-- A clean diagram is the best basis for deciding what can be [automated](/en/automation).
+- A clean diagram is the best basis for deciding what can be [automated](/automation).

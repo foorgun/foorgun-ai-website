@@ -40,13 +40,13 @@ Typische Muster:
 2. Ein Prototyp funktioniert in der Demo, aber nicht mit echten Daten.
 3. Die Lösung läuft, aber niemand im Team fühlt sich zuständig oder versteht sie.
 
-Ein FDE setzt genau an diesen Stellen an: erst den [Prozess verstehen](/prozessmanagement), dann das Kleinste bauen, das spürbar entlastet, und es mit echten Fällen testen.
+Ein FDE setzt genau an diesen Stellen an: erst den [Prozess verstehen](/de/prozessmanagement), dann das Kleinste bauen, das spürbar entlastet, und es mit echten Fällen testen.
 
 ## Braucht jedes Unternehmen ein eigenes FDE-Team?
 
 Nein. Große Softwarefirmen haben eigene FDE-Teams, weil sie ihre Produkte bei vielen Kunden einführen. Die meisten Unternehmen brauchen das nicht dauerhaft – aber sie profitieren von derselben Arbeitsweise, wenn sie KI oder Automation einführen.
 
-Genau so arbeite ich: als [Forward Deployed Engineer für Unternehmen](/forward-deployed-engineering), die kein eigenes Team dafür aufbauen wollen.
+Genau so arbeite ich: als [Forward Deployed Engineer für Unternehmen](/de/forward-deployed-engineering), die kein eigenes Team dafür aufbauen wollen.
 
 ## Kurz zusammengefasst
 

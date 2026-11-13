@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const self = postPath(post)
   const languages: Record<string, string> = { de: self }
   if (tr) languages[tr.lang] = postPath(tr)
-  languages["x-default"] = languages.de ?? self
+  languages["x-default"] = languages.en ?? self
   return {
     title: `${post.title} | foorgun.ai`,
     description: post.description,

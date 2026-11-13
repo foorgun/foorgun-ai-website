@@ -34,7 +34,7 @@ Cloud-Flows sind schnell, stabil und laufen rund um die Uhr, ohne dass ein Rechn
 
 Nicht jedes Programm hat eine Schnittstelle. Gerade ältere Fachanwendungen, Warenwirtschaftssysteme oder Branchensoftware lassen sich oft nur über ihre Oberfläche bedienen. Hier kommen **Desktop-Flows** ins Spiel: Sie zeichnen Klicks und Eingaben auf und spielen sie ab – Felder ausfüllen, Buttons klicken, Daten kopieren.
 
-Das nennt man **RPA** (Robotic Process Automation). Es ist eine Brücke zu Systemen, die sonst gar nicht automatisierbar wären. Der Preis dafür: Wenn sich die Oberfläche ändert – ein Button wandert, ein Fenster heißt anders –, muss der Flow angepasst werden. Mehr dazu im Artikel [RPA oder API-Automation?](/blog/rpa-oder-api-automatisierung)
+Das nennt man **RPA** (Robotic Process Automation). Es ist eine Brücke zu Systemen, die sonst gar nicht automatisierbar wären. Der Preis dafür: Wenn sich die Oberfläche ändert – ein Button wandert, ein Fenster heißt anders –, muss der Flow angepasst werden. Mehr dazu im Artikel [RPA oder API-Automation?](/de/blog/rpa-oder-api-automatisierung)
 
 Man unterscheidet zwei Betriebsarten:
 
@@ -64,6 +64,6 @@ Prüf vor einem Projekt den aktuellen Stand bei Microsoft – oder lass dich ber
 
 1. **Schnittstelle zuerst.** Wenn es einen Konnektor oder eine API gibt, nehmt den Cloud-Flow. Er ist stabiler und günstiger im Betrieb.
 2. **Desktop-Flow als Brücke.** Nur für die Schritte, bei denen es wirklich keine Schnittstelle gibt.
-3. **Erst den Ablauf verstehen.** Wer vorher aufschreibt, wie der Prozess läuft – zum Beispiel mit [BPMN](/blog/bpmn-einfach-erklaert) –, sieht sofort, welche Schritte über Schnittstellen gehen und wo eine Brücke nötig ist.
+3. **Erst den Ablauf verstehen.** Wer vorher aufschreibt, wie der Prozess läuft – zum Beispiel mit [BPMN](/de/blog/bpmn-einfach-erklaert) –, sieht sofort, welche Schritte über Schnittstellen gehen und wo eine Brücke nötig ist.
 
-Du arbeitest mit Microsoft 365 und willst wissen, was sich bei dir automatisieren lässt? Genau das klären wir im [Automations-Pilot](/automation). Und wenn dein Team selbst mit Power Automate bauen soll: Das ist Teil meines [KI-Coachings](/ki-coaching).
+Du arbeitest mit Microsoft 365 und willst wissen, was sich bei dir automatisieren lässt? Genau das klären wir im [Automations-Pilot](/de/automation). Und wenn dein Team selbst mit Power Automate bauen soll: Das ist Teil meines [KI-Coachings](/de/ki-coaching).

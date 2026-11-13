@@ -34,7 +34,7 @@ Cloud flows are fast, stable and run around the clock, without any machine needi
 
 Not every program has an interface. Older line-of-business applications, ERP systems or industry software in particular can often only be operated through their user interface. That's where **desktop flows** come in: they record clicks and inputs and replay them – filling in fields, clicking buttons, copying data.
 
-This is called **RPA** (robotic process automation). It's a bridge to systems that otherwise couldn't be automated at all. The price: when the interface changes – a button moves, a window gets renamed – the flow has to be adjusted. More on this in the article [RPA or API automation?](/en/blog/rpa-vs-api-automation)
+This is called **RPA** (robotic process automation). It's a bridge to systems that otherwise couldn't be automated at all. The price: when the interface changes – a button moves, a window gets renamed – the flow has to be adjusted. More on this in the article [RPA or API automation?](/blog/rpa-vs-api-automation)
 
 There are two modes:
 
@@ -64,6 +64,6 @@ Check the current state with Microsoft before a project – or get advice before
 
 1. **Interface first.** If there's a connector or an API, use a cloud flow. It's more stable and cheaper to run.
 2. **Desktop flow as a bridge.** Only for the steps where there really is no interface.
-3. **Understand the process first.** If you write down how the process runs beforehand – for example with [BPMN](/en/blog/bpmn-explained-simply) – you immediately see which steps work through interfaces and where a bridge is needed.
+3. **Understand the process first.** If you write down how the process runs beforehand – for example with [BPMN](/blog/bpmn-explained-simply) – you immediately see which steps work through interfaces and where a bridge is needed.
 
-You work with Microsoft 365 and want to know what can be automated? That's exactly what we clarify in the [automation pilot](/en/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/en/ki-coaching).
+You work with Microsoft 365 and want to know what can be automated? That's exactly what we clarify in the [automation pilot](/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/ki-coaching).

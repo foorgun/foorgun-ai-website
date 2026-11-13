@@ -40,6 +40,6 @@ Soll der Entwurf die Next.js-Seite ersetzen oder in sie überführt werden? Empf
 ## Blog & SEO (Next.js-Seite, Branch redesign-v3)
 - Artikel: `content/blog/<id>/de.md` und `en.md` (immer beide Sprachen). Frontmatter: title, description, slug, date (YYYY-MM-DD), cluster, optional updated.
 - Cluster = Pillar-Seite: automation → /automation, ki-coaching → /ki-coaching, prozessmanagement → /prozessmanagement, fde → /forward-deployed-engineering (siehe components/site/clusters.ts). Artikel erscheinen automatisch auf der Pillar-Seite, im Blog, in der Sitemap, mit eigenem Vorschaubild.
-- Interne Links im Text setzen: auf die Pillar-Seite und passende andere Artikel (DE ohne Präfix, EN mit /en).
+- Interne Links im Text setzen: auf die Pillar-Seite und passende andere Artikel (EN ohne Präfix = Standardsprache, DE mit /de). Alte /en-URLs leiten per 301 auf / um (next.config.mjs).
 - Keine reinen News; KI-News nur mit eigener Einordnung für Unternehmen. Keine erfundenen Zahlen/Kundenbeispiele.
 - Grafiken in Artikeln: eigene Zeile `[[figure:name]]` im Markdown. Verfügbare Namen und neue Grafiken in components/site/figures.tsx (Tabellen: bpmn-legend, epk-legend; Diagramme: bpmn-lanes, bpmn-example, epk-example; Einzelbilder: bpmn-events, bpmn-tasks, bpmn-gateways, bpmn-flows, epk-elements).

@@ -38,7 +38,7 @@ RPA ist eine **Brücke**. Sie lohnt sich, wenn es keinen anderen Weg gibt:
 
 Immer dann, wenn eine Schnittstelle existiert – und das ist heute bei den meisten Cloud-Tools der Fall: CRM, E-Mail, Kalender, Buchhaltung, Shop, Projektmanagement.
 
-API-Automation ist schneller, stabiler und günstiger im Betrieb. Sie kann rund um die Uhr laufen, reagiert sofort auf neue Ereignisse (zum Beispiel per Webhook) und kommt mit großen Datenmengen klar. Welches Tool dafür passt, steht im Vergleich [n8n oder Make?](/blog/n8n-oder-make)
+API-Automation ist schneller, stabiler und günstiger im Betrieb. Sie kann rund um die Uhr laufen, reagiert sofort auf neue Ereignisse (zum Beispiel per Webhook) und kommt mit großen Datenmengen klar. Welches Tool dafür passt, steht im Vergleich [n8n oder Make?](/de/blog/n8n-oder-make)
 
 ## Die typische Falle
 
@@ -61,6 +61,6 @@ Für wiederkehrende Abläufe mit festen Regeln bleibt die Schnittstelle trotzdem
 1. **Gibt es eine Schnittstelle?** Dann API-Automation.
 2. **Gibt es keine, aber das System wird bald abgelöst?** Dann RPA als Übergang.
 3. **Gibt es keine, und das System bleibt?** Dann RPA – aber gut dokumentiert, mit Fehlermeldungen und einem klaren Verantwortlichen.
-4. **Meistens:** eine Kombination. Alles über Schnittstellen, nur der eine Schritt ohne Schnittstelle per RPA. Wie das im Microsoft-Umfeld aussieht, zeigt der Artikel [Power Automate Cloud vs. Desktop](/blog/power-automate-cloud-vs-desktop).
+4. **Meistens:** eine Kombination. Alles über Schnittstellen, nur der eine Schritt ohne Schnittstelle per RPA. Wie das im Microsoft-Umfeld aussieht, zeigt der Artikel [Power Automate Cloud vs. Desktop](/de/blog/power-automate-cloud-vs-desktop).
 
-Welcher Weg bei dir passt, hängt vom Ablauf und den beteiligten Systemen ab. Genau das schaue ich mir im [Automations-Pilot](/automation) zuerst an – bevor irgendetwas gebaut wird.
+Welcher Weg bei dir passt, hängt vom Ablauf und den beteiligten Systemen ab. Genau das schaue ich mir im [Automations-Pilot](/de/automation) zuerst an – bevor irgendetwas gebaut wird.

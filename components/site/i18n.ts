@@ -2,18 +2,18 @@ import type { Metadata } from "next"
 
 export type Lang = "de" | "en"
 
-/** Pfad in der jeweiligen Sprache: Deutsch ohne Präfix, Englisch unter /en */
+/** Pfad in der jeweiligen Sprache: Englisch ohne Präfix (Standard), Deutsch unter /de */
 export function href(lang: Lang, path: string) {
-  if (lang === "de") return path
-  return path === "/" ? "/en" : `/en${path}`
+  if (lang === "en") return path
+  return path === "/" ? "/de" : `/de${path}`
 }
 
 /** Gegenstück eines Pfads in der anderen Sprache */
 export function counterpart(pathname: string): { lang: Lang; path: string } {
-  if (pathname === "/en" || pathname.startsWith("/en/")) {
-    return { lang: "de", path: pathname.slice(3) || "/" }
+  if (pathname === "/de" || pathname.startsWith("/de/")) {
+    return { lang: "en", path: pathname.slice(3) || "/" }
   }
-  return { lang: "en", path: href("en", pathname) }
+  return { lang: "de", path: href("de", pathname) }
 }
 
 export function meta(lang: Lang, path: string, title: string, description: string): Metadata {
@@ -22,7 +22,7 @@ export function meta(lang: Lang, path: string, title: string, description: strin
     description,
     alternates: {
       canonical: href(lang, path),
-      languages: { de: href("de", path), en: href("en", path), "x-default": href("de", path) },
+      languages: { de: href("de", path), en: href("en", path), "x-default": href("en", path) },
     },
     openGraph: { title, description, url: href(lang, path), locale: lang === "de" ? "de_DE" : "en_US", type: "website", siteName: "foorgun.ai", images: [{ url: `/og-image/${lang}`, width: 1200, height: 630 }] },
   }

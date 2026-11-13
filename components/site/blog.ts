@@ -83,4 +83,4 @@ export const postBySlug = (lang: Lang, slug: string) => allPosts().find((p) => p
 /** Übersetzung desselben Artikels */
 export const translationOf = (p: Post) => allPosts().find((q) => q.id === p.id && q.lang !== p.lang)
 
-export const postPath = (p: Pick<Post, "lang" | "slug">) => (p.lang === "de" ? `/blog/${p.slug}` : `/en/blog/${p.slug}`)
+export const postPath = (p: Pick<Post, "lang" | "slug">) => (p.lang === "de" ? `/de/blog/${p.slug}` : `/blog/${p.slug}`)

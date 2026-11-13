@@ -6,13 +6,13 @@ const pages = ["/", "/websites", "/automation", "/software", "/ki-coaching", "/p
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const localized = pages.flatMap((p) => {
-    const de = `${base}${p === "/" ? "" : p}`;
-    const en = `${base}/en${p === "/" ? "" : p}`;
-    const alternates = { languages: { de, en } };
+    const en = `${base}${p === "/" ? "" : p}`;
+    const de = `${base}/de${p === "/" ? "" : p}`;
+    const alternates = { languages: { en, de, "x-default": en } };
     const priority = p === "/" ? 1 : 0.9;
     return [
-      { url: de, lastModified: new Date(), priority, alternates },
-      { url: en, lastModified: new Date(), priority: priority - 0.1, alternates },
+      { url: en, lastModified: new Date(), priority, alternates },
+      { url: de, lastModified: new Date(), priority: priority - 0.1, alternates },
     ];
   });
 
@@ -28,10 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts,
     { url: `${base}/check`, lastModified: new Date(), priority: 0.6 },
     ...["/impressum", "/datenschutz"].flatMap((p) => {
-      const alternates = { languages: { de: `${base}${p}`, en: `${base}/en${p}` } };
+      const alternates = { languages: { en: `${base}${p}`, de: `${base}/de${p}` } };
       return [
         { url: `${base}${p}`, lastModified: new Date(), priority: 0.2, alternates },
-        { url: `${base}/en${p}`, lastModified: new Date(), priority: 0.1, alternates },
+        { url: `${base}/de${p}`, lastModified: new Date(), priority: 0.1, alternates },
       ];
     }),
   ];

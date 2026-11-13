@@ -47,4 +47,4 @@ Beide sind stark und entwickeln sich schnell weiter. In der Praxis entscheidet o
 
 ## Lernen statt nur ausprobieren
 
-Genau das ist Teil meines [KI-Coachings](/ki-coaching): Claude Code und Codex richtig einsetzen, an einem echten ersten Projekt aus deinem Alltag. Wenn du lieber direkt ein fertiges System willst, schau dir [interne Software nach Maß](/software) an.
+Genau das ist Teil meines [KI-Coachings](/de/ki-coaching): Claude Code und Codex richtig einsetzen, an einem echten ersten Projekt aus deinem Alltag. Wenn du lieber direkt ein fertiges System willst, schau dir [interne Software nach Maß](/de/software) an.

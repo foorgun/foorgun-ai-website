@@ -47,8 +47,8 @@ export default function Header({ lang, alt }: { lang: Lang; alt?: string }) {
               {t.blog}
             </Link>
             <Link className="lang lang-desktop" href={other.path} hrefLang={other.lang} aria-label={t.switchLabel} onClick={close}>
-              <span className={lang === "de" ? "on" : ""}>DE</span>
               <span className={lang === "en" ? "on" : ""}>EN</span>
+              <span className={lang === "de" ? "on" : ""}>DE</span>
             </Link>
             <a className="btn small" href={CALL} onClick={close}>
               {t.book}

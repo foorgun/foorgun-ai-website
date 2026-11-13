@@ -40,13 +40,13 @@ Typical patterns:
 2. A prototype works in the demo, but not with real data.
 3. The solution runs, but nobody on the team feels responsible for it or understands it.
 
-An FDE tackles exactly these points: first [understand the process](/en/prozessmanagement), then build the smallest thing that takes real work off people's plates, and test it with real cases.
+An FDE tackles exactly these points: first [understand the process](/prozessmanagement), then build the smallest thing that takes real work off people's plates, and test it with real cases.
 
 ## Does every business need its own FDE team?
 
 No. Large software companies have their own FDE teams because they roll out their products at many customers. Most businesses don't need that permanently – but they benefit from the same way of working when they introduce AI or automation.
 
-That's exactly how I work: as a [forward deployed engineer for businesses](/en/forward-deployed-engineering) that don't want to build their own team for it.
+That's exactly how I work: as a [forward deployed engineer for businesses](/forward-deployed-engineering) that don't want to build their own team for it.
 
 ## In short
 

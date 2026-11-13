@@ -17,9 +17,9 @@ const T = {
     build: [
       { title: "Interne Systeme, CRM, ERP", text: "Ein System für Kunden, Projekte, Angebote und Rechnungen – statt Excel und fünf Abos.", href: "#system", more: "Was so ein System kann" },
       { title: "Kundenportale", text: "Deine Kunden sehen Status, Dokumente und Termine selbst, statt nachzufragen.", href: "#ablauf", more: "So entsteht es" },
-      { title: "APIs & Schnittstellen", text: "Eigene APIs und Integrationen, damit deine Systeme Daten direkt austauschen – statt Copy-Paste zwischen Tools.", href: "/blog/rpa-oder-api-automatisierung", more: "RPA oder API?" },
+      { title: "APIs & Schnittstellen", text: "Eigene APIs und Integrationen, damit deine Systeme Daten direkt austauschen – statt Copy-Paste zwischen Tools.", href: "/de/blog/rpa-oder-api-automatisierung", more: "RPA oder API?" },
       { title: "Cloud-Infrastruktur", text: "Hosting, Datenbanken und Deployments in der EU-Cloud – sicher, skalierbar, dokumentiert und mit Backups.", href: "#ablauf", more: "So entsteht es" },
-      { title: "Websites mit Online-Buchung", text: "Für Salons, Studios und lokale Betriebe: eigene Buchung, ohne monatliche Plattformgebühren.", href: "/websites", more: "Zu den Websites" },
+      { title: "Websites mit Online-Buchung", text: "Für Salons, Studios und lokale Betriebe: eigene Buchung, ohne monatliche Plattformgebühren.", href: "/de/websites", more: "Zu den Websites" },
     ],
     painTitle: "Wenn Standard-Software nicht passt",
     pains: ["Unsere wichtigste Kundenliste ist eine Excel-Datei, die nur eine Person versteht.", "Wir zahlen für ein CRM, ein Projekttool und ein Rechnungstool – und übertragen trotzdem alles von Hand.", "Wenn jemand im Urlaub ist, weiß keiner, wo das Projekt gerade steht."],
@@ -44,9 +44,9 @@ const T = {
     build: [
       { title: "Internal systems, CRM, ERP", text: "One system for clients, projects, quotes and invoices – instead of spreadsheets and five subscriptions.", href: "#system", more: "What such a system can do" },
       { title: "Client portals", text: "Your clients see status, documents and appointments themselves instead of asking.", href: "#ablauf", more: "How it comes together" },
-      { title: "APIs & integrations", text: "Custom APIs and integrations so your systems exchange data directly – instead of copy-paste between tools.", href: "/en/blog/rpa-vs-api-automation", more: "RPA or API?" },
+      { title: "APIs & integrations", text: "Custom APIs and integrations so your systems exchange data directly – instead of copy-paste between tools.", href: "/blog/rpa-vs-api-automation", more: "RPA or API?" },
       { title: "Cloud infrastructure", text: "Hosting, databases and deployments in the EU cloud – secure, scalable, documented and backed up.", href: "#ablauf", more: "How it comes together" },
-      { title: "Websites with online booking", text: "For salons, studios and local businesses: your own booking, no monthly platform fees.", href: "/en/websites", more: "Go to websites" },
+      { title: "Websites with online booking", text: "For salons, studios and local businesses: your own booking, no monthly platform fees.", href: "/websites", more: "Go to websites" },
     ],
     painTitle: "When off-the-shelf software doesn't fit",
     pains: ["Our most important client list is a spreadsheet only one person understands.", "We pay for a CRM, a project tool and an invoicing tool – and still copy everything by hand.", "When someone is on holiday, nobody knows where the project stands."],

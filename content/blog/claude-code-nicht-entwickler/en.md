@@ -47,4 +47,4 @@ Both are strong and evolving quickly. In practice, the decision often comes down
 
 ## Learn instead of just trying
 
-That's exactly part of my [AI coaching](/en/ki-coaching): using Claude Code and Codex properly, on a real first project from your daily work. If you'd rather have a finished system straight away, take a look at [custom internal software](/en/software).
+That's exactly part of my [AI coaching](/ki-coaching): using Claude Code and Codex properly, on a real first project from your daily work. If you'd rather have a finished system straight away, take a look at [custom internal software](/software).
