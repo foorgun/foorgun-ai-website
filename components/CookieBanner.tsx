@@ -7,7 +7,7 @@ import { useLang } from "@/lib/i18n"
 
 export default function CookieBanner() {
   const { bannerOpen, decide } = useConsent()
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const c = t.cookies
 
   const pathname = usePathname()
@@ -26,7 +26,7 @@ export default function CookieBanner() {
       <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
         <p className="text-white-mid font-light text-sm leading-relaxed flex-1">
           {c.textBefore}
-          <Link href="/datenschutz" className="text-accent hover:text-white transition-colors duration-150 underline underline-offset-2">
+          <Link href={lang === "DE" ? "/de/datenschutz" : "/datenschutz"} className="text-accent hover:text-white transition-colors duration-150 underline underline-offset-2">
             {c.policyLabel}
           </Link>
           {c.textAfter}
