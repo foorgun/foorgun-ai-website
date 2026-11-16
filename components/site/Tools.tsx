@@ -33,8 +33,16 @@ const ROW2: Tool[] = [
 ]
 
 const T = {
-  de: "Funktioniert mit den Tools, die du schon nutzt",
-  en: "Works with the tools you already use",
+  de: {
+    title: "Du musst deine bestehenden Tools nicht ersetzen.",
+    text: "Ich verbinde deine vorhandenen Systeme, damit Informationen automatisch dort landen, wo sie gebraucht werden.",
+    note: "Auch individuelle Systeme und andere Tools mit Schnittstellen.",
+  },
+  en: {
+    title: "You don't have to replace your existing tools.",
+    text: "I connect the systems you already have, so information lands automatically where it's needed.",
+    note: "Also custom systems and other tools with an interface.",
+  },
 }
 
 function Row({ tools, reverse }: { tools: Tool[]; reverse?: boolean }) {
@@ -56,11 +64,15 @@ export default function Tools({ lang }: { lang: Lang }) {
   return (
     <section className="rule tools">
       <div className="wrap">
-        <h2>{T[lang]}</h2>
+        <h2>{T[lang].title}</h2>
+        <p className="lead">{T[lang].text}</p>
       </div>
       <div className="marquees">
         <Row tools={ROW1} />
         <Row tools={ROW2} reverse />
+      </div>
+      <div className="wrap">
+        <p className="hero-sub">{T[lang].note}</p>
       </div>
     </section>
   )

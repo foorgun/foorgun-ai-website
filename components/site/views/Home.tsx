@@ -29,9 +29,9 @@ const T = {
     ] as { tag: string; status: string; problem: string; solution: string }[],
     servicesTitle: "Drei Bausteine, die aufeinander aufbauen",
     nodes: [
-      { path: "/automation", who: "Für Unternehmen mit Routinearbeit", title: "Automation", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
-      { path: "/software", who: "Wenn aus Automationen ein System wird", title: "Software & Plattformen", text: <>Interne Software, CRM, Kundenportale und Websites mit Buchung – <Hl>alles an einem Ort</Hl>.</>, more: "Zu Software & Plattformen" },
-      { path: "/ki-coaching", who: "Damit dein Team es nutzt", title: "KI-Coaching und Schulungen", text: <>Dein Team lernt, KI und die neuen Systeme <Hl>selbst einzusetzen</Hl>.</>, more: "Zum Coaching" },
+      { path: "/automation", who: "Automation · für Unternehmen mit Routinearbeit", title: "Aufgaben automatisch erledigen", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
+      { path: "/software", who: "Software & Plattformen · wenn aus Automationen ein System wird", title: "Eigene Systeme für deine Abläufe", text: <>Interne Software, CRM, Kundenportale und Websites mit Buchung – <Hl>alles an einem Ort</Hl>.</>, more: "Zu Software & Plattformen" },
+      { path: "/ki-coaching", who: "KI-Coaching · damit dein Team es nutzt", title: "Dein Team nutzt die neuen Abläufe selbst", text: <>Dein Team lernt, KI und die neuen Systeme <Hl>selbst einzusetzen</Hl>.</>, more: "Zum Coaching" },
     ],
     approachTitle: <>Ich fange bei deinem Ablauf an, <em className="hl">nicht beim Tool.</em></>,
     approach: [
@@ -102,9 +102,9 @@ const T = {
     ] as { tag: string; status: string; problem: string; solution: string }[],
     servicesTitle: "Three building blocks that build on each other",
     nodes: [
-      { path: "/automation", who: "For businesses with routine work", title: "Automation", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
-      { path: "/software", who: "When automations become a system", title: "Software & platforms", text: <>Internal software, CRM, client portals and websites with booking – <Hl>all in one place</Hl>.</>, more: "Go to software & platforms" },
-      { path: "/ki-coaching", who: "So your team uses it", title: "AI coaching and training", text: <>Your team learns to use AI and the new systems <Hl>on their own</Hl>.</>, more: "Go to coaching" },
+      { path: "/automation", who: "Automation · for businesses with routine work", title: "Get recurring tasks done automatically", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
+      { path: "/software", who: "Software & platforms · when automations become a system", title: "Your own systems for your workflows", text: <>Internal software, CRM, client portals and websites with booking – <Hl>all in one place</Hl>.</>, more: "Go to software & platforms" },
+      { path: "/ki-coaching", who: "AI coaching · so your team uses it", title: "Your team runs the new workflows themselves", text: <>Your team learns to use AI and the new systems <Hl>on their own</Hl>.</>, more: "Go to coaching" },
     ],
     approachTitle: <>I start with your process, <em className="hl">not with the tool.</em></>,
     approach: [
