@@ -13,9 +13,20 @@ const T = {
   de: {
     title1: "Bau ein Unternehmen, das für dich arbeitet.",
     title2: "Nicht umgekehrt.",
-    lead: <>Ich bin Furkan und dein technischer Partner, wenn es um KI geht. Erst verstehe ich, wie du arbeitest. Dann baue ich das, was dir <Hl>jede Woche Stunden spart</Hl>.</>,
+    lead: <>Ich automatisiere wiederkehrende Aufgaben, verbinde deine bestehenden Tools und baue Lösungen, die zu deinem Ablauf passen. Damit du <Hl>weniger Zeit mit E-Mails, Excel und Copy-Paste</Hl> verbringst.</>,
     services: "Leistungen ansehen",
-    sub: "15 Minuten, kostenlos, unverbindlich, per Video.",
+    sub: "15 Minuten, kostenlos, unverbindlich, per Video. Keine Vorbereitung nötig.",
+    trust: "Wirtschaftsinformatiker · Persönliche Umsetzung statt anonymer Agentur · Mit Dokumentation und Übergabe",
+    casesTitle: "Typische Situationen, in denen sich Automatisierung lohnt",
+    casesLead: "Vier Beispiele aus dem Büroalltag. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
+    problem: "Das Problem",
+    solution: "Die Lösung",
+    cases: [
+      { tag: "Agenturen & Dienstleister", status: "Typischer Anwendungsfall", problem: "Kundendaten werden zwischen Tools hin und her kopiert, Onboarding und Reports entstehen von Hand in Excel.", solution: "Daten fließen automatisch dorthin, wo sie gebraucht werden. Onboarding und Kundenreports laufen als fester Ablauf, dein Team prüft nur noch das Ergebnis." },
+      { tag: "Architektur & Planung", status: "In Umsetzung", problem: "Projektdaten aus Werkverträgen werden immer wieder von Hand in Excel übertragen.", solution: "Informationen aus den Verträgen werden mit KI für die Projektanlage aufbereitet. Dazu eine zentrale Projektübersicht und digitale Urlaubsanträge." },
+      { tag: "Handwerk & Bau", status: "Typischer Anwendungsfall", problem: "Abends noch Angebote schreiben, und das Nachfassen geht im Alltag unter.", solution: "Anfragen werden erfasst, ein Angebotsentwurf wird vorbereitet und du gibst frei. Offene Angebote werden zum richtigen Zeitpunkt nachverfolgt." },
+      { tag: "Beauty & Barber", status: "Typischer Anwendungsfall", problem: "Termine laufen über WhatsApp, und für jede Buchungsplattform fällt ein Abo an.", solution: "Eine eigene Website mit integrierter Online-Terminbuchung, passend zu deinen Abläufen und mit mehr Kontrolle über den Buchungsprozess." },
+    ] as { tag: string; status: string; problem: string; solution: string }[],
     servicesTitle: "Drei Bausteine, die aufeinander aufbauen",
     nodes: [
       { path: "/automation", who: "Für Unternehmen mit Routinearbeit", title: "Automation", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
@@ -70,14 +81,25 @@ const T = {
       ["Kannst du mit unseren bestehenden Tools arbeiten, oder müssen wir neue Software kaufen?", "Ich arbeite so weit wie möglich mit dem, was du schon hast. Falls ein neues Tool nötig ist, empfehle ich die kosteneffizienteste Option und richte sie für dich ein."],
     ] as [string, string][],
     ctaTitle: "Lass uns schauen, wo du gerade Zeit verlierst.",
-    ctaText: "In 15 Minuten gehen wir durch, wie du heute arbeitest. Du bekommst eine ehrliche Einschätzung, was sich lohnt – auch wenn das Ergebnis ist, dass du mich nicht brauchst.",
+    ctaText: "In 15 Minuten gehen wir durch, wie du heute arbeitest. Du bekommst eine ehrliche Einschätzung, was sich lohnt – auch wenn das Ergebnis ist, dass du mich nicht brauchst. Du brauchst keine Vorbereitung und keine technischen Vorkenntnisse.",
   },
   en: {
     title1: "Build a business that works for you.",
     title2: "Not the other way around.",
-    lead: <>I&apos;m Furkan, your technical partner when it comes to AI. First I understand how you work. Then I build what <Hl>saves you hours every week</Hl>.</>,
+    lead: <>I automate recurring tasks, connect the tools you already use and build solutions that fit how you work. So you spend <Hl>less time on email, Excel and copy-paste</Hl>.</>,
     services: "See services",
-    sub: "15 minutes, free, no obligation, via video.",
+    sub: "15 minutes, free, no obligation, via video. No preparation needed.",
+    trust: "Business information systems graduate · Personal delivery instead of an anonymous agency · Documented and handed over",
+    casesTitle: "Typical situations where automation pays off",
+    casesLead: "Four examples from everyday office work. Each with the problem and the solution, so you can see what it could look like for you.",
+    problem: "The problem",
+    solution: "The solution",
+    cases: [
+      { tag: "Agencies & service providers", status: "Typical use case", problem: "Client data gets copied back and forth between tools, onboarding and reports are built by hand in Excel.", solution: "Data flows to where it's needed automatically. Onboarding and client reports run as a fixed process, your team only reviews the result." },
+      { tag: "Architecture & planning", status: "In progress", problem: "Project data from contracts is typed into Excel by hand, again and again.", solution: "Information from the contracts is prepared with AI for project setup. Plus a central project overview and digital leave requests." },
+      { tag: "Trades & construction", status: "Typical use case", problem: "Writing quotes in the evening, and follow-ups get lost in the daily routine.", solution: "Enquiries are captured, a quote draft is prepared and you approve it. Open quotes are followed up at the right time." },
+      { tag: "Beauty & barber", status: "Typical use case", problem: "Appointments run through WhatsApp, and every booking platform comes with a subscription.", solution: "Your own website with built-in online booking, fitted to how you work, with more control over the booking process." },
+    ] as { tag: string; status: string; problem: string; solution: string }[],
     servicesTitle: "Three building blocks that build on each other",
     nodes: [
       { path: "/automation", who: "For businesses with routine work", title: "Automation", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
@@ -132,7 +154,7 @@ const T = {
       ["Can you work with our existing tools, or do we need to buy new software?", "I work with what you already have wherever possible. If a new tool is needed, I'll recommend the most cost-effective option and set it up for you."],
     ] as [string, string][],
     ctaTitle: "Let's find out where you're losing time.",
-    ctaText: "In 15 minutes we'll walk through how you work today. You'll get an honest assessment of what's worth doing – even if the answer is that you don't need me.",
+    ctaText: "In 15 minutes we'll walk through how you work today. You'll get an honest assessment of what's worth doing – even if the answer is that you don't need me. No preparation or technical knowledge needed.",
   },
 }
 
@@ -150,11 +172,30 @@ export default function Home({ lang }: { lang: Lang }) {
               <p className="lead">{t.lead}</p>
               <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
               <p className="hero-sub">{t.sub}</p>
+              <p className="hero-sub hero-trust">{t.trust}</p>
             </div>
             <Image className="portrait" src="/furkan.png" alt="Furkan Çetin" width={889} height={1108} sizes="(max-width: 960px) 280px, 320px" priority />
           </div>
 
 
+        </div>
+      </section>
+
+      <section className="rule" id="beispiele">
+        <div className="wrap">
+          <h2>{t.casesTitle}</h2>
+          <p className="lead">{t.casesLead}</p>
+          <div className="usecases">
+            {t.cases.map((c) => (
+              <article key={c.tag} className="usecase">
+                <p className="uc-meta"><span className="uc-tag">{c.tag}</span><span className="uc-status">{c.status}</span></p>
+                <h3>{t.problem}</h3>
+                <p>{c.problem}</p>
+                <h3>{t.solution}</h3>
+                <p>{c.solution}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
