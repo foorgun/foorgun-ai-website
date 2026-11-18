@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import type { ReactNode } from "react"
 import { ConsentProvider } from "@/lib/consent"
+import CtaTracking from "./CtaTracking"
 import JsonLd, { orgSchema } from "./JsonLd"
 import type { Lang } from "./i18n"
 import "../../app/globals.css"
@@ -26,6 +27,7 @@ export default function SiteRoot({ lang, children }: { lang: Lang; children: Rea
         <ConsentProvider>
           <div className="v3">{children}</div>
         </ConsentProvider>
+        <CtaTracking />
         <Analytics />
       </body>
     </html>

@@ -1,5 +1,6 @@
 "use client"
 
+import { track } from "@vercel/analytics"
 import { useEffect, useRef, useState } from "react"
 import { CAL_LINK, CAL_ORIGIN, loadCalSnippet } from "@/components/CalEmbedInline"
 import { useConsent } from "@/lib/consent"
@@ -36,6 +37,7 @@ export default function CalInline({ lang, label, onOpen, ns = "v3check" }: { lan
       cal("inline", { elementOrSelector: ref.current, calLink: CAL_LINK, layout: "month_view", config: { theme: "light" } })
       cal("ui", { theme: "light", cssVarsPerTheme: { light: { "cal-brand": "#0C0C0C" } }, hideEventTypeDetails: false })
       cal("on", { action: "linkReady", callback: () => { if (!cancelled) { clearTimeout(timer); setStatus("ready") } } })
+      cal("on", { action: "bookingSuccessful", callback: () => { try { track("booking_completed") } catch {} } })
       cal("on", { action: "linkFailed", callback: () => { if (!cancelled) setStatus("failed") } })
     } catch {
       setStatus("failed")
