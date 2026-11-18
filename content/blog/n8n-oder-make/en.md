@@ -1,6 +1,6 @@
 ---
-title: "n8n or Make? A practical comparison"
-description: n8n and Make both automate processes between your tools – but with different strengths. What really matters when choosing.
+title: "n8n or Make? Which automation fits your business?"
+description: n8n and Make both connect your tools, but with different strengths. What decides it is how complex your process is, how many systems are involved, who looks after it and what it costs – not the feature list.
 slug: n8n-vs-make
 date: 2026-11-11
 cluster: automation
@@ -32,7 +32,14 @@ So the question isn't which tool is "better" – it's which one suits you better
 - **The processes are manageable.** For simple connections with few steps, Make is quick to set up.
 - **You don't want your own server.** Make runs entirely in the cloud, with an EU data centre if you need one.
 
-## What really matters
+## Four questions that decide it
+
+1. **How complex is your process?** A few steps, one clear path: Make is often perfectly enough. Many branches, edge cases and large volumes of data: n8n gives you more room.
+2. **How many systems are involved?** The more programs are involved, the more error handling and overview matter. Also check up front that the tools you use are supported on both platforms.
+3. **Who looks after it afterwards?** With n8n on your own server, running it comes on top: updates, backups, monitoring. Make takes that off your hands. In exchange you have less control.
+4. **What does it cost to run?** They bill differently (see the table). With few steps the difference is small, with large workflows and many records it can become noticeable. So calculate with your real process, not with the price list.
+
+## What else matters
 
 The tool question usually isn't the decisive one. More important:
 
@@ -44,4 +51,4 @@ The tool question usually isn't the decisive one. More important:
 
 For most projects with customer data, multiple systems and AI steps, I go with **n8n** – for the control over data and the flexibility. But if a team mainly wants to build simple connections themselves, **Make** is often the easier start.
 
-Not sure what fits your process? That's exactly what we clarify in the [automation pilot](/automation): process first, then the tool.
+Not sure what fits your process? In a free 15-minute call we'll look together at which approach suits your business. After that it continues in the [automation pilot](/automation): process first, then the tool.
