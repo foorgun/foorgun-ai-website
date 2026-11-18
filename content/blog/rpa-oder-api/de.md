@@ -1,12 +1,12 @@
 ---
-title: "RPA oder API-Automation? Wann sich was lohnt"
-description: Software-Roboter, die Klicks nachahmen, oder Systeme, die direkt miteinander sprechen? Der Unterschied zwischen RPA und API-Automation – und wie du die richtige Wahl triffst.
+title: "Programme miteinander verbinden: Klick-Roboter (RPA) oder Schnittstelle (API)?"
+description: Wann reicht ein Software-Roboter, der Klicks nachahmt, und wann braucht es eine Schnittstelle? Der Unterschied zwischen RPA und API-Automation – mit Beispiel, Wartungsaufwand und Entscheidungshilfe.
 slug: rpa-oder-api-automatisierung
 date: 2026-11-11
 cluster: automation
 ---
 
-Es gibt zwei grundsätzlich verschiedene Wege, einen Ablauf zwischen Programmen zu automatisieren:
+Daten aus einem Programm in ein anderes übertragen, jeden Tag, von Hand: Das kostet Zeit und ist fehleranfällig. Wenn du das automatisieren willst, gibt es zwei grundsätzlich verschiedene Wege:
 
 - **RPA** (Robotic Process Automation): Ein Software-Roboter bedient die Programme so, wie ein Mensch es tun würde – über die Oberfläche. Er klickt, tippt, kopiert.
 - **API-Automation:** Die Systeme sprechen direkt über ihre Schnittstellen (APIs) miteinander. Keine Oberfläche, keine Klicks.
@@ -49,6 +49,16 @@ Viele Unternehmen starten mit RPA, weil es sich so anfühlt, als würde man einf
 - Der Rechner, auf dem der Roboter läuft, startet Updates oder wird gesperrt.
 
 Das heißt nicht, dass RPA schlecht ist. Aber wer RPA einsetzt, wo eine Schnittstelle vorhanden wäre, baut sich unnötig Wartungsaufwand ein.
+
+## Ein typisches Beispiel
+
+Ein Betrieb bekommt jeden Tag Bestellungen über das Portal eines Lieferanten und überträgt sie von Hand in die eigene Warenwirtschaft. Das Lieferantenportal hat keine Schnittstelle, die Warenwirtschaft schon.
+
+Hier ist die Kombination sinnvoll: Die Warenwirtschaft wird über ihre Schnittstelle angebunden. Nur der Schritt im Portal, der sich anders nicht lösen lässt, läuft per RPA. So bleibt der fehleranfällige Teil klein, und bei einer Änderung am Portal musst du nur diesen einen Schritt anpassen. (Das ist ein typisches Szenario, kein konkretes Kundenprojekt.)
+
+## Was es langfristig kostet
+
+Ein Roboter, der Oberflächen bedient, ist schnell gebaut, braucht aber laufende Pflege: Jede Änderung am Programm kann ihn brechen. Eine Schnittstellen-Lösung kostet in der Einrichtung oft ähnlich viel, läuft danach aber deutlich wartungsärmer. Rechne deshalb nicht nur mit dem Aufbau, sondern auch mit dem Betrieb über ein bis zwei Jahre.
 
 ## Und was ist mit KI?
 

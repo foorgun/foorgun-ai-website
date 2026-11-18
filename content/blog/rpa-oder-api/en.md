@@ -1,12 +1,12 @@
 ---
-title: "RPA or API automation? When each one pays off"
-description: Software robots that mimic clicks, or systems that talk to each other directly? The difference between RPA and API automation – and how to make the right choice.
+title: "Connecting your software: click robot (RPA) or interface (API)?"
+description: When is a software robot that mimics clicks enough, and when do you need an interface? The difference between RPA and API automation – with an example, maintenance effort and a decision guide.
 slug: rpa-vs-api-automation
 date: 2026-11-11
 cluster: automation
 ---
 
-There are two fundamentally different ways to automate a process between programs:
+Moving data from one program to another by hand, every day: it costs time and invites mistakes. If you want to automate that, there are two fundamentally different ways:
 
 - **RPA** (robotic process automation): a software robot operates the programs the way a human would – through the user interface. It clicks, types, copies.
 - **API automation:** the systems talk to each other directly through their interfaces (APIs). No user interface, no clicks.
@@ -49,6 +49,16 @@ Many businesses start with RPA because it feels like simply "rebuilding the huma
 - The machine running the robot installs updates or gets locked.
 
 That doesn't mean RPA is bad. But using RPA where an interface would be available builds in unnecessary maintenance.
+
+## A typical example
+
+A business receives orders through a supplier's portal every day and copies them by hand into its own inventory system. The supplier portal has no interface, the inventory system does.
+
+Here the combination makes sense: the inventory system is connected through its interface. Only the step in the portal that can't be solved any other way runs via RPA. That keeps the fragile part small, and when the portal changes you only have to adjust that one step. (This is a typical scenario, not a specific client project.)
+
+## What it costs in the long run
+
+A robot that operates user interfaces is quick to build but needs ongoing care: any change to the program can break it. An interface-based solution often costs about the same to set up but runs with much less maintenance afterwards. So don't only count the build, count running it for a year or two.
 
 ## What about AI?
 
