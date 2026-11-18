@@ -1,6 +1,6 @@
 ---
-title: "n8n oder Make? Ein Vergleich für den Arbeitsalltag"
-description: n8n und Make automatisieren beide Abläufe zwischen deinen Tools – aber mit unterschiedlichen Stärken. Worauf es bei der Wahl wirklich ankommt.
+title: "n8n oder Make? Welche Automatisierung passt zu deinem Unternehmen?"
+description: n8n und Make verbinden beide deine Tools, aber mit unterschiedlichen Stärken. Entscheidend sind Komplexität deines Ablaufs, Anzahl der Systeme, Betreuung und Kosten – nicht die Feature-Liste.
 slug: n8n-oder-make
 date: 2026-11-11
 cluster: automation
@@ -32,7 +32,14 @@ Die Frage ist also nicht, welches Tool „besser“ ist – sondern welches bess
 - **Die Abläufe sind überschaubar.** Für einfache Verbindungen mit wenigen Schritten ist Make schnell eingerichtet.
 - **Es soll keinen eigenen Server geben.** Make läuft komplett in der Cloud, auf Wunsch mit Rechenzentrum in der EU.
 
-## Worauf es wirklich ankommt
+## Vier Fragen, die die Wahl entscheiden
+
+1. **Wie komplex ist dein Ablauf?** Wenige Schritte, ein klarer Weg: Make reicht oft völlig. Viele Verzweigungen, Sonderfälle und große Datenmengen: n8n gibt dir mehr Spielraum.
+2. **Wie viele Systeme hängen dran?** Je mehr Programme beteiligt sind, desto wichtiger werden Fehlerbehandlung und Übersicht. Prüfe außerdem vorab, ob die Tools, die du nutzt, in beiden Plattformen angebunden sind.
+3. **Wer betreut es danach?** Bei n8n auf eigenem Server kommt Betrieb dazu: Updates, Backups, Überwachung. Make nimmt dir das ab. Dafür hast du dort weniger Kontrolle.
+4. **Was kostet es im laufenden Betrieb?** Beide rechnen unterschiedlich ab (siehe Tabelle). Bei wenigen Schritten ist der Unterschied klein, bei großen Workflows mit vielen Datensätzen kann er spürbar werden. Rechne deshalb mit deinem echten Ablauf, nicht mit der Preisliste.
+
+## Worauf es darüber hinaus ankommt
 
 Die Tool-Frage ist meistens nicht die entscheidende. Wichtiger ist:
 
@@ -44,4 +51,4 @@ Die Tool-Frage ist meistens nicht die entscheidende. Wichtiger ist:
 
 Für die meisten Projekte mit Kundendaten, mehreren Systemen und KI-Schritten setze ich auf **n8n** – wegen der Kontrolle über die Daten und der Flexibilität. Wenn ein Team aber vor allem selbst einfache Verbindungen bauen soll, ist **Make** oft der leichtere Einstieg.
 
-Du bist unsicher, was für deinen Ablauf passt? Genau das klären wir im [Automations-Pilot](/de/automation): erst der Ablauf, dann das Tool.
+Du bist unsicher, was für deinen Ablauf passt? In einem kostenlosen 15-Minuten-Gespräch schauen wir gemeinsam, welcher Ansatz zu deinem Unternehmen passt. Danach geht es im [Automations-Pilot](/de/automation) weiter: erst der Ablauf, dann das Tool.
