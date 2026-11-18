@@ -1,12 +1,23 @@
 ---
-title: "Power Automate cloud vs. desktop: what's the difference?"
-description: Power Automate comes as cloud flows and desktop flows. What separates the two, when to use which and how they work together.
+title: "Microsoft Power Automate: which office tasks can you automate with it?"
+description: Filing emails, getting approvals, moving data out of Excel: what Power Automate can handle in everyday office work, and how cloud flows and desktop flows differ.
 slug: power-automate-cloud-vs-desktop
 date: 2026-11-11
 cluster: automation
 ---
 
 If you work in the Microsoft world, you'll quickly come across **Power Automate** when it comes to automation. And then the first confusion: there are **cloud flows** and **desktop flows** (the app for the latter is called Power Automate for desktop). Both are called Power Automate – but they work in fundamentally different ways.
+
+## What you can automate in the office
+
+Typical tasks teams on Microsoft 365 hand over to Power Automate:
+
+- **Outlook:** save attachments automatically, sort emails by rules, send reminders
+- **SharePoint and folders:** file documents in the right place, route documents for approval
+- **Excel:** move data from forms or emails into spreadsheets instead of copying it by hand
+- **Teams:** collect approvals, notify the team about new requests
+
+Whether it fits depends on your process. The technology behind it comes in two variants, and you should know both.
 
 ## The short version
 
@@ -66,4 +77,4 @@ Check the current state with Microsoft before a project – or get advice before
 2. **Desktop flow as a bridge.** Only for the steps where there really is no interface.
 3. **Understand the process first.** If you write down how the process runs beforehand – for example with [BPMN](/blog/bpmn-explained-simply) – you immediately see which steps work through interfaces and where a bridge is needed.
 
-You work with Microsoft 365 and want to know what can be automated? That's exactly what we clarify in the [automation pilot](/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/ki-coaching).
+You work with Microsoft 365 and want to know what can be automated? In a free 15-minute call we'll look at it together, then in more detail in the [automation pilot](/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/ki-coaching).
