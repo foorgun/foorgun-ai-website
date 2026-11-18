@@ -52,3 +52,5 @@ Die Tool-Frage ist meistens nicht die entscheidende. Wichtiger ist:
 Für die meisten Projekte mit Kundendaten, mehreren Systemen und KI-Schritten setze ich auf **n8n** – wegen der Kontrolle über die Daten und der Flexibilität. Wenn ein Team aber vor allem selbst einfache Verbindungen bauen soll, ist **Make** oft der leichtere Einstieg.
 
 Du bist unsicher, was für deinen Ablauf passt? In einem kostenlosen 15-Minuten-Gespräch schauen wir gemeinsam, welcher Ansatz zu deinem Unternehmen passt. Danach geht es im [Automations-Pilot](/de/automation) weiter: erst der Ablauf, dann das Tool.
+
+Was ein solches Projekt kostet, steht in [Was kostet eine individuelle Automatisierung?](/de/blog/was-kostet-automatisierung-kleine-unternehmen) Beispiele für Abläufe findest du in [7 Prozesse, die jede Marketingagentur automatisieren sollte](/de/blog/sieben-prozesse-agentur-automatisieren).

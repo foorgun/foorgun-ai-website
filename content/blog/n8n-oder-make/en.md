@@ -52,3 +52,5 @@ The tool question usually isn't the decisive one. More important:
 For most projects with customer data, multiple systems and AI steps, I go with **n8n** – for the control over data and the flexibility. But if a team mainly wants to build simple connections themselves, **Make** is often the easier start.
 
 Not sure what fits your process? In a free 15-minute call we'll look together at which approach suits your business. After that it continues in the [automation pilot](/automation): process first, then the tool.
+
+What such a project costs is covered in [What does custom automation cost a small business?](/blog/automation-cost-small-business) For examples of workflows, see [7 processes every marketing agency should automate](/blog/seven-agency-processes-to-automate).
