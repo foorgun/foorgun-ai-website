@@ -74,3 +74,5 @@ For recurring processes with fixed rules, the interface is still the better way:
 4. **Most of the time:** a combination. Everything through interfaces, only the one step without an interface via RPA. What that looks like in the Microsoft world is shown in [Power Automate cloud vs. desktop](/blog/power-automate-cloud-vs-desktop).
 
 Which path fits you depends on the process and the systems involved. That's exactly what I look at first in the [automation pilot](/automation) – before anything gets built.
+
+Concrete workflows where this pays off: [Automating client onboarding](/blog/client-onboarding-automation) and [Creating client reports automatically](/blog/automated-client-reports).

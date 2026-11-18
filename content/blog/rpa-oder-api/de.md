@@ -74,3 +74,5 @@ Für wiederkehrende Abläufe mit festen Regeln bleibt die Schnittstelle trotzdem
 4. **Meistens:** eine Kombination. Alles über Schnittstellen, nur der eine Schritt ohne Schnittstelle per RPA. Wie das im Microsoft-Umfeld aussieht, zeigt der Artikel [Power Automate Cloud vs. Desktop](/de/blog/power-automate-cloud-vs-desktop).
 
 Welcher Weg bei dir passt, hängt vom Ablauf und den beteiligten Systemen ab. Genau das schaue ich mir im [Automations-Pilot](/de/automation) zuerst an – bevor irgendetwas gebaut wird.
+
+Konkrete Abläufe, bei denen sich das lohnt: [Kunden-Onboarding automatisieren](/de/blog/kunden-onboarding-automatisieren) und [Kundenreports automatisch erstellen](/de/blog/kundenreports-automatisch-erstellen).
