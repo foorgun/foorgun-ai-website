@@ -11,8 +11,8 @@ import { FIGURES } from "../figures"
 
 const BASE = "https://foorgun.ai"
 const T = {
-  de: { blog: "Blog", updated: "aktualisiert", ctaTitle: "Soll ich mir deinen Ablauf ansehen?", ctaText: "In 15 Minuten schauen wir gemeinsam, wo sich bei dir etwas lohnt – kostenlos und unverbindlich.", cta: "15-Min-Gespräch buchen", topic: "Mehr zum Thema", more: "Weitere Artikel zum Thema", by: "von" },
-  en: { blog: "Blog", updated: "updated", ctaTitle: "Want me to look at your process?", ctaText: "In 15 minutes we'll look at where it pays off for you – free and with no obligation.", cta: "Book a 15-min call", topic: "More on this topic", more: "More articles on this topic", by: "by" },
+  de: { blog: "Blog", updated: "aktualisiert", ctaTitle: "Kommt dir das bekannt vor?", ctaText: "Ich helfe dir, wiederkehrende Abläufe in deinem Unternehmen zu vereinfachen. In einem kostenlosen 15-Minuten-Gespräch schauen wir gemeinsam, was sich bei dir automatisieren lässt.", cta: "Kostenloses 15-Min-Gespräch buchen", topic: "Mehr zum Thema", more: "Weitere Artikel zum Thema", by: "von" },
+  en: { blog: "Blog", updated: "updated", ctaTitle: "Sound familiar?", ctaText: "I help you simplify recurring work in your business. In a free 15-minute call we'll look together at what can be automated for you.", cta: "Book a free 15-min call", topic: "More on this topic", more: "More articles on this topic", by: "by" },
 }
 
 export default function Article({ post }: { post: Post }) {

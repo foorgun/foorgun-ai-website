@@ -6,8 +6,8 @@ import { href, type Lang } from "../i18n"
 
 const T = {
   de: {
-    title: <>Wissen aus der Praxis: <em className="hl">KI, Automation, Prozesse.</em></>,
-    lead: "Anleitungen und Einordnungen für Unternehmen, die KI sinnvoll einsetzen wollen – ohne Hype.",
+    title: <>Weniger manuelle Arbeit. <em className="hl">Bessere Prozesse.</em></>,
+    lead: "Praxisnahe Anleitungen, Beispiele und Ideen, wie du wiederkehrende Aufgaben automatisierst, deine Abläufe vereinfachst und KI sinnvoll in deinem Unternehmen einsetzt. Keine Technik um der Technik willen, sondern Lösungen für Probleme, die dich und dein Team im Alltag Zeit kosten.",
     topic: "Zum Thema",
     empty: "Hier erscheinen bald die ersten Artikel.",
   },
