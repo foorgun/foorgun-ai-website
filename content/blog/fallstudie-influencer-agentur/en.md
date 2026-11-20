@@ -65,19 +65,12 @@ On top of that there's an interface where the team reviews applications and sees
 
 What started as an automation project is now a fixed part of daily operations. After launch, the project moved into a monthly retainer: monitoring, bug fixes and small improvements to keep operations stable.
 
-## What came next – and what didn't
-
-As volume grew, so did the database. At some point the tool everything ran on hit its limits, and the next plan would have cost significantly more per user. So I calculated and proposed a move to an own platform: own database, own interface, lower ongoing licence costs.
-
-The agency decided not to take that step for now. That's a legitimate decision: the existing system works, and a migration is a project with its own risk. For me, part of the job is putting the numbers openly on the table and leaving the decision with the client.
-
 ## What other agencies can take from this
 
 1. **Start with the process, not the tool.** Only once the whole path from application to post was on one page was it clear where time was really being lost.
 2. **Keep the decision with the team, not the busywork.** Everything around the selection was automated, not the selection itself.
 3. **Start at the middle level.** Most of the relief came from the simple workflows. Automatic shortlisting can be added later, once the data is clean.
 4. **Measure from day one.** Because every workflow is logged, the results above can be shown rather than estimated.
-5. **Plan for growth.** Tools that charge per user or per record get more expensive as you succeed. Know that before you build on them.
 
 Which workflows usually pay off first in agencies is covered in [7 processes every marketing agency should automate](/blog/seven-agency-processes-to-automate). What a similar flow looks like when new clients start is described in [Automating client onboarding](/blog/client-onboarding-automation), and what it costs in [What does custom automation cost a small business?](/blog/automation-cost-small-business)
 

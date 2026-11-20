@@ -65,19 +65,12 @@ Zusätzlich gibt es eine Oberfläche, in der das Team sichtet und den Stand sieh
 
 Was als Automatisierungsprojekt angefangen hat, ist heute ein fester Teil des Tagesgeschäfts. Nach dem Start ging das Projekt in einen Monatsretainer über: Überwachung, Fehlerbehebung und kleine Verbesserungen, damit der Betrieb stabil läuft.
 
-## Was als Nächstes kam – und was nicht
-
-Mit dem Volumen wuchs auch die Datenbank. Irgendwann stieß das Werkzeug, auf dem alles lief, an seine Grenzen, und der nächste Tarif wäre pro Nutzer deutlich teurer geworden. Ich habe deshalb einen Umzug auf eine eigene Plattform durchgerechnet und vorgeschlagen: eigene Datenbank, eigene Oberfläche, weniger laufende Lizenzkosten.
-
-Die Agentur hat sich entschieden, diesen Schritt vorerst nicht zu gehen. Das ist eine legitime Entscheidung: Das bestehende System läuft, und eine Migration ist ein eigenes Projekt mit eigenem Risiko. Für mich gehört dazu, die Rechnung offen auf den Tisch zu legen und die Entscheidung beim Kunden zu lassen.
-
 ## Was andere Agenturen daraus mitnehmen können
 
 1. **Nicht beim Tool anfangen, sondern beim Ablauf.** Erst als der ganze Weg von der Bewerbung bis zum Beitrag auf einem Blatt stand, war klar, wo die Zeit wirklich verloren geht.
 2. **Die Entscheidung beim Team lassen, die Fleißarbeit nicht.** Automatisiert wurde alles rund um die Auswahl, nicht die Auswahl selbst.
 3. **Mit der mittleren Stufe starten.** Der größte Teil der Entlastung kam aus den einfachen Abläufen. Eine automatische Vorauswahl kann man später ergänzen, wenn die Datenbasis sauber ist.
 4. **Von Anfang an messen.** Weil jeder Ablauf protokolliert wird, lassen sich die Ergebnisse oben belegen, statt sie zu schätzen.
-5. **Wachstum einplanen.** Werkzeuge, die pro Nutzer oder Datensatz abrechnen, werden mit dem Erfolg teurer. Das sollte man kennen, bevor man darauf aufbaut.
 
 Welche Abläufe sich in Agenturen typischerweise zuerst lohnen, zeigt [7 Prozesse, die jede Marketingagentur automatisieren sollte](/de/blog/sieben-prozesse-agentur-automatisieren). Wie ein ähnlicher Ablauf beim Start neuer Kunden aussieht, beschreibt [Kunden-Onboarding automatisieren](/de/blog/kunden-onboarding-automatisieren), und mit welchen Kosten du rechnen solltest, [Was kostet eine individuelle Automatisierung?](/de/blog/was-kostet-automatisierung-kleine-unternehmen)
 
