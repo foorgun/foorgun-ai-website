@@ -8,8 +8,6 @@ cluster: automation
 
 **Kurz gesagt:** Eine internationale Influencer-Agentur hat ihre Kampagnen über Tabellen, Formulare, E-Mail und ein Team aus Freelancern gesteuert. Heute laufen 7 von 9 Schritten vom Creator-Bewerbungseingang bis zum veröffentlichten Beitrag automatisch. Die Auswahl der Creator bleibt beim Team. In den ersten vier Monaten nach dem Start hat das System **über 50.000 Bewerbungen** verarbeitet.
 
-Den Namen der Agentur und ihrer Kunden lasse ich weg. Die Zahlen stammen aus dem laufenden System.
-
 ## Die Ausgangslage
 
 Die Agentur bringt Marken mit Creatorn zusammen: Creator bewerben sich auf eine Kampagne, das Team wählt passende Profile aus, der Kunde gibt die Liste frei, Produkte werden verschickt, und am Ende wird geprüft, ob der Beitrag wirklich online gegangen ist.
@@ -70,7 +68,7 @@ Was als Automatisierungsprojekt angefangen hat, ist heute ein fester Teil des Ta
 1. **Nicht beim Tool anfangen, sondern beim Ablauf.** Erst als der ganze Weg von der Bewerbung bis zum Beitrag auf einem Blatt stand, war klar, wo die Zeit wirklich verloren geht.
 2. **Die Entscheidung beim Team lassen, die Fleißarbeit nicht.** Automatisiert wurde alles rund um die Auswahl, nicht die Auswahl selbst.
 3. **Mit der mittleren Stufe starten.** Der größte Teil der Entlastung kam aus den einfachen Abläufen. Eine automatische Vorauswahl kann man später ergänzen, wenn die Datenbasis sauber ist.
-4. **Von Anfang an messen.** Weil jeder Ablauf protokolliert wird, lassen sich die Ergebnisse oben belegen, statt sie zu schätzen.
+4. **Von Anfang an messen.** Wenn jeder Ablauf protokolliert wird, siehst du jederzeit, was das System leistet und wo es hakt.
 
 Welche Abläufe sich in Agenturen typischerweise zuerst lohnen, zeigt [7 Prozesse, die jede Marketingagentur automatisieren sollte](/de/blog/sieben-prozesse-agentur-automatisieren). Wie ein ähnlicher Ablauf beim Start neuer Kunden aussieht, beschreibt [Kunden-Onboarding automatisieren](/de/blog/kunden-onboarding-automatisieren), und mit welchen Kosten du rechnen solltest, [Was kostet eine individuelle Automatisierung?](/de/blog/was-kostet-automatisierung-kleine-unternehmen)
 

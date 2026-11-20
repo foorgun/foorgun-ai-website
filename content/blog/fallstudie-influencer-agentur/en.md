@@ -8,8 +8,6 @@ cluster: automation
 
 **In short:** An international influencer agency ran its campaigns through spreadsheets, forms, email and a team of freelancers. Today, 7 of 9 steps from creator application to published post run automatically. Choosing the creators stays with the team. In the first four months after launch, the system processed **more than 50,000 applications**.
 
-I'm leaving out the names of the agency and its clients. The numbers come from the live system.
-
 ## The starting point
 
 The agency connects brands with creators: creators apply for a campaign, the team picks suitable profiles, the client approves the list, products are shipped, and finally someone checks whether the post actually went live.
@@ -70,7 +68,7 @@ What started as an automation project is now a fixed part of daily operations. A
 1. **Start with the process, not the tool.** Only once the whole path from application to post was on one page was it clear where time was really being lost.
 2. **Keep the decision with the team, not the busywork.** Everything around the selection was automated, not the selection itself.
 3. **Start at the middle level.** Most of the relief came from the simple workflows. Automatic shortlisting can be added later, once the data is clean.
-4. **Measure from day one.** Because every workflow is logged, the results above can be shown rather than estimated.
+4. **Measure from day one.** When every workflow is logged, you can see at any time what the system delivers and where it gets stuck.
 
 Which workflows usually pay off first in agencies is covered in [7 processes every marketing agency should automate](/blog/seven-agency-processes-to-automate). What a similar flow looks like when new clients start is described in [Automating client onboarding](/blog/client-onboarding-automation), and what it costs in [What does custom automation cost a small business?](/blog/automation-cost-small-business)
 
