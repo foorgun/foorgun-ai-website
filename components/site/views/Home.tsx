@@ -9,7 +9,7 @@ import { CALL } from "../config"
 import { href, UI, type Lang } from "../i18n"
 import { Actions, Cta, Faq, Hl, Section, Steps, Testimonials } from "../blocks"
 
-type Project = { tag: string; status: string; before: string; how: string; result: string }
+type Project = { tag: string; status: string; before: string; how: string; result: string; link?: string }
 
 const T = {
   de: {
@@ -34,8 +34,9 @@ const T = {
     before: "Ausgangslage",
     how: "Umsetzung",
     result: "Ergebnis",
+    caseLink: "Zur Fallstudie",
     projects: [
-      { tag: "Internationale Influencer-Agentur", status: "Umgesetzt", before: "Creator-Bewerbungen, Kundenlisten und Versanddaten für Produktproben wurden von Hand zwischen Tools hin und her kopiert.", how: "Bewerbungen werden automatisch erfasst und mit relevanten Informationen angereichert. Kundenlisten und Versanddaten entstehen daraus automatisch.", result: "Weniger manuelle Datenpflege und ein klar strukturierter Ablauf bei Creator-Kampagnen." },
+      { tag: "Internationale Influencer-Agentur", status: "Umgesetzt", before: "Creator-Bewerbungen, Kundenlisten und Versanddaten für Produktproben wurden von Hand zwischen Tools hin und her kopiert.", how: "Bewerbungen werden automatisch erfasst und mit relevanten Informationen angereichert. Kundenlisten und Versanddaten entstehen daraus automatisch.", result: "Über 50.000 Bewerbungen in den ersten vier Monaten verarbeitet. 7 von 9 Prozessschritten laufen automatisch, die Auswahl bleibt beim Team.", link: "/blog/fallstudie-influencer-agentur" },
       { tag: "Architekturbüro, ca. 10 Mitarbeitende", status: "In Umsetzung", before: "Projektdaten aus Werkverträgen werden von Hand in Excel übertragen.", how: "Informationen aus den Verträgen werden mit KI für die Projektanlage aufbereitet. Dazu kommen eine zentrale Projektübersicht und digitale Urlaubsanträge.", result: "Das Projekt läuft noch. Ziel: weniger doppelte Eingaben und eine Übersicht für alle." },
       { tag: "ViUnlimited, Kampfsport-Studio", status: "Umgesetzt", before: "Social-Media-Content entstand nebenher und kostete das Team jede Woche Zeit.", how: "Eine automatisierte Content-Pipeline, die den Ablauf von der Idee bis zum fertigen Beitrag strukturiert.", result: "Content entsteht als fester Ablauf statt nebenbei – siehe Stimme von Sandra Schmidt weiter unten." },
       { tag: "Salon Majesto, Barbershop", status: "Umgesetzt", before: "Termine liefen über eine kostenpflichtige externe Buchungsplattform.", how: "Eine eigene, minimalistische Website mit integrierter Online-Buchung.", result: "Eigene Präsenz mit direkter Buchung und volle Kontrolle über den Buchungsprozess." },
@@ -120,8 +121,9 @@ const T = {
     before: "Starting point",
     how: "What I built",
     result: "Outcome",
+    caseLink: "Read the case study",
     projects: [
-      { tag: "International influencer agency", status: "Delivered", before: "Creator applications, client lists and shipping data for product samples were copied between tools by hand.", how: "Applications are captured automatically and enriched with relevant information. Client lists and shipping data are generated from that automatically.", result: "Less manual data work and a clearly structured process for creator campaigns." },
+      { tag: "International influencer agency", status: "Delivered", before: "Creator applications, client lists and shipping data for product samples were copied between tools by hand.", how: "Applications are captured automatically and enriched with relevant information. Client lists and shipping data are generated from that automatically.", result: "More than 50,000 applications processed in the first four months. 7 of 9 process steps run automatically, the selection stays with the team.", link: "/blog/case-study-influencer-agency" },
       { tag: "Architecture firm, approx. 10 people", status: "In progress", before: "Project data from contracts is typed into Excel by hand.", how: "Information from the contracts is prepared with AI for project setup. Plus a central project overview and digital leave requests.", result: "The project is still running. Goal: fewer duplicate entries and one overview for everyone." },
       { tag: "ViUnlimited, martial arts studio", status: "Delivered", before: "Social media content was produced on the side and cost the team time every week.", how: "An automated content pipeline that structures the process from idea to finished post.", result: "Content is now a fixed process instead of a side task – see Sandra Schmidt's words further down." },
       { tag: "Salon Majesto, barbershop", status: "Delivered", before: "Appointments ran through a paid external booking platform.", how: "Its own minimalist website with built-in online booking.", result: "Its own presence with direct booking and full control over the booking process." },
@@ -260,6 +262,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 <p>{c.how}</p>
                 <h3>{t.result}</h3>
                 <p>{c.result}</p>
+                {c.link && <p><a className="more" href={href(lang, c.link)}>{t.caseLink} →</a></p>}
               </article>
             ))}
           </div>
