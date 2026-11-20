@@ -9,6 +9,8 @@ import { CALL } from "../config"
 import { href, UI, type Lang } from "../i18n"
 import { Actions, Cta, Faq, Hl, Section, Steps, Testimonials } from "../blocks"
 
+type Project = { tag: string; status: string; before: string; how: string; result: string }
+
 const T = {
   de: {
     title1: "Bau ein Unternehmen, das für dich arbeitet.",
@@ -25,8 +27,19 @@ const T = {
       { tag: "Agenturen & Dienstleister", status: "Typischer Anwendungsfall", problem: "Kundendaten werden zwischen Tools hin und her kopiert, Onboarding und Reports entstehen von Hand in Excel.", solution: "Daten fließen automatisch dorthin, wo sie gebraucht werden. Onboarding und Kundenreports laufen als fester Ablauf, dein Team prüft nur noch das Ergebnis." },
       { tag: "Architektur & Planung", status: "In Umsetzung", problem: "Projektdaten aus Werkverträgen werden immer wieder von Hand in Excel übertragen.", solution: "Informationen aus den Verträgen werden mit KI für die Projektanlage aufbereitet. Dazu eine zentrale Projektübersicht und digitale Urlaubsanträge." },
       { tag: "Handwerk & Bau", status: "Typischer Anwendungsfall", problem: "Abends noch Angebote schreiben, und das Nachfassen geht im Alltag unter.", solution: "Anfragen werden erfasst, ein Angebotsentwurf wird vorbereitet und du gibst frei. Offene Angebote werden zum richtigen Zeitpunkt nachverfolgt." },
-      { tag: "Beauty & Barber", status: "Typischer Anwendungsfall", problem: "Termine laufen über WhatsApp, und für jede Buchungsplattform fällt ein Abo an.", solution: "Eine eigene Website mit integrierter Online-Terminbuchung, passend zu deinen Abläufen und mit mehr Kontrolle über den Buchungsprozess." },
+      { tag: "Beauty & Barber", status: "Umgesetzt", problem: "Termine laufen über WhatsApp, und für jede Buchungsplattform fällt ein Abo an.", solution: "Eine eigene Website mit integrierter Online-Terminbuchung, passend zu deinen Abläufen und mit mehr Kontrolle über den Buchungsprozess." },
     ] as { tag: string; status: string; problem: string; solution: string }[],
+    projectsTitle: "Echte Projekte",
+    projectsLead: "Was ich bisher umgesetzt habe – und woran ich gerade arbeite. Ohne Kundennamen, wo es um interne Abläufe geht.",
+    before: "Ausgangslage",
+    how: "Umsetzung",
+    result: "Ergebnis",
+    projects: [
+      { tag: "Internationale Influencer-Agentur", status: "Umgesetzt", before: "Creator-Bewerbungen, Kundenlisten und Versanddaten für Produktproben wurden von Hand zwischen Tools hin und her kopiert.", how: "Bewerbungen werden automatisch erfasst und mit relevanten Informationen angereichert. Kundenlisten und Versanddaten entstehen daraus automatisch.", result: "Weniger manuelle Datenpflege und ein klar strukturierter Ablauf bei Creator-Kampagnen." },
+      { tag: "Architekturbüro, ca. 10 Mitarbeitende", status: "In Umsetzung", before: "Projektdaten aus Werkverträgen werden von Hand in Excel übertragen.", how: "Informationen aus den Verträgen werden mit KI für die Projektanlage aufbereitet. Dazu kommen eine zentrale Projektübersicht und digitale Urlaubsanträge.", result: "Das Projekt läuft noch. Ziel: weniger doppelte Eingaben und eine Übersicht für alle." },
+      { tag: "ViUnlimited, Kampfsport-Studio", status: "Umgesetzt", before: "Social-Media-Content entstand nebenher und kostete das Team jede Woche Zeit.", how: "Eine automatisierte Content-Pipeline, die den Ablauf von der Idee bis zum fertigen Beitrag strukturiert.", result: "Content entsteht als fester Ablauf statt nebenbei – siehe Stimme von Sandra Schmidt weiter unten." },
+      { tag: "Salon Majesto, Barbershop", status: "Umgesetzt", before: "Termine liefen über eine kostenpflichtige externe Buchungsplattform.", how: "Eine eigene, minimalistische Website mit integrierter Online-Buchung.", result: "Eigene Präsenz mit direkter Buchung und volle Kontrolle über den Buchungsprozess." },
+    ] as Project[],
     servicesTitle: "Drei Bausteine, die aufeinander aufbauen",
     nodes: [
       { path: "/automation", who: "Automation · für Unternehmen mit Routinearbeit", title: "Aufgaben automatisch erledigen", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
@@ -100,8 +113,19 @@ const T = {
       { tag: "Agencies & service providers", status: "Typical use case", problem: "Client data gets copied back and forth between tools, onboarding and reports are built by hand in Excel.", solution: "Data flows to where it's needed automatically. Onboarding and client reports run as a fixed process, your team only reviews the result." },
       { tag: "Architecture & planning", status: "In progress", problem: "Project data from contracts is typed into Excel by hand, again and again.", solution: "Information from the contracts is prepared with AI for project setup. Plus a central project overview and digital leave requests." },
       { tag: "Trades & construction", status: "Typical use case", problem: "Writing quotes in the evening, and follow-ups get lost in the daily routine.", solution: "Enquiries are captured, a quote draft is prepared and you approve it. Open quotes are followed up at the right time." },
-      { tag: "Beauty & barber", status: "Typical use case", problem: "Appointments run through WhatsApp, and every booking platform comes with a subscription.", solution: "Your own website with built-in online booking, fitted to how you work, with more control over the booking process." },
+      { tag: "Beauty & barber", status: "Delivered", problem: "Appointments run through WhatsApp, and every booking platform comes with a subscription.", solution: "Your own website with built-in online booking, fitted to how you work, with more control over the booking process." },
     ] as { tag: string; status: string; problem: string; solution: string }[],
+    projectsTitle: "Real projects",
+    projectsLead: "What I've delivered so far – and what I'm working on right now. Without client names where internal processes are involved.",
+    before: "Starting point",
+    how: "What I built",
+    result: "Outcome",
+    projects: [
+      { tag: "International influencer agency", status: "Delivered", before: "Creator applications, client lists and shipping data for product samples were copied between tools by hand.", how: "Applications are captured automatically and enriched with relevant information. Client lists and shipping data are generated from that automatically.", result: "Less manual data work and a clearly structured process for creator campaigns." },
+      { tag: "Architecture firm, approx. 10 people", status: "In progress", before: "Project data from contracts is typed into Excel by hand.", how: "Information from the contracts is prepared with AI for project setup. Plus a central project overview and digital leave requests.", result: "The project is still running. Goal: fewer duplicate entries and one overview for everyone." },
+      { tag: "ViUnlimited, martial arts studio", status: "Delivered", before: "Social media content was produced on the side and cost the team time every week.", how: "An automated content pipeline that structures the process from idea to finished post.", result: "Content is now a fixed process instead of a side task – see Sandra Schmidt's words further down." },
+      { tag: "Salon Majesto, barbershop", status: "Delivered", before: "Appointments ran through a paid external booking platform.", how: "Its own minimalist website with built-in online booking.", result: "Its own presence with direct booking and full control over the booking process." },
+    ] as Project[],
     servicesTitle: "Three building blocks that build on each other",
     nodes: [
       { path: "/automation", who: "Automation · for businesses with routine work", title: "Get recurring tasks done automatically", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
@@ -219,6 +243,26 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
         <div className="wrap">
           <Bpmn lang={lang} />
+        </div>
+      </section>
+
+      <section className="rule" id="projekte">
+        <div className="wrap">
+          <h2>{t.projectsTitle}</h2>
+          <p className="lead">{t.projectsLead}</p>
+          <div className="usecases">
+            {t.projects.map((c) => (
+              <article key={c.tag} className="usecase">
+                <p className="uc-meta"><span className="uc-tag">{c.tag}</span><span className="uc-status">{c.status}</span></p>
+                <h3>{t.before}</h3>
+                <p>{c.before}</p>
+                <h3>{t.how}</h3>
+                <p>{c.how}</p>
+                <h3>{t.result}</h3>
+                <p>{c.result}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
