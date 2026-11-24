@@ -38,6 +38,12 @@ export function orgSchema(lang: Lang) {
           { "@type": "CollegeOrUniversity", name: "Technische Hochschule Ulm" },
           { "@type": "CollegeOrUniversity", name: "Korea University" },
         ],
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          name: "Microsoft Certified: Power Platform Functional Consultant Associate",
+          credentialCategory: "certification",
+          recognizedBy: { "@type": "Organization", name: "Microsoft" },
+        },
         knowsAbout: ["Automation", "APIs", "Cloud infrastructure", "n8n", "Business Process Management", "BPMN", "Forward Deployed Engineering", "Claude", "Power Automate"],
         url: `${BASE}${href(lang, "/")}`,
       },

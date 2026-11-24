@@ -36,6 +36,13 @@ const T = {
       ["Bestehende Flows", "Flows, die jemand gebaut hat und die niemand mehr versteht: Ich räume auf, mache sie stabil und dokumentiere sie."],
       ["Schulung", <>Dein Team soll selbst bauen? Im <Link href="/de/ki-coaching">Coaching</Link> zeige ich es an euren eigenen Abläufen.</>],
     ] as [string, React.ReactNode][],
+    whyTitle: "Zertifiziert und aus der Praxis",
+    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Zertifiziert seit Januar 2025",
+    why: [
+      ["Erfahrung", "Fast zwei Jahre habe ich als Intelligent Automation Engineer in der Beratung Lösungen auf der Microsoft Power Platform entworfen und entwickelt: Power Automate, Power Apps und Copilot Studio."],
+      ["KI im Ablauf", "KI-Schritte, APIs und Datenverarbeitung gehören dazu – dort, wo sie im Ablauf wirklich etwas übernehmen."],
+      ["Vom Fachbereich zur Lösung", "Ich übersetze, was dein Team braucht, in eine Lösung, die im Alltag läuft und sich später erweitern lässt."],
+    ] as [string, string][],
     stepsTitle: "So läuft ein Power-Automate-Projekt ab",
     steps: [["Gespräch", "15 Minuten: Welcher Ablauf kostet am meisten Zeit? Wir wählen den einen, der sich am meisten lohnt."], ["Prozess-Check", "Ich nehme den Ablauf auf, prüfe Systeme und Lizenzen und lege fest, was automatisiert wird."], ["Entwicklung", "Ich baue den Flow in deiner Microsoft-Umgebung und teste ihn mit echten Fällen."], ["Übergabe", "Dokumentation und Einweisung. Der Flow gehört dir und läuft in deinem Tenant."]] as [string, string][],
     pkgName: "Power-Automate-Pilot",
@@ -78,6 +85,13 @@ const T = {
       ["Existing flows", "Flows someone built and nobody understands any more: I clean them up, make them stable and document them."],
       ["Training", <>Should your team build flows themselves? In <Link href="/ki-coaching">coaching</Link> I teach it on your own processes.</>],
     ] as [string, React.ReactNode][],
+    whyTitle: "Certified and hands-on",
+    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Certified since January 2025",
+    why: [
+      ["Experience", "For almost two years I designed and developed solutions on the Microsoft Power Platform as an Intelligent Automation Engineer in consulting: Power Automate, Power Apps and Copilot Studio."],
+      ["AI in the process", "AI steps, APIs and data processing are part of it – where they actually take work over in the process."],
+      ["From business need to solution", "I translate what your team needs into a solution that runs day to day and can be extended later."],
+    ] as [string, string][],
     stepsTitle: "How a Power Automate project works",
     steps: [["Call", "15 minutes: which process costs the most time? We pick the one that's most worth it."], ["Process check", "I map the process, check systems and licences and define what gets automated."], ["Development", "I build the flow in your Microsoft environment and test it with real cases."], ["Handover", "Documentation and a walkthrough. The flow is yours and runs in your tenant."]] as [string, string][],
     pkgName: "Power Automate pilot",
@@ -112,6 +126,20 @@ export default function PowerAutomate({ lang }: { lang: Lang }) {
       <section className="rule" id="was"><div className="wrap split"><h2>{t.whatTitle}</h2><div className="prose">{t.what.map((p, i) => <p key={i}>{p}</p>)}</div></div></section>
       <Section><h2>{t.buildTitle}</h2><Proof items={t.build} /></Section>
       <section className="rule"><div className="wrap split"><h2>{t.helpTitle}</h2><Facts rows={t.help} /></div></section>
+      <section className="rule">
+        <div className="wrap split">
+          <div>
+            <h2>{t.whyTitle}</h2>
+            <div className="cert">
+              <span className="cert-stars" aria-hidden="true">★★</span>
+              <small>{t.certKicker}</small>
+              <strong>{t.certName}</strong>
+              <span className="cert-note">{t.certNote}</span>
+            </div>
+          </div>
+          <Facts rows={t.why} />
+        </div>
+      </section>
       <Section>
         <h2>{t.stepsTitle}</h2>
         <Steps items={t.steps} />
