@@ -66,7 +66,7 @@ export function Steps({ items }: { items: [string, string][] }) {
   )
 }
 
-export function Faq({ items }: { items: [string, string][] }) {
+export function Faq({ items }: { items: [string, ReactNode][] }) {
   return (
     <div className="faq">
       {items.map(([q, a]) => (

@@ -1,3 +1,5 @@
+import Link from "next/link"
+import type { ReactNode } from "react"
 import Shell from "../Shell"
 import JsonLd, { serviceSchema } from "../JsonLd"
 import ClusterArticles from "../ClusterArticles"
@@ -21,7 +23,7 @@ const T = {
     priceLabel: "Festpreis", price: "ab 1.500 €", priceNote: "Danach weitere Abläufe zum Festpreis oder laufende Betreuung im Monat.", priceCta: "Gespräch buchen",
     whyTitle: "Warum mit mir",
     why: [["Prozess-Know-how", "Wirtschaftsinformatiker mit Hintergrund in Prozessmanagement, Digitalisierung und Automation."], ["Aus der Praxis", "Automationen, die bei Kunden im Alltag laufen – keine Demos, keine Prototypen in der Schublade."], ["Pragmatisch", "Ich automatisiere, was sich rechnet – nicht alles, was technisch möglich ist."]] as [string, string][],
-    faq: [["Welche Tools kannst du anbinden?", "Fast alles mit Schnittstelle: Gmail, Outlook, Google Sheets, Excel, Monday, HubSpot, Slack, WhatsApp, Notion, Airtable und viele mehr."], ["Wo laufen die Daten?", "Je nach Bedarf in n8n Cloud mit Servern in der EU oder auf deinem eigenen Server."], ["Was, wenn sich unser Ablauf ändert?", "Kleine Anpassungen machst du nach der Einweisung selbst. Für größere bin ich da."], ["Brauchen wir dafür KI?", "Nicht immer. Viele Abläufe brauchen nur saubere Regeln. KI kommt dort rein, wo Texte gelesen oder eingeordnet werden müssen."]] as [string, string][],
+    faq: [["Welche Tools kannst du anbinden?", "Fast alles mit Schnittstelle: Gmail, Outlook, Google Sheets, Excel, Monday, HubSpot, Slack, WhatsApp, Notion, Airtable und viele mehr."], ["Wo laufen die Daten?", "Je nach Bedarf in n8n Cloud mit Servern in der EU oder auf deinem eigenen Server."], ["Was, wenn sich unser Ablauf ändert?", "Kleine Anpassungen machst du nach der Einweisung selbst. Für größere bin ich da."], ["Brauchen wir dafür KI?", "Nicht immer. Viele Abläufe brauchen nur saubere Regeln. KI kommt dort rein, wo Texte gelesen oder eingeordnet werden müssen."], ["Arbeitest du auch mit Microsoft Power Automate?", <>Ja. Wenn dein Team in Microsoft 365 arbeitet, ist das oft der kürzere Weg. Mehr dazu unter <Link href="/de/power-automate">Power Automate Beratung und Entwicklung</Link>.</>]] as [string, ReactNode][],
     ctaTitle: "Welcher Ablauf nervt dich am meisten?",
     ctaText: "Erzähl es mir in 15 Minuten. Du bekommst eine ehrliche Einschätzung, ob und wie es sich automatisieren lässt.",
   },
@@ -38,7 +40,7 @@ const T = {
     priceLabel: "Fixed price", price: "from €1,500", priceNote: "After that, more processes at a fixed price or ongoing monthly support.", priceCta: "Book a call",
     whyTitle: "Why work with me",
     why: [["Process know-how", "Business information systems graduate with a background in process management, digitalisation and automation."], ["Hands-on", "Automations that run in my clients' day-to-day work – not demos or prototypes left in a drawer."], ["Pragmatic", "I automate what pays off – not everything that's technically possible."]] as [string, string][],
-    faq: [["Which tools can you connect?", "Almost anything with an API: Gmail, Outlook, Google Sheets, Excel, Monday, HubSpot, Slack, WhatsApp, Notion, Airtable and many more."], ["Where does the data live?", "Depending on your needs, in n8n Cloud with servers in the EU or on your own server."], ["What if our process changes?", "After the walkthrough you can make small adjustments yourself. I'm there for bigger ones."], ["Do we even need AI for this?", "Not always. Many processes just need clean rules. AI comes in where text needs to be read or classified."]] as [string, string][],
+    faq: [["Which tools can you connect?", "Almost anything with an API: Gmail, Outlook, Google Sheets, Excel, Monday, HubSpot, Slack, WhatsApp, Notion, Airtable and many more."], ["Where does the data live?", "Depending on your needs, in n8n Cloud with servers in the EU or on your own server."], ["What if our process changes?", "After the walkthrough you can make small adjustments yourself. I'm there for bigger ones."], ["Do we even need AI for this?", "Not always. Many processes just need clean rules. AI comes in where text needs to be read or classified."], ["Do you also work with Microsoft Power Automate?", <>Yes. If your team works in Microsoft 365, that is often the shorter route. More under <Link href="/power-automate">Power Automate consulting and development</Link>.</>]] as [string, ReactNode][],
     ctaTitle: "Which process annoys you the most?",
     ctaText: "Tell me about it in 15 minutes. You'll get an honest assessment of whether and how it can be automated.",
   },

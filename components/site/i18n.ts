@@ -46,7 +46,7 @@ export const UI = {
     ctaEmail: "Per E-Mail schreiben",
     faq: "Häufige Fragen",
     fixedPrice: "Festpreis nach kostenlosem Erstgespräch.",
-    footer: { check: "KI-Check", imprint: "Impressum", privacy: "Datenschutz", process: "Prozessmanagement", fde: "Forward Deployed Engineering", blog: "Blog", websites: "Websites mit Online-Buchung" },
+    footer: { check: "KI-Check", imprint: "Impressum", privacy: "Datenschutz", process: "Prozessmanagement", fde: "Forward Deployed Engineering", pa: "Power Automate", blog: "Blog", websites: "Websites mit Online-Buchung" },
   },
   en: {
     nav: [
@@ -65,6 +65,6 @@ export const UI = {
     ctaEmail: "Send an email",
     faq: "Frequently asked questions",
     fixedPrice: "Fixed price after a free intro call.",
-    footer: { check: "AI check", imprint: "Legal notice", privacy: "Privacy policy", process: "Process management", fde: "Forward deployed engineering", blog: "Blog", websites: "Websites with online booking" },
+    footer: { check: "AI check", imprint: "Legal notice", privacy: "Privacy policy", process: "Process management", fde: "Forward deployed engineering", pa: "Power Automate", blog: "Blog", websites: "Websites with online booking" },
   },
 } as const

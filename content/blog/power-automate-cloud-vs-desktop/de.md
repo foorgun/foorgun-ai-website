@@ -4,6 +4,7 @@ description: Mails ablegen, Genehmigungen einholen, Daten aus Excel übertragen:
 slug: power-automate-cloud-vs-desktop
 date: 2026-11-11
 cluster: automation
+updated: 2026-11-24
 ---
 
 Wer im Microsoft-Umfeld arbeitet, stößt beim Thema Automation schnell auf **Power Automate**. Und dann auf die erste Verwirrung: Es gibt **Cloud-Flows** und **Desktop-Flows** (das Programm dafür heißt Power Automate for desktop). Beide heißen Power Automate – funktionieren aber grundverschieden.
@@ -77,4 +78,4 @@ Prüf vor einem Projekt den aktuellen Stand bei Microsoft – oder lass dich ber
 2. **Desktop-Flow als Brücke.** Nur für die Schritte, bei denen es wirklich keine Schnittstelle gibt.
 3. **Erst den Ablauf verstehen.** Wer vorher aufschreibt, wie der Prozess läuft – zum Beispiel mit [BPMN](/de/blog/bpmn-einfach-erklaert) –, sieht sofort, welche Schritte über Schnittstellen gehen und wo eine Brücke nötig ist.
 
-Du arbeitest mit Microsoft 365 und willst wissen, was sich bei dir automatisieren lässt? In einem kostenlosen 15-Minuten-Gespräch schauen wir gemeinsam darauf, danach im [Automations-Pilot](/de/automation) genauer. Und wenn dein Team selbst mit Power Automate bauen soll: Das ist Teil meines [KI-Coachings](/de/ki-coaching).
+Du arbeitest mit Microsoft 365 und willst wissen, was sich bei dir automatisieren lässt? In einem kostenlosen 15-Minuten-Gespräch schauen wir gemeinsam darauf. Was ich rund um [Power Automate berate und entwickle](/de/power-automate), steht auf der Leistungsseite; für Abläufe außerhalb von Microsoft gibt es den [Automations-Pilot](/de/automation). Und wenn dein Team selbst mit Power Automate bauen soll: Das ist Teil meines [KI-Coachings](/de/ki-coaching).

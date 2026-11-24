@@ -1,13 +1,15 @@
 import Link from "next/link"
-import { postPath, postsFor } from "./blog"
+import { allPosts, postPath, postsFor } from "./blog"
 import type { ClusterId } from "./clusters"
 import type { Lang } from "./i18n"
 
 const T = { de: "Artikel zum Thema", en: "Articles on this topic" }
 
-/** Verlinkt die Artikel eines Clusters – auf Pillar-Seiten eingebunden. */
-export default function ClusterArticles({ lang, cluster, exclude, title }: { lang: Lang; cluster: ClusterId; exclude?: string; title?: string }) {
-  const posts = postsFor(lang, cluster).filter((p) => p.id !== exclude)
+/** Verlinkt die Artikel eines Clusters (oder eine feste Liste per ids) – auf Pillar-Seiten eingebunden. */
+export default function ClusterArticles({ lang, cluster, ids, exclude, title }: { lang: Lang; cluster?: ClusterId; ids?: string[]; exclude?: string; title?: string }) {
+  const posts = ids
+    ? ids.flatMap((id) => allPosts().filter((p) => p.lang === lang && p.id === id))
+    : postsFor(lang, cluster).filter((p) => p.id !== exclude)
   if (posts.length === 0) return null
   return (
     <section className="rule">
