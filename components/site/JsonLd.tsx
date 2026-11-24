@@ -42,6 +42,7 @@ export function orgSchema(lang: Lang) {
           "@type": "EducationalOccupationalCredential",
           name: "Microsoft Certified: Power Platform Functional Consultant Associate",
           credentialCategory: "certification",
+          url: "https://learn.microsoft.com/en-us/users/furkan-9794/credentials/fdc2579963da7e6a",
           recognizedBy: { "@type": "Organization", name: "Microsoft" },
         },
         knowsAbout: ["Automation", "APIs", "Cloud infrastructure", "n8n", "Business Process Management", "BPMN", "Forward Deployed Engineering", "Claude", "Power Automate"],

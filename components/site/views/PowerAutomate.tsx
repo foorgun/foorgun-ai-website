@@ -7,6 +7,7 @@ import { UI, type Lang } from "../i18n"
 import { Cta, Facts, Faq, Hl, Package, PageHero, Proof, Section, Steps } from "../blocks"
 
 export const PA_PATH = "/power-automate"
+export const PA_CERT_URL = "https://learn.microsoft.com/en-us/users/furkan-9794/credentials/fdc2579963da7e6a"
 
 export const PA_META = {
   de: { title: "Power Automate Beratung & Entwicklung – foorgun.ai", description: "Power Automate Dienstleister für Unternehmen mit Microsoft 365: Beratung, Entwicklung von Cloud- und Desktop-Flows und Lösungen auf der Power Platform. Festpreis nach kostenlosem Erstgespräch." },
@@ -37,7 +38,7 @@ const T = {
       ["Schulung", <>Dein Team soll selbst bauen? Im <Link href="/de/ki-coaching">Coaching</Link> zeige ich es an euren eigenen Abläufen.</>],
     ] as [string, React.ReactNode][],
     whyTitle: "Zertifiziert und aus der Praxis",
-    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Zertifiziert seit Januar 2025",
+    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Zertifiziert seit Januar 2025", certVerify: "Bei Microsoft verifizieren",
     why: [
       ["Erfahrung", "Fast zwei Jahre habe ich als Intelligent Automation Engineer in der Beratung Lösungen auf der Microsoft Power Platform entworfen und entwickelt: Power Automate, Power Apps und Copilot Studio."],
       ["KI im Ablauf", "KI-Schritte, APIs und Datenverarbeitung gehören dazu – dort, wo sie im Ablauf wirklich etwas übernehmen."],
@@ -86,7 +87,7 @@ const T = {
       ["Training", <>Should your team build flows themselves? In <Link href="/ki-coaching">coaching</Link> I teach it on your own processes.</>],
     ] as [string, React.ReactNode][],
     whyTitle: "Certified and hands-on",
-    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Certified since January 2025",
+    certKicker: "Microsoft Certified", certName: "Power Platform Functional Consultant Associate", certNote: "Certified since January 2025", certVerify: "Verify with Microsoft",
     why: [
       ["Experience", "For almost two years I designed and developed solutions on the Microsoft Power Platform as an Intelligent Automation Engineer in consulting: Power Automate, Power Apps and Copilot Studio."],
       ["AI in the process", "AI steps, APIs and data processing are part of it – where they actually take work over in the process."],
@@ -130,12 +131,13 @@ export default function PowerAutomate({ lang }: { lang: Lang }) {
         <div className="wrap split">
           <div>
             <h2>{t.whyTitle}</h2>
-            <div className="cert">
+            <a className="cert" href={PA_CERT_URL} target="_blank" rel="noopener noreferrer">
               <span className="cert-stars" aria-hidden="true">★★</span>
               <small>{t.certKicker}</small>
               <strong>{t.certName}</strong>
               <span className="cert-note">{t.certNote}</span>
-            </div>
+              <span className="cert-verify">{t.certVerify} ↗</span>
+            </a>
           </div>
           <Facts rows={t.why} />
         </div>
