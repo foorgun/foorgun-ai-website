@@ -132,7 +132,6 @@ export default function PowerAutomate({ lang }: { lang: Lang }) {
           <div>
             <h2>{t.whyTitle}</h2>
             <a className="cert" href={PA_CERT_URL} target="_blank" rel="noopener noreferrer">
-              <span className="cert-stars" aria-hidden="true">★★</span>
               <small>{t.certKicker}</small>
               <strong>{t.certName}</strong>
               <span className="cert-note">{t.certNote}</span>

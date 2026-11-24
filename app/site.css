@@ -576,7 +576,6 @@ body.v3-body { background: #FBFAF7; color: #0C0C0C; font-weight: 400; }
 
 /* Zertifikat-Karte (Power-Automate-Seite) */
 .v3 .cert { display: inline-flex; flex-direction: column; gap: 6px; margin-top: 28px; padding: 22px 24px; max-width: 340px; background: var(--surface); border: 2px solid var(--ink); border-radius: 14px; box-shadow: 6px 6px 0 var(--signal); }
-.v3 .cert-stars { color: var(--signal); font-size: 1.1rem; letter-spacing: 4px; line-height: 1; }
 .v3 .cert small { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .v3 .cert strong { font-size: 1.2rem; line-height: 1.25; }
 .v3 .cert-note { font-size: .9rem; color: var(--muted); }
