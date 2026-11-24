@@ -18,6 +18,7 @@ export default function Shell({ lang, children, alt }: { lang: Lang; children: R
             <Link href={href(lang, "/websites")}>{f.websites}</Link>
             <Link href={href(lang, "/prozessmanagement")}>{f.process}</Link>
             <Link href={href(lang, "/forward-deployed-engineering")}>{f.fde}</Link>
+            <Link href={href(lang, "/power-automate")}>{f.pa}</Link>
             <Link href={href(lang, "/blog")}>{f.blog}</Link>
             <Link href={`${href(lang, "/")}#ki-check`}>{f.check}</Link>
             <Link href={href(lang, "/impressum")}>{f.imprint}</Link>

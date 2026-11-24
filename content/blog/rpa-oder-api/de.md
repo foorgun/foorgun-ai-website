@@ -71,7 +71,7 @@ Für wiederkehrende Abläufe mit festen Regeln bleibt die Schnittstelle trotzdem
 1. **Gibt es eine Schnittstelle?** Dann API-Automation.
 2. **Gibt es keine, aber das System wird bald abgelöst?** Dann RPA als Übergang.
 3. **Gibt es keine, und das System bleibt?** Dann RPA – aber gut dokumentiert, mit Fehlermeldungen und einem klaren Verantwortlichen.
-4. **Meistens:** eine Kombination. Alles über Schnittstellen, nur der eine Schritt ohne Schnittstelle per RPA. Wie das im Microsoft-Umfeld aussieht, zeigt der Artikel [Power Automate Cloud vs. Desktop](/de/blog/power-automate-cloud-vs-desktop).
+4. **Meistens:** eine Kombination. Alles über Schnittstellen, nur der eine Schritt ohne Schnittstelle per RPA. Wie das im Microsoft-Umfeld aussieht, zeigt der Artikel [Power Automate Cloud vs. Desktop](/de/blog/power-automate-cloud-vs-desktop). Wenn du dafür Unterstützung suchst: [Power Automate Beratung und Entwicklung](/de/power-automate).
 
 Welcher Weg bei dir passt, hängt vom Ablauf und den beteiligten Systemen ab. Genau das schaue ich mir im [Automations-Pilot](/de/automation) zuerst an – bevor irgendetwas gebaut wird.
 

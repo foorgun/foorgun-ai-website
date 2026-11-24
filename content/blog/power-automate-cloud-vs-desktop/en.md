@@ -4,6 +4,7 @@ description: Filing emails, getting approvals, moving data out of Excel: what Po
 slug: power-automate-cloud-vs-desktop
 date: 2026-11-11
 cluster: automation
+updated: 2026-11-24
 ---
 
 If you work in the Microsoft world, you'll quickly come across **Power Automate** when it comes to automation. And then the first confusion: there are **cloud flows** and **desktop flows** (the app for the latter is called Power Automate for desktop). Both are called Power Automate – but they work in fundamentally different ways.
@@ -77,4 +78,4 @@ Check the current state with Microsoft before a project – or get advice before
 2. **Desktop flow as a bridge.** Only for the steps where there really is no interface.
 3. **Understand the process first.** If you write down how the process runs beforehand – for example with [BPMN](/blog/bpmn-explained-simply) – you immediately see which steps work through interfaces and where a bridge is needed.
 
-You work with Microsoft 365 and want to know what can be automated? In a free 15-minute call we'll look at it together, then in more detail in the [automation pilot](/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/ki-coaching).
+You work with Microsoft 365 and want to know what can be automated? In a free 15-minute call we'll look at it together. What I offer around [Power Automate consulting and development](/power-automate) is on the service page; for processes outside Microsoft there is the [automation pilot](/automation). And if your team should build with Power Automate themselves: that's part of my [AI coaching](/ki-coaching).

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { allPosts, postPath, translationOf } from "@/components/site/blog";
 
 const base = "https://foorgun.ai";
-const pages = ["/", "/websites", "/automation", "/software", "/ki-coaching", "/prozessmanagement", "/forward-deployed-engineering", "/blog"];
+const pages = ["/", "/websites", "/automation", "/software", "/ki-coaching", "/prozessmanagement", "/forward-deployed-engineering", "/power-automate", "/blog"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const localized = pages.flatMap((p) => {
@@ -19,7 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = allPosts().map((p) => {
     const tr = translationOf(p);
     const languages: Record<string, string> = { [p.lang]: `${base}${postPath(p)}` };
-    if (tr) languages[tr.lang] = `${base}${postPath(tr)}`;
+    if (tr) languages[tr.lang] = `${base}${postPath(tr)}`
+    if (languages.en) languages["x-default"] = languages.en;
     return { url: `${base}${postPath(p)}`, lastModified: new Date(p.updated ?? p.date), priority: 0.7, alternates: { languages } };
   });
 

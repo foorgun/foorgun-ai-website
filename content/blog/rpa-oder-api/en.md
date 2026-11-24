@@ -71,7 +71,7 @@ For recurring processes with fixed rules, the interface is still the better way:
 1. **Is there an interface?** Then API automation.
 2. **There isn't, but the system is being replaced soon?** Then RPA as an interim solution.
 3. **There isn't, and the system is staying?** Then RPA – but well documented, with error alerts and a clear owner.
-4. **Most of the time:** a combination. Everything through interfaces, only the one step without an interface via RPA. What that looks like in the Microsoft world is shown in [Power Automate cloud vs. desktop](/blog/power-automate-cloud-vs-desktop).
+4. **Most of the time:** a combination. Everything through interfaces, only the one step without an interface via RPA. What that looks like in the Microsoft world is shown in [Power Automate cloud vs. desktop](/blog/power-automate-cloud-vs-desktop). If you want help with it: [Power Automate consulting and development](/power-automate).
 
 Which path fits you depends on the process and the systems involved. That's exactly what I look at first in the [automation pilot](/automation) – before anything gets built.
 
