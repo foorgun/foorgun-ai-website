@@ -252,7 +252,8 @@
 .v3 .polaroid .clip { position: absolute; top: -34px; left: 54px; width: 28px; height: 74px; z-index: 1; transform: rotate(8deg); }
 .v3 .polaroid .clip path { fill: none; stroke: #9a978f; stroke-width: 2.6; stroke-linecap: round; }
 
-.v3 .story-text h3 { font-size: clamp(2.2rem, 4vw, 3.6rem); line-height: 1; letter-spacing: -.035em; margin-bottom: 28px; }
+.v3 .story-text { min-width: 0; container-type: inline-size; }
+.v3 .story-text h3 { font-size: clamp(1.8rem, 8.5cqi, 3.6rem); overflow-wrap: break-word; hyphens: manual; line-height: 1; letter-spacing: -.035em; margin-bottom: 28px; }
 .v3 .story-text h3 .hl { color: var(--signal); }
 .v3 .story-body { color: var(--muted); max-width: 52ch; font-size: 1.1rem; }
 .v3 .story-body .btn { margin-top: 28px; }
@@ -582,3 +583,11 @@ body.v3-body { background: #FBFAF7; color: #0C0C0C; font-weight: 400; }
 .v3 a.cert { color: inherit; text-decoration: none; transition: transform .15s; }
 .v3 a.cert:hover { transform: translate(-3px, -3px); }
 .v3 .cert-verify { margin-top: 6px; font-size: .9rem; font-weight: 600; color: var(--signal); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+/* Startseiten-Hero: Outcomes statt Porträt */
+.v3 .hero-outcomes { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 32px; max-width: 880px; }
+.v3 .hero-outcomes li { position: relative; padding-left: 32px; font-size: 1.05rem; line-height: 1.45; }
+.v3 .hero-outcomes li::before { content: "✓"; position: absolute; left: 0; top: .1em; display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--signal); color: #fff; font-size: .7rem; }
+@media (max-width: 760px) {
+  .v3 .hero-outcomes { grid-template-columns: 1fr; }
+}
