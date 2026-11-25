@@ -1,13 +1,13 @@
 import Bpmn from "../Bpmn"
 import Check from "../Check"
 import Flow from "../Flow"
-import HeroDemo, { type Industry } from "../HeroDemo"
+import HeroDemo, { type DemoTask } from "../HeroDemo"
 import Shell from "../Shell"
 import Story, { type Chapter } from "../Story"
 import Tools from "../Tools"
 import { CALL } from "../config"
 import { href, UI, type Lang } from "../i18n"
-import { Actions, Cta, Faq, Hl, Section, Steps, Testimonials } from "../blocks"
+import { Cta, Faq, Hl, Section, Steps, Testimonials } from "../blocks"
 
 type Project = { tag: string; status: string; before: string; how: string; result: string; link?: string }
 
@@ -22,15 +22,21 @@ const T = {
       <>Kunden, Projekte und Termine an einem Ort statt in zehn Excel-Listen.</>,
       <>Dein Team nutzt KI und die neuen Abläufe selbst.</>,
     ],
-    services: "Leistungen ansehen",
-    sub: "15 Minuten, kostenlos, unverbindlich, per Video. Keine Vorbereitung nötig.",
-    demo: { forExample: "Zum Beispiel für", title: "Diese Woche für dich erledigt", example: "Beispiel", badge: "automatisch", hours: "Std. pro Woche zurück" },
-    industries: [
-      { name: "Architekturbüros", hours: 6, tasks: ["Pläne aus Mails in Projektordner ablegen", "Neues Projekt in Excel eintragen", "Urlaubsliste pflegen", "Bauherren-Anfrage beantworten"] },
-      { name: "Agenturen", hours: 8, tasks: ["Kunden-Report zusammenkopieren", "Neue Anfrage ins CRM tippen", "Freigaben hinterherlaufen", "Belege an die Buchhaltung schicken"] },
-      { name: "Ingenieurbüros", hours: 5, tasks: ["Stundenzettel einsammeln", "Angebot aus Vorlage bauen", "Lieferanten-Rechnungen ablegen", "Termin-Erinnerungen schreiben"] },
-      { name: "Dienstleister", hours: 7, tasks: ["Terminbestätigungen verschicken", "Rechnungen schreiben", "Um Google-Bewertung bitten", "Standard-Anfragen beantworten"] },
-    ] as Industry[],
+    line: "Excel, E-Mails, Copy-Paste? Erledigt sich ab jetzt von selbst.",
+    cta: "Kostenloses 15-Min-Gespräch",
+    note: "Erster Ablauf live in 14 Tagen",
+    demo: {
+      title: "zurück. Diese Woche.", example: "Ein Beispiel. Deine Liste sieht anders aus.", badge: "automatisch", hour: "Std", hours: "Std", minutes: "Min",
+      alt: "Beispiel: Projektdaten in Excel tippen, Anfragen ins CRM übertragen, WhatsApp-Termine bestätigen, Pläne im Projektordner ablegen und Probetrainings eintragen laufen automatisch. Das spart in diesem Beispiel 3 Stunden 15 Minuten pro Woche.",
+    },
+    demoTasks: [
+      // Je Zeile eine typische Aufgabe aus der Zielgruppe: Architekturbüro, Agentur, Studio/Barbershop
+      { icon: "/icons/excel.svg", app: "Excel", label: "Projektdaten in Excel tippen", minutes: 45 },
+      { icon: "/icons/outlook.svg", app: "Outlook", label: "Anfragen ins CRM übertragen", minutes: 30 },
+      { icon: "/icons/whatsapp.svg", app: "WhatsApp", label: "WhatsApp-Termine bestätigen", minutes: 25 },
+      { icon: "/icons/pdf.svg", app: "PDF", label: "Pläne im Projektordner ablegen", minutes: 60 },
+      { icon: "/icons/google-calendar.svg", app: "Google Calendar", label: "Probetrainings eintragen", minutes: 35 },
+    ] as DemoTask[],
     casesTitle: "Typische Situationen, in denen sich Automatisierung lohnt",
     casesLead: "Vier Beispiele aus dem Büroalltag. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
     problem: "Das Problem",
@@ -54,6 +60,7 @@ const T = {
       { tag: "Barbershop", status: "Umgesetzt", before: "Termine liefen über eine kostenpflichtige externe Buchungsplattform.", how: "Eine eigene, minimalistische Website mit integrierter Online-Buchung.", result: "Eigene Präsenz mit direkter Buchung und volle Kontrolle über den Buchungsprozess." },
     ] as Project[],
     servicesTitle: "Drei Bausteine, die aufeinander aufbauen",
+    outcomesLead: "Was du davon hast, egal womit du anfängst:",
     nodes: [
       { path: "/automation", who: "Automation · für Unternehmen mit Routinearbeit", title: "Aufgaben automatisch erledigen", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
       { path: "/software", who: "Software & Plattformen · wenn aus Automationen ein System wird", title: "Eigene Systeme für deine Abläufe", text: <>Interne Software, CRM, Kundenportale und Websites mit Buchung – <Hl>alles an einem Ort</Hl>.</>, more: "Zu Software & Plattformen" },
@@ -121,15 +128,21 @@ const T = {
       <>Clients, projects and appointments in one place instead of ten spreadsheets.</>,
       <>Your team uses AI and the new workflows on their own.</>,
     ],
-    services: "See services",
-    sub: "15 minutes, free, no obligation, via video. No preparation needed.",
-    demo: { forExample: "For example, for", title: "Done for you this week", example: "Example", badge: "automated", hours: "hrs back per week" },
-    industries: [
-      { name: "architecture firms", hours: 6, tasks: ["File plans from emails into project folders", "Add new project to the spreadsheet", "Update the vacation list", "Reply to client inquiries"] },
-      { name: "agencies", hours: 8, tasks: ["Copy-paste the client report", "Type new leads into the CRM", "Chase approvals", "Send receipts to accounting"] },
-      { name: "engineering offices", hours: 5, tasks: ["Collect timesheets", "Build quotes from templates", "File supplier invoices", "Send appointment reminders"] },
-      { name: "service businesses", hours: 7, tasks: ["Send booking confirmations", "Write invoices", "Ask for Google reviews", "Answer routine inquiries"] },
-    ] as Industry[],
+    line: "Spreadsheets, emails, copy-paste? From now on, they handle themselves.",
+    cta: "Free 15-min call",
+    note: "First workflow live in 14 days",
+    demo: {
+      title: "back. This week.", example: "An example. Your list will look different.", badge: "automated", hour: "hr", hours: "hrs", minutes: "min",
+      alt: "Example: typing project data into Excel, moving inquiries into the CRM, answering WhatsApp bookings, filing plans in project folders and adding trial sessions to the calendar run automatically. In this example that saves 3 hours 15 minutes per week.",
+    },
+    demoTasks: [
+      // One typical task per target group: architecture firm, agency, studio/barbershop
+      { icon: "/icons/excel.svg", app: "Excel", label: "Type project data into Excel", minutes: 45 },
+      { icon: "/icons/outlook.svg", app: "Outlook", label: "Move inquiries into the CRM", minutes: 30 },
+      { icon: "/icons/whatsapp.svg", app: "WhatsApp", label: "Answer WhatsApp bookings", minutes: 25 },
+      { icon: "/icons/pdf.svg", app: "PDF", label: "File plans in project folders", minutes: 60 },
+      { icon: "/icons/google-calendar.svg", app: "Google Calendar", label: "Add trial sessions to calendar", minutes: 35 },
+    ] as DemoTask[],
     casesTitle: "Typical situations where automation pays off",
     casesLead: "Four examples from everyday office work. Each with the problem and the solution, so you can see what it could look like for you.",
     problem: "The problem",
@@ -153,6 +166,7 @@ const T = {
       { tag: "Barbershop", status: "Delivered", before: "Appointments ran through a paid external booking platform.", how: "Its own minimalist website with built-in online booking.", result: "Its own presence with direct booking and full control over the booking process." },
     ] as Project[],
     servicesTitle: "Three building blocks that build on each other",
+    outcomesLead: "What you get, wherever you start:",
     nodes: [
       { path: "/automation", who: "Automation · for businesses with routine work", title: "Get recurring tasks done automatically", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
       { path: "/software", who: "Software & platforms · when automations become a system", title: "Your own systems for your workflows", text: <>Internal software, CRM, client portals and websites with booking – <Hl>all in one place</Hl>.</>, more: "Go to software & platforms" },
@@ -218,27 +232,17 @@ export default function Home({ lang }: { lang: Lang }) {
     <Shell lang={lang}>
       <section className="hero hero-home">
         <div className="wrap">
-          <HeroDemo
-            labels={t.demo}
-            industries={t.industries}
-            top={
-              <>
-                <h1 className="hero-title">
-                  {t.title1} <span className="line2">{t.title2}</span>
-                </h1>
-                <p className="lead">{t.lead}</p>
-              </>
-            }
-            bottom={
-              <>
-                <ul className="hero-outcomes">
-                  {t.outcomes.map((o, n) => <li key={n}>{o}</li>)}
-                </ul>
-                <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
-                <p className="hero-sub">{t.sub}</p>
-              </>
-            }
-          />
+          <div className="hero-grid">
+            <div>
+              <h1 className="hero-title">
+                {t.title1} <span className="line2">{t.title2}</span>
+              </h1>
+              <p className="lead">{t.line}</p>
+              <div className="actions"><a className="btn" href={CALL}>{t.cta}</a></div>
+              <p className="hero-sub hero-note">{t.note}</p>
+            </div>
+            <HeroDemo labels={t.demo} tasks={t.demoTasks} />
+          </div>
         </div>
       </section>
 
@@ -263,6 +267,10 @@ export default function Home({ lang }: { lang: Lang }) {
       <section className="rule">
         <div className="wrap">
           <h2 id="leistungen" className="services-title flush">{t.servicesTitle}</h2>
+          <p className="lead">{t.outcomesLead}</p>
+          <ul className="outcomes">
+            {t.outcomes.map((o, n) => <li key={n}>{o}</li>)}
+          </ul>
           <Flow nodes={t.nodes.map((n) => ({ ...n, href: href(lang, n.path) }))} />
         </div>
       </section>
