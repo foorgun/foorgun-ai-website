@@ -81,7 +81,7 @@ const T = {
         {
           tab: "Ausbildung",
           title: <>Die Grundlage:<br /><span className="hl">Wirtschafts&shy;informatik.</span></>,
-          body: <><p>Ich habe Wirtschaftsinformatik an der Technischen Hochschule Ulm studiert, mit einem Auslandssemester an der Korea University in Seoul.</p><p>In meiner Bachelorarbeit ging es um Identity Management in Multicloud-Lösungen als Grundlage für eine Cloud-Strategie.</p></>,
+          body: <><p>Ich habe Wirtschaftsinformatik an der Technischen Hochschule Ulm studiert, mit einem Auslandssemester an der Korea University in Seoul.</p><p>Im Studium habe ich beide Seiten kennengelernt: Business und Technik. Wie Unternehmen arbeiten und wie man Software baut, die sie dabei unterstützt. Dort habe ich auch angefangen, Prozesse zu automatisieren und selbst zu programmieren.</p></>,
           photo: { src: "/about/th-ulm-campus.jpg", width: 800, height: 1000, alt: "Campus der Technischen Hochschule Ulm mit dem THU-Schriftzug" },
           caption: "Technische Hochschule Ulm",
         },
@@ -173,7 +173,7 @@ const T = {
         {
           tab: "Education",
           title: <>The foundation:<br /><span className="hl">business information systems.</span></>,
-          body: <><p>I studied Business Information Systems at Ulm University of Applied Sciences, including a semester abroad at Korea University in Seoul.</p><p>My bachelor&apos;s thesis was on identity management in multi-cloud solutions as the foundation for a cloud strategy.</p></>,
+          body: <><p>I studied Business Information Systems at Ulm University of Applied Sciences, including a semester abroad at Korea University in Seoul.</p><p>My studies taught me both sides: business and technology. How companies work, and how to build software that supports them. That&apos;s also where I started automating processes and writing code myself.</p></>,
           photo: { src: "/about/th-ulm-campus.jpg", width: 800, height: 1000, alt: "Campus of Technische Hochschule Ulm with the THU lettering" },
           caption: "Technische Hochschule Ulm (THU)",
         },
