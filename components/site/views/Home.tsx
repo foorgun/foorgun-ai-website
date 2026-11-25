@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Bpmn from "../Bpmn"
 import Check from "../Check"
 import Flow from "../Flow"
@@ -15,10 +14,15 @@ const T = {
   de: {
     title1: "Bau ein Unternehmen, das für dich arbeitet.",
     title2: "Nicht umgekehrt.",
-    lead: <>Ich automatisiere wiederkehrende Aufgaben, verbinde deine bestehenden Tools und baue Lösungen, die zu deinem Ablauf passen. Damit du <Hl>weniger Zeit mit E-Mails, Excel und Copy-Paste</Hl> verbringst.</>,
+    lead: <>Weniger Zeit mit <Hl>E-Mails, Excel und Copy-Paste</Hl>. Mehr Zeit für deine Kunden und dein Geschäft.</>,
+    outcomes: [
+      <>Wiederkehrende Aufgaben laufen von allein. <Hl>Der erste Ablauf ist in 14 Tagen live.</Hl></>,
+      <>Deine Tools sind verbunden. Keine doppelten Eingaben, nichts bleibt mehr liegen.</>,
+      <>Kunden, Projekte und Termine an einem Ort statt in zehn Excel-Listen.</>,
+      <>Dein Team nutzt KI und die neuen Abläufe selbst.</>,
+    ],
     services: "Leistungen ansehen",
     sub: "15 Minuten, kostenlos, unverbindlich, per Video. Keine Vorbereitung nötig.",
-    trust: "Wirtschaftsinformatiker · Persönliche Umsetzung statt anonymer Agentur · Mit Dokumentation und Übergabe",
     casesTitle: "Typische Situationen, in denen sich Automatisierung lohnt",
     casesLead: "Vier Beispiele aus dem Büroalltag. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
     problem: "Das Problem",
@@ -65,7 +69,7 @@ const T = {
           tab: "Wer ich bin",
           title: <>Hi,<br /><span className="hl">ich bin Furkan.</span></>,
           body: <><p>Du hast bei mir einen <strong className="hl">persönlichen Ansprechpartner</strong>, der dein Geschäft und die Technik versteht – von der ersten Prozessaufnahme bis zur laufenden Lösung. Ich baue selbst, dokumentiere alles und übergebe es so, dass du <strong className="hl">keine eigene IT-Abteilung</strong> brauchst.</p><p>Seit 2026 bin ich selbstständig und arbeite remote, auf Deutsch, Englisch und Türkisch – und sitze lieber 15 Minuten mit dir am Tisch, als dir ein Tool zu verkaufen.</p><a className="btn" href={CALL}>15-Min-Gespräch buchen</a></>,
-          photo: { src: "/furkan.png", width: 889, height: 1108, alt: "Porträt von Furkan Çetin" },
+          photo: { src: "/about/furkan-portrait.jpg", width: 900, height: 1199, alt: "Porträt von Furkan Çetin" },
         },
         {
           tab: "Erfahrung",
@@ -102,10 +106,15 @@ const T = {
   en: {
     title1: "Build a business that works for you.",
     title2: "Not the other way around.",
-    lead: <>I automate recurring tasks, connect the tools you already use and build solutions that fit how you work. So you spend <Hl>less time on email, Excel and copy-paste</Hl>.</>,
+    lead: <>Less time on <Hl>email, Excel and copy-paste</Hl>. More time for your clients and your business.</>,
+    outcomes: [
+      <>Recurring tasks run on their own. <Hl>Your first workflow is live in 14 days.</Hl></>,
+      <>Your tools are connected. No duplicate entries, nothing falls through the cracks.</>,
+      <>Clients, projects and appointments in one place instead of ten spreadsheets.</>,
+      <>Your team uses AI and the new workflows on their own.</>,
+    ],
     services: "See services",
     sub: "15 minutes, free, no obligation, via video. No preparation needed.",
-    trust: "Business information systems graduate · Personal delivery instead of an anonymous agency · Documented and handed over",
     casesTitle: "Typical situations where automation pays off",
     casesLead: "Four examples from everyday office work. Each with the problem and the solution, so you can see what it could look like for you.",
     problem: "The problem",
@@ -152,7 +161,7 @@ const T = {
           tab: "Who I am",
           title: <>Hi,<br /><span className="hl">I&apos;m Furkan.</span></>,
           body: <><p>You get <strong className="hl">a personal point of contact</strong> who understands your business and the technology – from the first process mapping to a running solution. I build it myself, document everything and hand it over so you <strong className="hl">don&apos;t need your own IT department</strong>.</p><p>I&apos;ve been self-employed since 2026, working remotely in German, English and Turkish – and I&apos;d rather spend 15 minutes at the table with you than sell you a tool.</p><a className="btn" href={CALL}>Book a 15-min call</a></>,
-          photo: { src: "/furkan.png", width: 889, height: 1108, alt: "Portrait of Furkan Çetin" },
+          photo: { src: "/about/furkan-portrait.jpg", width: 900, height: 1199, alt: "Portrait of Furkan Çetin" },
         },
         {
           tab: "Experience",
@@ -194,20 +203,15 @@ export default function Home({ lang }: { lang: Lang }) {
     <Shell lang={lang}>
       <section className="hero hero-home">
         <div className="wrap">
-          <div className="hero-grid">
-            <div>
-              <h1 className="hero-title">
-                {t.title1} <span className="line2">{t.title2}</span>
-              </h1>
-              <p className="lead">{t.lead}</p>
-              <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
-              <p className="hero-sub">{t.sub}</p>
-              <p className="hero-sub hero-trust">{t.trust}</p>
-            </div>
-            <Image className="portrait" src="/furkan.png" alt="Furkan Çetin" width={889} height={1108} sizes="(max-width: 960px) 280px, 320px" priority />
-          </div>
-
-
+          <h1 className="hero-title">
+            {t.title1} <span className="line2">{t.title2}</span>
+          </h1>
+          <p className="lead">{t.lead}</p>
+          <ul className="hero-outcomes">
+            {t.outcomes.map((o, n) => <li key={n}>{o}</li>)}
+          </ul>
+          <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
+          <p className="hero-sub">{t.sub}</p>
         </div>
       </section>
 
