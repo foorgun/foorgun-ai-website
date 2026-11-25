@@ -80,7 +80,7 @@ const T = {
         },
         {
           tab: "Ausbildung",
-          title: <>Die Grundlage:<br /><span className="hl">Wirtschaftsinformatik.</span></>,
+          title: <>Die Grundlage:<br /><span className="hl">Wirtschafts&shy;informatik.</span></>,
           body: <><p>Ich habe Wirtschaftsinformatik an der Technischen Hochschule Ulm studiert, mit einem Auslandssemester an der Korea University in Seoul.</p><p>In meiner Bachelorarbeit ging es um Identity Management in Multicloud-Lösungen als Grundlage für eine Cloud-Strategie.</p></>,
           photo: { src: "/about/ausbildung-abschluss.jpg", width: 735, height: 1024, alt: "Furkan Çetin mit Doktorhut und seiner Bachelorarbeit der TH Ulm" },
           caption: "Abschluss an der TH Ulm",

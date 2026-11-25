@@ -252,7 +252,8 @@
 .v3 .polaroid .clip { position: absolute; top: -34px; left: 54px; width: 28px; height: 74px; z-index: 1; transform: rotate(8deg); }
 .v3 .polaroid .clip path { fill: none; stroke: #9a978f; stroke-width: 2.6; stroke-linecap: round; }
 
-.v3 .story-text h3 { font-size: clamp(2.2rem, 4vw, 3.6rem); line-height: 1; letter-spacing: -.035em; margin-bottom: 28px; }
+.v3 .story-text { min-width: 0; container-type: inline-size; }
+.v3 .story-text h3 { font-size: clamp(1.8rem, 8.5cqi, 3.6rem); overflow-wrap: break-word; hyphens: manual; line-height: 1; letter-spacing: -.035em; margin-bottom: 28px; }
 .v3 .story-text h3 .hl { color: var(--signal); }
 .v3 .story-body { color: var(--muted); max-width: 52ch; font-size: 1.1rem; }
 .v3 .story-body .btn { margin-top: 28px; }
