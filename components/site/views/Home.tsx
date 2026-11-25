@@ -1,6 +1,7 @@
 import Bpmn from "../Bpmn"
 import Check from "../Check"
 import Flow from "../Flow"
+import HeroDemo, { type Industry } from "../HeroDemo"
 import Shell from "../Shell"
 import Story, { type Chapter } from "../Story"
 import Tools from "../Tools"
@@ -23,6 +24,13 @@ const T = {
     ],
     services: "Leistungen ansehen",
     sub: "15 Minuten, kostenlos, unverbindlich, per Video. Keine Vorbereitung nötig.",
+    demo: { forExample: "Zum Beispiel für", title: "Diese Woche für dich erledigt", example: "Beispiel", badge: "automatisch", hours: "Std. pro Woche zurück" },
+    industries: [
+      { name: "Architekturbüros", hours: 6, tasks: ["Pläne aus Mails in Projektordner ablegen", "Neues Projekt in Excel eintragen", "Urlaubsliste pflegen", "Bauherren-Anfrage beantworten"] },
+      { name: "Agenturen", hours: 8, tasks: ["Kunden-Report zusammenkopieren", "Neue Anfrage ins CRM tippen", "Freigaben hinterherlaufen", "Belege an die Buchhaltung schicken"] },
+      { name: "Ingenieurbüros", hours: 5, tasks: ["Stundenzettel einsammeln", "Angebot aus Vorlage bauen", "Lieferanten-Rechnungen ablegen", "Termin-Erinnerungen schreiben"] },
+      { name: "Dienstleister", hours: 7, tasks: ["Terminbestätigungen verschicken", "Rechnungen schreiben", "Um Google-Bewertung bitten", "Standard-Anfragen beantworten"] },
+    ] as Industry[],
     casesTitle: "Typische Situationen, in denen sich Automatisierung lohnt",
     casesLead: "Vier Beispiele aus dem Büroalltag. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
     problem: "Das Problem",
@@ -115,6 +123,13 @@ const T = {
     ],
     services: "See services",
     sub: "15 minutes, free, no obligation, via video. No preparation needed.",
+    demo: { forExample: "For example, for", title: "Done for you this week", example: "Example", badge: "automated", hours: "hrs back per week" },
+    industries: [
+      { name: "architecture firms", hours: 6, tasks: ["File plans from emails into project folders", "Add new project to the spreadsheet", "Update the vacation list", "Reply to client inquiries"] },
+      { name: "agencies", hours: 8, tasks: ["Copy-paste the client report", "Type new leads into the CRM", "Chase approvals", "Send receipts to accounting"] },
+      { name: "engineering offices", hours: 5, tasks: ["Collect timesheets", "Build quotes from templates", "File supplier invoices", "Send appointment reminders"] },
+      { name: "service businesses", hours: 7, tasks: ["Send booking confirmations", "Write invoices", "Ask for Google reviews", "Answer routine inquiries"] },
+    ] as Industry[],
     casesTitle: "Typical situations where automation pays off",
     casesLead: "Four examples from everyday office work. Each with the problem and the solution, so you can see what it could look like for you.",
     problem: "The problem",
@@ -203,15 +218,27 @@ export default function Home({ lang }: { lang: Lang }) {
     <Shell lang={lang}>
       <section className="hero hero-home">
         <div className="wrap">
-          <h1 className="hero-title">
-            {t.title1} <span className="line2">{t.title2}</span>
-          </h1>
-          <p className="lead">{t.lead}</p>
-          <ul className="hero-outcomes">
-            {t.outcomes.map((o, n) => <li key={n}>{o}</li>)}
-          </ul>
-          <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
-          <p className="hero-sub">{t.sub}</p>
+          <HeroDemo
+            labels={t.demo}
+            industries={t.industries}
+            top={
+              <>
+                <h1 className="hero-title">
+                  {t.title1} <span className="line2">{t.title2}</span>
+                </h1>
+                <p className="lead">{t.lead}</p>
+              </>
+            }
+            bottom={
+              <>
+                <ul className="hero-outcomes">
+                  {t.outcomes.map((o, n) => <li key={n}>{o}</li>)}
+                </ul>
+                <Actions items={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#leistungen", label: t.services }]} />
+                <p className="hero-sub">{t.sub}</p>
+              </>
+            }
+          />
         </div>
       </section>
 
