@@ -12,7 +12,7 @@ const T = {
     title: <>Software, die <em className="hl">zu deinem Betrieb</em> passt.</>,
     lead: <>Interne Software, CRM, Kundenportale, Schnittstellen und Cloud-Infrastruktur – statt Excel-Listen und fünf Abo-Tools, die nicht miteinander reden. <Hl>Es gehört dir</Hl>, und deine Abläufe sind <Hl>von Anfang an automatisiert</Hl>.</>,
     a1: "Erstgespräch buchen", a2: "Ablauf ansehen",
-    sub: "Für Büros und Betriebe jeder Größe: Architektur, Handwerk, Agenturen, Kanzleien.",
+    sub: "Vor allem für Agenturen und digitale Dienstleister. Ebenso für Architektur, Handwerk und Kanzleien.",
     buildTitle: "Was ich baue",
     build: [
       { title: "Interne Systeme, CRM, ERP", text: "Ein System für Kunden, Projekte, Angebote und Rechnungen – statt Excel und fünf Abos.", href: "#system", more: "Was so ein System kann" },
@@ -39,7 +39,7 @@ const T = {
     title: <>Software that <em className="hl">fits your business.</em></>,
     lead: <>Internal software, CRM, client portals, APIs and cloud infrastructure – instead of spreadsheets and five subscription tools that don&apos;t talk to each other. <Hl>You own it</Hl>, and your processes are <Hl>automated from day one</Hl>.</>,
     a1: "Book an intro call", a2: "See the process",
-    sub: "For offices and businesses of any size: architecture, trades, agencies, law firms.",
+    sub: "Above all for agencies and digital service providers. And for architecture, trades and law firms.",
     buildTitle: "What I build",
     build: [
       { title: "Internal systems, CRM, ERP", text: "One system for clients, projects, quotes and invoices – instead of spreadsheets and five subscriptions.", href: "#system", more: "What such a system can do" },
