@@ -14,8 +14,9 @@ const T = {
     title: <>Ein Ablauf, der dich jede Woche Stunden kostet – <em className="hl">in 14 Tagen automatisiert.</em></>,
     lead: <>Ich verbinde deine Tools mit n8n und KI, sodass Daten nicht mehr <Hl>von Hand übertragen</Hl>, Erinnerungen nicht mehr <Hl>vergessen</Hl> und Dokumente nicht mehr <Hl>abgetippt</Hl> werden.</>,
     a2: "Beispiele ansehen",
+    sub: "Vor allem für Agenturen und Dienstleister. Ebenso für jeden Betrieb, bei dem Routinearbeit Zeit frisst.",
     exTitle: "Typische Abläufe, die ich automatisiere",
-    ex: [["Dokumente auslesen", "Rechnungen, Verträge oder Formulare kommen per Mail rein. KI liest die Daten aus und trägt sie ins richtige System ein."], ["Fristen und Erinnerungen", "Vertragsenden, Wiedervorlagen, Verlängerungen: Kunden und Team werden rechtzeitig automatisch erinnert."], ["Anfragen und Deals", "Anfragen aus Mail, Formular oder Instagram landen sortiert im CRM, mit Zusammenfassung und nächster Aufgabe."], ["Berichte", "Zahlen aus mehreren Tools werden jede Woche zusammengeführt und als fertiger Bericht verschickt."]] as [string, string][],
+    ex: [["Anfragen und Onboarding", "Anfragen aus Mail, Formular oder Instagram landen sortiert im CRM. Bei neuen Kunden werden Zugänge, Ordner und erste Aufgaben automatisch vorbereitet."], ["Kundenreports", "Zahlen aus mehreren Tools werden jede Woche zusammengeführt und als fertiger Bericht an deine Kunden verschickt."], ["Dokumente auslesen", "Rechnungen, Verträge oder Formulare kommen per Mail rein. KI liest die Daten aus und trägt sie ins richtige System ein."], ["Fristen und Erinnerungen", "Vertragsenden, Wiedervorlagen, Verlängerungen: Kunden und Team werden rechtzeitig automatisch erinnert."]] as [string, string][],
     stepsTitle: "So läuft der Pilot ab",
     steps: [["Gespräch", "15 Minuten: Wo verlierst du Zeit? Wir wählen den einen Ablauf, der sich am meisten lohnt."], ["Prozess-Check", "Ich schaue mir den Ablauf und deine Tools genau an und lege fest, was automatisiert wird."], ["Umsetzung", "Ich baue den Workflow, teste ihn mit echten Fällen und stelle ihn live."], ["Übergabe", "Dokumentation und Video. Du weißt, was läuft und was du bei Bedarf anpasst."]] as [string, string][],
     pkgName: "Automations-Pilot",
@@ -31,8 +32,9 @@ const T = {
     title: <>A process that costs you hours every week – <em className="hl">automated in 14 days.</em></>,
     lead: <>I connect your tools with n8n and AI, so data no longer gets <Hl>copied by hand</Hl>, reminders no longer get <Hl>forgotten</Hl> and documents no longer get <Hl>typed up</Hl>.</>,
     a2: "See examples",
+    sub: "Above all for agencies and service providers. And for any business where routine work eats time.",
     exTitle: "Typical processes I automate",
-    ex: [["Reading documents", "Invoices, contracts or forms arrive by email. AI extracts the data and enters it into the right system."], ["Deadlines and reminders", "Contract ends, follow-ups, renewals: clients and team get reminded automatically, on time."], ["Enquiries and deals", "Enquiries from email, forms or Instagram land in your CRM, sorted, with a summary and the next task."], ["Reports", "Numbers from several tools are pulled together every week and sent out as a finished report."]] as [string, string][],
+    ex: [["Enquiries and onboarding", "Enquiries from email, forms or Instagram land in your CRM, sorted. For new clients, access, folders and first tasks are prepared automatically."], ["Client reports", "Numbers from several tools are pulled together every week and sent to your clients as a finished report."], ["Reading documents", "Invoices, contracts or forms arrive by email. AI extracts the data and enters it into the right system."], ["Deadlines and reminders", "Contract ends, follow-ups, renewals: clients and team get reminded automatically, on time."]] as [string, string][],
     stepsTitle: "How the pilot works",
     steps: [["Call", "15 minutes: where are you losing time? We pick the one process that's most worth it."], ["Process check", "I look closely at the process and your tools and define what gets automated."], ["Build", "I build the workflow, test it with real cases and put it live."], ["Handover", "Documentation and video. You know what's running and what to adjust if needed."]] as [string, string][],
     pkgName: "Automation pilot",
@@ -51,7 +53,7 @@ export default function Automation({ lang }: { lang: Lang }) {
   return (
     <Shell lang={lang}>
       <JsonLd data={serviceSchema(lang, "/automation", SVC[lang][0], SVC[lang][1])} />
-      <PageHero title={t.title} lead={t.lead} actions={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#beispiele", label: t.a2 }]} />
+      <PageHero title={t.title} lead={t.lead} actions={[{ href: CALL, label: UI[lang].ctaPrimary }, { href: "#beispiele", label: t.a2 }]} sub={t.sub} />
       <Section id="beispiele"><h2>{t.exTitle}</h2><Proof items={t.ex} /></Section>
       <Section>
         <h2>{t.stepsTitle}</h2>
