@@ -38,7 +38,7 @@ const T = {
       { icon: "/icons/google-calendar.svg", app: "Google Calendar", label: "Probetrainings eintragen", minutes: 35 },
     ] as DemoTask[],
     casesTitle: "Typische Situationen, in denen sich Automatisierung lohnt",
-    casesLead: "Vier Beispiele aus dem Büroalltag. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
+    casesLead: "Vier Beispiele aus dem Büroalltag – besonders für Agenturen und digitale Dienstleister. Jeweils mit Problem und Lösung, damit du siehst, wie das bei dir aussehen könnte.",
     problem: "Das Problem",
     solution: "Die Lösung",
     cases: [
@@ -62,7 +62,7 @@ const T = {
     servicesTitle: "Drei Bausteine, die aufeinander aufbauen",
     outcomesLead: "Was du davon hast, egal womit du anfängst:",
     nodes: [
-      { path: "/automation", who: "Automation · für Unternehmen mit Routinearbeit", title: "Aufgaben automatisch erledigen", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
+      { path: "/automation", who: "Automation · für Agenturen und Betriebe mit Routinearbeit", title: "Aufgaben automatisch erledigen", text: <>Ein wiederkehrender Ablauf läuft ab jetzt von allein – <Hl>in 14 Tagen live</Hl>.</>, more: "Zur Automation" },
       { path: "/software", who: "Software & Plattformen · wenn aus Automationen ein System wird", title: "Eigene Systeme für deine Abläufe", text: <>Interne Software, CRM, Kundenportale und Websites mit Buchung – <Hl>alles an einem Ort</Hl>.</>, more: "Zu Software & Plattformen" },
       { path: "/ki-coaching", who: "KI-Coaching · damit dein Team es nutzt", title: "Dein Team nutzt die neuen Abläufe selbst", text: <>Dein Team lernt, KI und die neuen Systeme <Hl>selbst einzusetzen</Hl>.</>, more: "Zum Coaching" },
     ],
@@ -144,7 +144,7 @@ const T = {
       { icon: "/icons/google-calendar.svg", app: "Google Calendar", label: "Add trial sessions to calendar", minutes: 35 },
     ] as DemoTask[],
     casesTitle: "Typical situations where automation pays off",
-    casesLead: "Four examples from everyday office work. Each with the problem and the solution, so you can see what it could look like for you.",
+    casesLead: "Four examples from everyday office work – especially for agencies and digital service providers. Each with the problem and the solution, so you can see what it could look like for you.",
     problem: "The problem",
     solution: "The solution",
     cases: [
@@ -168,7 +168,7 @@ const T = {
     servicesTitle: "Three building blocks that build on each other",
     outcomesLead: "What you get, wherever you start:",
     nodes: [
-      { path: "/automation", who: "Automation · for businesses with routine work", title: "Get recurring tasks done automatically", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
+      { path: "/automation", who: "Automation · for agencies and teams with routine work", title: "Get recurring tasks done automatically", text: <>A recurring process runs on its own from now on – <Hl>live in 14 days</Hl>.</>, more: "Go to automation" },
       { path: "/software", who: "Software & platforms · when automations become a system", title: "Your own systems for your workflows", text: <>Internal software, CRM, client portals and websites with booking – <Hl>all in one place</Hl>.</>, more: "Go to software & platforms" },
       { path: "/ki-coaching", who: "AI coaching · so your team uses it", title: "Your team runs the new workflows themselves", text: <>Your team learns to use AI and the new systems <Hl>on their own</Hl>.</>, more: "Go to coaching" },
     ],
